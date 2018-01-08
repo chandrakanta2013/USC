@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="DEMO">
+
+<head>
+    <!-- <title ng-bind="$state.current.data.pageTitle"></title> -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="fragment" content="!" />
+    <meta name="title" ng-attr-content="{{ metaData.metaTitle()}}" content="Meta Title default content goes here..">
+    <meta name="description" ng-attr-content="{{ metaData.metaDescription()}}" content="Default description goes here..">
+    <meta name="keywords" ng-attr-content="{{ metaData.metaKeyword()}}" content="sitename, keyword1, Keyword2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="build/assets/css/styles-min.css">
+    <script src="src/assets/js/pace.min.js"></script>
+    <link id="load_plugins_before" />
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <link rel="stylesheet" href="src/assets/css/responsive.css">
+    <link rel="stylesheet" href="src/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="src/assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="https://www.marshall.usc.edu/profiles/usc_marshall/usc_marshall.ico">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
+    <style type="text/css">
+    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+        display: none !important;
+    }
+    </style>
+</head>
+<title>USC Marshall</title>
+<body ng-controller="homeCtrl" ng-cloak>
+    <!-- <div class="loading"></div> -->
+    <header id="header" class="header clearfix">
+        <div class="main-wrapper">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="col-lg-7 col-md-8">
+                        <div class="header-left">
+                            <a href="/"><h1 class="logo" ><img src="src/assets/images/logo.png" alt=""></h1></a>
+                            <h2 class="slogan">Business Administration Course Grid</h2>
+                        </div>
+                    </div>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="javascript:;"><h1 class='main-logo'><img src="assets/images/logo.png" alt=""></h1></a> -->
+                    </div>
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-4">
+                                <ul class="header-right pull-right">
+                                    <li routerLinkActive="active"><a href='howtoplay.html'>Help</a></li>
+                                    <li routerLinkActive="active"><a href='javascript:;'>Share This</a></li>
+                                    <!-- <li><a href='javascript:;' click='signout()' title="Logout">Logout</a></li> -->
+                                    <li class="social"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="social" ><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li class="social" ><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                    <li class="social"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- /Header -->
+    <!-- Partial View -->
+    <div class="">
+        <div class="main-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="draganddrop-outer howtoplay">
+                        <h2 class="page-title">How to play</h2>
+                        <div class='col-lg-9 col-lg-offset-2 col-md-12'>
+                            <p class="sample-text">Sample curriculum</p>
+                            <div class="game-zone-outer">
+                                <div class="game-zone">
+                                    <table class="" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th colspan='2'>Freshman</th>
+                                                <th colspan='2'>Sophomore</th>
+                                                <th colspan='2'>Junior</th>
+                                                <th colspan='2'>Senior</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Fall</td>
+                                                <td>Spring</td>
+                                                <td>Fall</td>
+                                                <td>Spring</td>
+                                                <td>Fall</td>
+                                                <td>Spring</td>
+                                                <td>Fall</td>
+                                                <td>Spring</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div ng-repeat="item in gridData" class='box-contianer'>
+                                        <div class="grid box" data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}"  id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
+                                            <label class="title">{{item.data.title}}</label>
+                                            <p class="desc">{{item.data.desc}}</p>
+                                            <span class="points">{{item.data.points}}</span>
+                                        </div>
+                                    </div>
+
+                                    <table class="btm-table" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th colspan='2'>
+                                                    <h4>SUMMER</h4>
+                                                </th>
+                                                <th class="background-none" colspan='2'>
+                                                    <div class="grid box-bottom">
+                                                        <label class="title">Global Leadership Program</label>
+                                                        <p class="desc">Beijing and Shanghai, China</p>
+                                                        <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                    </div>
+                                                </th>
+                                                <th colspan='2'>
+                                                    <h4>SUMMER</h4>
+                                                </th>
+                                                <th class="background-none" colspan='2'>
+                                                   <div class="grid box-bottom">
+                                                    <label class="title">Global Leadership Program</label>
+                                                    <p class="desc">Beijing and Shanghai, China</p>
+                                                    <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="discription">
+                            <ul class="chart-detail">
+                                <li><span><img src="src/assets/images/required-icon.png" height="20" width="21" alt=""></span>Required courses, fixed</li>
+                                <li><span><img src="src/assets/images/unavailable-icon.png" height="20" width="21" alt=""></span>Unavailable</li>
+                            </ul>
+                            <div class="bottom-notes">
+                                <h3>Objective</h3>
+                                <p>To build a four-year course map using your free elective units and any additional free elective units you can earn with AP, IB, and A-Level exam credit</p>
+                                <h3>Grid Key</h3>
+                                <p><i>*Note: Courses that are outlined cannot be waived with AP, IB, or A-Level exam credit</i></p>
+                                <ul>
+                                    <li>BUAD=USC Marshall business core course (you must complete these courses at USC)</li>
+                                    <li>ECON=Required economics courses that must be completed at USC</li>
+                                    <li>GE and Diversity=USC’s General Education courses, which give students a liberal arts core</li>
+                                    <li>WRIT=USC’s writing requirements </li>
+                                    <li>Marshall Elective= a student’s focus in business</li>
+                                    <li>Free Elective= ‘free’ courses that can be taken in any department at USC. You begin with 32 units.</li>
+                                    <li>Minor= Minors offer you a way to explore a department, interdisciplinary theme, or topical area with less commitment of time than a major. </li>
+                                </ul>
+                                <p>A minor can be completed in as few as 16 units, with most minors requiring about 20 to 24 units. Minors are optional. You may complete multiple minors or none at all.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /Partial View -->
+<!-- Footer -->
+<footer id="footer" class="footer">
+
+    <div class="container">
+        <div class="col-lg-9 col-md-9 col-sm-8">
+            <div class="foot-left">University of Southern California Marshall School of Business | Copyright 2017</div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="foot-right pull-right">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+</footer>
+<!-- /Footer -->
+
+<!--pop up design start-->
+<div class="row">
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="points-popup" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <img src="src/assets/images/points-icon.png" height="78" width="78" alt="">
+            <p>You’ve saved 4 free elective credits in your bank for your minor(s)”</p>
+        </div>
+    </div>
+</div>
+</div>
+<!--pop up design end-->
+
+
+
+
+
+
+
+</div>
+<script src="src/assets/vendor/jquery/dist/jquery.js"></script>
+<script src="src/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+<script src="src/assets/vendor/angular/angular.min.js"></script>
+<script src="src/assets/vendor/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+<script src="src/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="src/assets/js/angular-drag-drop.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script src="src/assets/js/defaultServices.js"></script>
+<script src="src/assets/js/messages.js"></script>
+<script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,257 @@
+body {font-family: 'Raleway', sans-serif !important; font-size: 17px !important; line-height:30px !important; color: #5a5858 !important;     }
+a.cmn-btn { background-color: #ffc028; color: #fff; text-transform: uppercase; font-weight: bold; border: none; padding: 12px;      }
+a.cmn-btn:hover { background-color: #000; color: #fff;  }
+
+button.cmn-btn { background-color: #ffc028; color: #fff; text-transform: uppercase; font-weight: bold; border: none; padding: 12px;      }
+button.cmn-btn:hover { background-color: #000; color: #fff;   }
+
+.clearfix:before, .clearfix:after {content: ""; display: table; }
+.clearfix:after {clear: both; }
+.clearfix {zoom: 1; / For IE 6/7 (trigger hasLayout) / }
+
+/*Login page css start*/
+*, h1, h2{
+    padding: 0; margin:0;
+}
+
+
+.form-control {border-radius: 0px;}
+.btn {border-radius: 0px;}
+
+.login-page { background: url(../images/banner.png) no-repeat center top; width: 100%; height: 560px;  background-size: cover;     margin-top: 0px; position: relative;   }
+.login-box {margin: 0 auto; padding: 20px; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); text-align: center;  }
+/*Login page css end*/
+
+
+
+/*Home page css start*/
+
+.draganddrop-outer { display: inline-block; float: left; width: 100%; padding: 2% 0; width: 100%;    }
+#header{ background: #d7d7d7; display: block; min-height: 72px; }
+#footer{ background: #232323; color: #fff; font-size: 16px; line-height: normal; display:flex; width: 100%; padding: 50px 0 35px 0;  }
+/*.main-wrapper{width: 100%;padding: 0px 20px;}*/
+.main-logo{padding: 11px;  padding-top: 2px;}
+.main-logo img{width: 80px;  height: auto; }
+.navbar-default .navbar-brand{padding: 0; margin: 0}
+#header .nav{min-height : 50px}
+.content {margin-top: 50px; min-height: 850px}
+
+.game-zone { /*width: 1040px*/ background: #f6f6f4;padding: 20px 7px; box-sizing: border-box; }
+.game-zone table { text-align: center; }
+.game-zone table th { text-align: center; background: #e3e2df; color: #000; text-transform: uppercase; font-size: 17px; border-right: 5px solid #f6f6f4; padding: 5px 0; width: 225px; }
+.game-zone table td {font-size: 12px; text-transform: uppercase; color: #51524e; font-weight: bold; min-width: 50px;  }
+.que-zone { text-align: left; }
+
+table.btm-table th {border-radius: 10px; padding: 0;  }
+
+.box{    border-radius: 10px; margin-top: 5px; margin-left: 6px; margin-bottom: 5px; padding: 8px; width: 98px; height: 104px; color: #fff; border: 2px solid #000; }
+.box label.title {font-weight: 400; font-size: 14px; margin: 0; padding: 0; line-height: 18px; font-family: arial; }
+.box p.desc {font-size: 11px; line-height: 12px; margin: 0; padding: 0; }
+.box span.points {     margin: 0; padding: 4px 8px; font-size: 13px; line-height: 14px; background: #000; position: absolute; bottom: 3px; left: 8px; border-radius: 80px; }
+
+.box-bottom{    border-radius: 10px; margin-top: 5px; margin-bottom: 5px; padding: 8px; width: 98px; height: 104px; color: #fff; position: relative; border-radius: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; padding: 8px; width: 204px; height: 60px; color: #fff; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb910+1,ffb910+50,ffab0e+52,ffab0e+100 */
+    background: #ffb910; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ffb910 1%, #ffb910 50%, #ffab0e 52%, #ffab0e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ffb910 1%,#ffb910 50%,#ffab0e 52%,#ffab0e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ffb910 1%,#ffb910 50%,#ffab0e 52%,#ffab0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb910', endColorstr='#ffab0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */  }
+.box-bottom label.title {font-weight: 700; font-size: 14px; margin: 0; padding: 0; line-height: 15px; font-family: arial; text-align: left; text-transform: none; display: inherit; }
+.box-bottom p.desc {font-size: 11px; line-height: 13px; margin: 0; padding: 0; text-align: left; text-transform: none;  }
+.box-bottom span.star {     position: absolute; right: 5px; top: 22px; }
+
+.box-contianer{display: block; float: left; }
+.que-block-container{width: 100%; float: left; min-height: 400px; }
+
+.orange{ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff954e+1,ff954e+49,ff7f42+52,ff7f42+52,ff7f42+100 */
+    background: #ff954e; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #ff954e 1%, #ff954e 49%, #ff7f42 52%, #ff7f42 52%, #ff7f42 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #ff954e 1%,#ff954e 49%,#ff7f42 52%,#ff7f42 52%,#ff7f42 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #ff954e 1%,#ff954e 49%,#ff7f42 52%,#ff7f42 52%,#ff7f42 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff954e', endColorstr='#ff7f42',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+
+.pink{/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f4748d+50,2989d8+50,f26077+50,f26077+100 */
+    background: #f4748d; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f4748d 50%, #2989d8 50%, #f26077 50%, #f26077 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f4748d 50%,#2989d8 50%,#f26077 50%,#f26077 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f4748d 50%,#2989d8 50%,#f26077 50%,#f26077 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4748d', endColorstr='#f26077',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+.red{ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f44e4e+0,f44e4e+2,f44e4e+49,ee3434+50,2989d8+50,ee3434+50,ee3434+100,ee3434+100 */
+    background: #f44e4e; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #f44e4e 0%, #f44e4e 2%, #f44e4e 49%, #ee3434 50%, #2989d8 50%, #ee3434 50%, #ee3434 100%, #ee3434 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #f44e4e 0%,#f44e4e 2%,#f44e4e 49%,#ee3434 50%,#2989d8 50%,#ee3434 50%,#ee3434 100%,#ee3434 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #f44e4e 0%,#f44e4e 2%,#f44e4e 49%,#ee3434 50%,#2989d8 50%,#ee3434 50%,#ee3434 100%,#ee3434 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f44e4e', endColorstr='#ee3434',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ }
+.purple {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9679fa+50,2989d8+50,8265fa+50,8265fa+100 */
+    background: #9679fa; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #9679fa 50%, #2989d8 50%, #8265fa 50%, #8265fa 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #9679fa 50%,#2989d8 50%,#8265fa 50%,#8265fa 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #9679fa 50%,#2989d8 50%,#8265fa 50%,#8265fa 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9679fa', endColorstr='#8265fa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+.green {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#84c537+0,84c537+50,6eb92d+51,6eb92d+100 */
+    background: #84c537; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #84c537 0%, #84c537 50%, #6eb92d 51%, #6eb92d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #84c537 0%,#84c537 50%,#6eb92d 51%,#6eb92d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #84c537 0%,#84c537 50%,#6eb92d 51%,#6eb92d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84c537', endColorstr='#6eb92d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+.light-green {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#69d6b5+1,69d6b5+50,57cea7+52,57cea7+100 */
+    background: #69d6b5; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #69d6b5 1%, #69d6b5 50%, #57cea7 52%, #57cea7 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #69d6b5 1%,#69d6b5 50%,#57cea7 52%,#57cea7 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #69d6b5 1%,#69d6b5 50%,#57cea7 52%,#57cea7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d6b5', endColorstr='#57cea7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+.sky-blue {/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#59cacc+1,59cacc+50,4bc0c2+53,4bc0c2+100 */
+    background: #59cacc; /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #59cacc 1%, #59cacc 50%, #4bc0c2 53%, #4bc0c2 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #59cacc 1%,#59cacc 50%,#4bc0c2 53%,#4bc0c2 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #59cacc 1%,#59cacc 50%,#4bc0c2 53%,#4bc0c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59cacc', endColorstr='#4bc0c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+
+.cross {display: block; margin: auto; width: 98px; height: 104px; position: relative; border: solid 1px #c8c6c4; background: #e3e2df; position: relative; border-radius: 10px; margin-top: 5px; margin-left: 6px; margin-bottom: 5px; }
+.cross:before {     content: ''; position: absolute; top: 50%; left: -16px; width: 130px; height: 1px; background: #c8c6c4; transform: rotate(45deg); } 
+.cross:after { content: ''; position: absolute; top: 50%; left: -16px; width: 130px; height: 1px; background: #c8c6c4; transform: rotate(-45deg); }
+
+.gray{background: #eee1e1; border: none;  }
+.no-border { border: none; }
+.cross span.points { background: none; }
+.gray span.points { background: none; }
+#toast-container{top: 50%; left: 38%; }
+#toast-container>div{opacity: 1; background: #fff; height: 120px; border-radius:10px; border:2px solid #ccc; text-align: center; color:#000; font-size: 15px }
+
+.right-content h2 { font-size: 24px; line-height:  normal; color: #991b1e; font-weight: 600; padding-top: 25px;    }
+.right-content p { font-size: 16px; line-height: normal; color: #000; padding-bottom: 20px;     }
+.right-content p span { font-weight: bold; }
+.right-content button { width: 100%; margin-bottom: 10px; font-size: 16px; padding: 8px 0; position: relative;      }
+.right-content button i.fa {     position: absolute; left: 14px; top: 16px; font-size: 18px; }
+.right-content button.red-btn { background: #a31919; }
+
+/*points popup code start*/
+#points-popup .modal-content {    text-align: center; border-radius: 0; padding: 30px;}
+#points-popup .modal-content p { font-weight: bold; font-size: 18px; line-height: 23px; color: #383737;    }
+#points-popup .modal-dialog { margin: 270px auto; }
+/*points popup code end*/
+/*Home page css end*/
+
+
+/*home page code start*/
+nav.navbar-default { border-bottom: 1px solid #a31919;     margin: 0; padding: 0; }
+.header-left { display: inline-block; float: left;  } 
+h1.logo { display: inline-block; float: left; }
+h2.slogan { font-size: 24px; line-height: normal;  padding-left: 20px; color: #a31919; display: inline-block; font-weight: 600;    }
+ul.header-right { margin-top:17px; padding: 0; display: inline-block;    }
+ul.header-right li { margin-right:15px; padding: 0; list-style-type: none; float: left;    }
+ul.header-right li.social {width: 35px; height: 35px; background: #fff; border-radius: 80px; border: 1px solid #ccc;} 
+ul.header-right li.social a {    font-size: 15px; text-align: center; vertical-align: middle; display: block; }
+/*.header-right  li i.fa:hover { background-color: #a31919; color: #fff; border: transparent: ;  border-radius: 80px;  }*/
+ul.header-right a { font-size: 12px; line-height: normal; color: #818689; font-weight: 600; text-decoration: none; font-family: arial; padding: 0; list-style-type: none;   }
+.header-right i.fa {     font-size: 16px; line-height: normal; padding:9px 11px; } 
+.foot-left { font-size: 14px; }
+.foot-right li { list-style-type: none;   }
+.foot-right li a { color: #fff; font-size: 14px; text-decoration: none;   }
+.bottom { background-color: #232323; padding:5px 0; display: inline-block; width: 100%; position: fixed; bottom: 0;   }
+.bottom .start-over { padding-top: 15px; display:block; }
+.bottom .start-over span {float: left; margin-right: 10px; }
+.bottom i.fa-refresh { font-size: 33px; }
+.bottom i.fa-arrow-right { font-size: 33px; }
+.bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right  { font-size: 33px; font-weight: lighter; line-height: normal; display: inline-block; }
+.bottom .start-over a { color: #ddd; font-size: 16px; text-decoration: none;   }
+.units-outer {display: inline-block; text-align: center; width: 100%;}
+.total-units { text-align: center; font-family: arial; float:none; display: inline-block; margin-left: 25px;    }
+.total-units h5 { display: inline-block; font-size: 14px; text-transform: uppercase; color: #fff;     margin: -12px 14px 0 0 ;vertical-align: middle;  }
+.total-units span {background: #a31919; color: #fff; position: relative; font-size: 40px; margin: 0; padding: 7px 8px; display: inline-block; border-radius: 8px; line-height: normal;         font-weight: bold;}
+.total-units .star-yellow { position: absolute; top: -22px; right: -5px;  }
+.elective {display: inline-block; }
+span.elective-bg { background: url(../images/elective-icon.png) no-repeat center; width: 61px ; height: 52px; font-size: 30px; padding-top: 10px;    }
+.next { display: inline-block; padding-top: 12px; }
+.next i.fa-arrow-right { margin: 0 0 0 10px; font-size: 20px; }
+.next a { color: #ffc028; text-decoration: none;  }
+.next a:hover, .next a:active, .next a:focus { color: #fff; text-decoration: none;  }
+
+.indstry{  -webkit-appearance: menulist-button; height: 47px!important; }
+.labeloptn{ width: 94%; padding: 0px 5px; font-weight: 400}
+.option-container ul{ list-style: none;    max-height: 487px; overflow: auto; padding: 3px; }
+.option-container input[type=radio]{float: left; margin:8px 0px 0px;}
+.chklabel{  width: 92%; font-weight: 400;vertical-align: text-top; margin-top: -4px;}
+.brown{ background:#d19b53 }
+#styleScroll::-webkit-scrollbar{width: 8px; }
+#styleScroll::-webkit-scrollbar-track {background: #80808061; border: 5px solid transparent; background-clip: content-box; } 
+#styleScroll::-webkit-scrollbar-thumb{background: rgb(172, 32, 15); border-radius: 24px;}
+#chebox-popup h2{ color: #b62600; font-size: 24px; padding: 15px 0px; line-height: 29px; }
+#chebox-popup .modal-content{width: 285px; text-align: center; height: auto; }
+/*home page code end*/
+
+/*login page code start*/
+.login-head h3 { font-size: 35px; line-height: normal; color: #ffc028;    }
+.login-head p { font-size:21px; line-height: normal; color: #fff; padding-bottom: 20px; font-weight: 500  }
+.login-box .form-control {float: none; display: inline-block; width: 395px; padding:14px 0px 14px 15px; height: auto;   }
+.login-box .form-control input[type="text"] { font-size:16px; line-height: normal; color: #000;  font-weight: 500;     }
+
+.login-box button.cmn-btn { width: 395px;  float: none; display: inline-block; padding:15px 0; font-weight: bold; font-size:20px; color: #fff; text-transform: uppercase; background-color: #ffc028;    }
+.login-box button.cmn-btn:hover { background-color: #000;  }
+.text-center label { color: #fff; font-weight: lighter; font-size: 14px;   }
+
+.mid-part { display: inline-block; float: left; width: 100%; padding:7% 0;      }
+section.howtoplay .howtoplay-btn { text-align: center; margin-top: 50px;     }
+section.howtoplay .howtoplay-btn a {  text-decoration: none; font-size: 13px; padding: 10px 30px;}
+section.btm-text { text-align: center; color: #000; background-color: #ffecbe; padding: 65px 0;}
+/*login page code end*/
+
+
+/*how to play code start*/
+h2.page-title { font-size: 28px; line-height: normal; color: #991b1e; font-weight: bold; text-align: center;  position: relative;    }
+h2.page-title i.fa-times { position: absolute; right: 112px; top: 0px; color: #000; font-weight: lighter; font-size: 21px; cursor: pointer;  }
+h2.page-title i.fa-times:hover { color: #991b1e}
+p.sample-text { color: #000; font-weight: bold;  }
+.howtoplay .game-zone {float: none; display: inline-block; }
+.discription { float: left; width: 100%; display: inline-block;  padding-left: 3%; color: #000; font-size: 16px;     }
+ul.chart-detail { float: left; margin: 0; padding: 20px 0 40px 0; }
+ul.chart-detail li { float: left; margin: 0 100px 0 0; padding: 0; list-style-type: none; font-size: 14px; font-weight: bold; color: #000;     }
+ul.chart-detail li span {margin-right: 15px; }
+ul.chart-detail li span img {margin: -3px 0 0 0; }
+.bottom-notes {float: left; width: 100%; text-align: left; }
+.bottom-notes h3 { color: #000; font-weight: bold; font-size: 16px;   }
+.bottom-notes ul {padding-bottom: 15px; }
+.bottom-notes li { line-height: 20px; }
+.bottom-notes p { line-height: 20px; }
+table th.background-none { background: transparent !important; }
+/*how to play code end*/
+
+/*Resume page code start*/
+.resume-outer { margin: 0 auto; max-width: 700px;  }
+.resume {  min-height: 700px; border: 1px solid #ddd; border-top: 10px solid #a31919; float: left; display: inline-block; width: 100%; padding:10% 10% 5% 10% }
+.resume-top {float: left; width: 100%; padding: 10px 0;}
+.resume-top ul { margin: 0; padding: 0; float: left;  }
+.resume-top li { margin: 0 0 0 5px  ; padding: 0; float: left; list-style-type: none;  }
+.resume-top span { margin-top: 5px; float: right; }
+.resume-top span i.fa-times { font-size: 22px; cursor: pointer; }
+.resume-top span i.fa-times:hover { color: #a31919; }
+.resume h2 {     font-size: 40px; line-height: 30px; font-weight: bold; color: #a31919; margin: 0; padding: 0; }
+.resume .email { font-size: 16px; line-height: normal; margin: 0; padding: 0;  }
+.resume .email a { color: #000; }
+.resume .education { padding: 0; margin-top: 32px; border-top: 1px solid #000; display: inline-block; }
+.resume .education h3 { display: inline-block; color: #a31919; text-transform: uppercase;   }
+.resume .education h4 { display: inline-block; float: left; width: 100%; color: #000; font-weight: bold; margin: 0; padding: 10px 0; font-size: 16px;  }
+.resume .education span { float: right;     margin: -3px 0 0 0; font-weight: normal; color: #8b8b8b; font-size: 15px;   }
+.resume .education p {     width: 330px; font-size: 15px; line-height: 18px; color: #000; float: left; font-weight: 500; }
+.resume-bottom { float: right; padding-top: 50px;  }
+.resume-bottom p { float: left; font-size: 12px; margin-right: 40px;   }
+/*Resume page code end*/
+.iziToast-wrapper-topCenter{ top: 8%!important; }
+/*.iziToast{ top: 247px;
+    left: 26%; }*/
+   /* .iziToast.iziToast-color-blue{ background: rgb(255, 190, 25);
+    border-color: rgb(255, 185, 0); }*/
+/*.iziToast > .iziToast-body .iziToast-icon{ 
+    top: 0px!important;
+    position: absolute!important;
+    left: 0px!important;
+    bottom: -18px!important;
+    font-size: 36px!important;
+    color: #fbe59d!important;
+    transform: rotate(12deg); }*/
+.next button{    color: #ffc028;
+    background:none;
+border:0px;}
+.next button:hover{ color: white }
+.next button:focus{outline: none; }
