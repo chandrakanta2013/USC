@@ -13,7 +13,7 @@ App.controller('loginCtrl', ['$scope','errorMsgFactory', function($scope,errorMs
     }
     if(window.location.href.indexOf("4015")===-1 && window.location.href.indexOf("4005")===-1){
         var path = window.location.href.split('usc');
-        path[0] = path[0] + "usc/usc/"
+        path[0] = path[0] + "usc/"
     }
     //===============Function for Signin==============//
     $scope.signin = function(obj) {
@@ -58,7 +58,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$rootScope', '$http', functio
     }
     if(window.location.href.indexOf("4015")===-1 && window.location.href.indexOf("4005")===-1){
         var path = window.location.href.split('usc');
-        path[0] = path[0] + "usc/usc/"
+        path[0] = path[0] + "usc/"
     }
     $scope.queBlock = false;
 
