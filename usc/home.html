@@ -21,67 +21,108 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
     <style type="text/css">
-    [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak, .ng-hide:not(.ng-hide-animate) {
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
         display: none !important;
     }
-
     </style>
 </head>
 <title>USC Marshall</title>
+
 <body ng-controller="homeCtrl" ng-cloak>
     <!-- <div class="loading"></div> -->
-    <header id="header" class="header clearfix">
-        <div class="main-wrapper">
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="col-lg-7 col-md-8">
-                        <div class="header-left">
-                            <a href="index.html"><h1 class="logo" ><img src="src/assets/images/logo.png" alt=""></h1></a>
-                            <h2 class="slogan">Business Administration Course Grid</h2>
-                        </div>
-                    </div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        
-                        <button type="button" class='visible-xs visible-sm hidden-lg hidden-md que-btn' ng-click='toggleQuestion()'>
-                            <i class="fa fa-angle-right" aria-hidden="true" ng-show='queBlock'></i> 
-                            <i class="fa fa-angle-left" aria-hidden="true" ng-show='!queBlock'></i>
-                        </button>
-
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <div class="row">
-                            <div class="col-lg-5 col-md-4">
-                                <ul class="header-right pull-right">
-                                    <li routerLinkActive="active"><a href='howtoplay.html'>Help</a></li>
-                                    <li routerLinkActive="active"><a href='javascript:;'>Share This</a></li>
-                                    <li><a href='index.html' ng-click='signout()' title="Logout">Logout</a></li>
-                                    <li class="social"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                                    <li class="social" ><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                                    <li class="social" ><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                                    <li class="social"><a href="#"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </nav>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="navbar-toggle" id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </header>
-    <!-- /Header -->
-    <!-- Partial View -->
-    <div class="">
-        <div class="main-wrapper">
-            <div class="container">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class='visible-xs visible-sm hidden-lg hidden-md que-btn' ng-click='toggleQuestion()'>
+                    <i class="fa fa-angle-right" aria-hidden="true" ng-show='queBlock'></i>
+                    <i class="fa fa-angle-left" aria-hidden="true" ng-show='!queBlock'></i>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="src/assets/images/logo.png" class="img-responsive" height="37" width="164" alt=""></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#about">Alumini & Support</a></li>
+                    <li><a href="#contact">Career Services</a></li>
+                    <li><a href="#contact">Current Student</a></li>
+                    <li class="see-red"><a href="#contact"><span><i class="fa fa-plus" aria-hidden="true"></i> SEE ALL</span></a></li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+            <div class="logo-right"><img src="src/assets/images/logo-right.jpg" class="img-responsive" height="40" width="177" alt=""></div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="banner">
+                <img src="src/assets/images/home-banner.jpg" class="hidden-sm hidden-xs" height="400" width="1440" alt="">
+                <div class="header__bottom">
+                    <div class="header__bottom__inner container">
+                        <ul>
+                            <div class="search-box hidden-lg hidden-md">
+                                <form action="/search" method="get" id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+                                    <div class="js-form-item form-item js-form-type-textfield form-type-textfield form-item-search js-form-item-search">
+                                        <input placeholder="Search..." data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="30" maxlength="128" class="form-text">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </div>
+                                </form>
+                            </div>
+                            <li><a href="#">Programs <i class="fa fa-caret-down" aria-hidden="true"></i> </a></li>
+                            <li><a href="#">Department <i class="fa fa-caret-down" aria-hidden="true"></i> </a></li>
+                            <li><a href="#">Faculty & Research <i class="fa fa-caret-down" aria-hidden="true"></i> </a></li>
+                            <li><a href="#">News & Events <i class="fa fa-caret-down" aria-hidden="true"></i> </a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Why Marshall</a></li>
+                            <li><a href="#">USC Leventhal</a></li>
+                            <li><a href="#">Directory</a></li>
+                            <li class="hidden-xs hidden-sm"><a href="#"><span><i class="fa fa-address-book" aria-hidden="true"></i></span></a></li>
+                            <li class="hidden-xs hidden-sm"><a href="#"><span><i class="fa fa-search" aria-hidden="true"></i></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mid-part">
+        <div class="container">
+            <div class="page-title hidden-sm hidden-xs">
+                <h2>Business Administration Course Grid</h2>
+            </div>
+            <div class="breadcrump hidden-sm hidden-xs">
+                <ul>
+                    <li><a href="#">Home</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                    <li><a href="#">Departments</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                    <li><a href="#">Business Communication</a><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                    <li class="active"><a href="#">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="social-share hidden-sm hidden-xs">
+                <p>Share This:</p>
+                <ul>
+                    <li><a href="#"><img src="src/assets/images/fb.jpg" height="32" width="33" alt=""></a></li>
+                    <li><a href="#"><img src="src/assets/images/skpye.jpg" height="32" width="33" alt=""></a></li>
+                    <li><a href="#"><img src="src/assets/images/mail.jpg" height="32" width="33" alt=""></a></li>
+                    <li><a href="#"><img src="src/assets/images/plus.jpg" height="32" width="33" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="main-wrapper">
                 <div class="row">
                     <div class="draganddrop-outer">
                         <div class='col-md-9'>
-                            <div class="game-zone-outer">
+                            <div class="game-zone-outer gamescroll">
                                 <div class="game-zone">
                                     <table class="" width="100%">
                                         <thead>
@@ -105,7 +146,6 @@
                                             </tr>
                                         </tbody>
                                     </table>
-
                                     <!-- <div *ngFor="let item of getGridData(), index as index" class='box-contianer'>
                                         <div class="box" droppable draggable [dragData]="{index:index, source: 'grid', div: item}" [dragEnabled]='item.draggable' [dropEnabled]='item.droppable' id={{index}} (onDrop)="onItemDrop($event,index)" [ngClass]="item.class">   
                                             <label>{{item.data.title}}</label>
@@ -113,7 +153,6 @@
                                             <p>{{item.data.points}}</p>
                                         </div>  
                                     </div> -->
-
                                     <!-- <div ng-repeat="item in gridData" class='box-contianer'>
                                         <div class="grid box" data="'bhole'" ng-class='item.class' droppable draggable dragData="{index:$index, source: 'grid', div: item}" dragEnabled='{{item.draggable}}' dropEnabled='{{item.droppable}}' id={{index}} onDrop="onItemDrop($event,index)">
                                             <label>{{item.data.title}}</label>
@@ -121,20 +160,28 @@
                                             <p>{{item.data.points}}</p>
                                         </div>
                                     </div> -->
-
-
                                     <div ng-repeat="item in gridData" class='box-contianer'>
-                                        <div class="grid box slideInDown" data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}"  id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
+                                        <div class="grid box slideInDown" data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
                                             <label class="title">{{item.data.title}}</label>
                                             <p class="desc">{{item.data.desc}}</p>
                                             <span class="points">{{item.data.points}}</span>
                                         </div>
                                     </div>
-                                    
                                     <table class="btm-table" width="100%">
                                         <thead>
                                             <tr>
-                                                <th colspan='2'>
+                                                <!--  <th colspan='2'>
+                                                    <h4>SUMMER</h4>
+                                                </th> -->
+                                                <th colspan='2' ng-repeat="item in summer">
+                                                    <h4 ng-if="item.heading">SUMMER</h4>
+                                                    <div class="grid box-bottom" ng-if="item.title">
+                                                        <label ng-if="item.title" class="title">{{item.title}}</label>
+                                                        <p ng-if="item.desc" class="desc">{{item.desc}}</p>
+                                                        <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                    </div>
+                                                </th>
+                                                <!-- <th colspan='2'>
                                                     <h4>SUMMER</h4>
                                                 </th>
                                                 <th colspan='2'>
@@ -143,165 +190,330 @@
                                                         <p class="desc">Beijing and Shanghai, China</p>
                                                         <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
                                                     </div>
-                                                </th>
-                                                <th colspan='2'>
-                                                    <h4>SUMMER</h4>
-                                                </th>
-                                                <th colspan='2'>
-                                                 <div class="grid box-bottom">
-                                                    <label class="title">Global Leadership Program</label>
-                                                    <p class="desc">Beijing and Shanghai, China</p>
-                                                    <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
-                                                </div>
-                                            </th>
-                                        </tr>
-                                    </thead>
+                                                </th> -->
+                                            </tr>
+                                        </thead>
                                     </table>
                                 </div>
                             </div>
                         </div>
                         <div class='col-md-3 static'>
                             <div class="que-zone" id='que-block'>
+                                <button type="button" class="visible-xs visible-sm hidden-lg hidden-md que-btn que-btn2" ng-click="toggleQuestion()">
+                                    <i class="fa fa-angle-right" aria-hidden="true" ng-show="queBlock"></i>
+                                    <i class="fa fa-angle-left ng-hide" aria-hidden="true" ng-show="!queBlock"></i>
+                                </button>
                                 <h3 style="font-weight: 600;color: #a32319;">{{currentQue.title}}</h3>
                                 <h4 style="font-weight: 600;color: #a32319;"> {{currentQue.heading}}</h4>
-                                <p>{{currentQue.que}}</p>
+                                <p ng-if="currentQue.confirm" ng-bind-html="currentQue.que"></p>
+                                <p ng-if="!currentQue.confirm"> {{currentQue.que}}</p>
+                                <p ng-if="currentQue.confirm" ng-bind-html="currentQue.content1"></p>
+                                <p ng-if="currentQue.confirm">{{currentQue.content2}}</p>
+                                <ul ng-if="currentQue.confirm">
+                                    <li ng-repeat="item in questionData">{{item.data.title}} {{item.data.desc}}</li>
+                                </ul>
                                 <!-- <hr> -->
                                 <div class='option-container'>
                                     <ul ng-if="currentQue.type == 'radio' && !currentQue.subTitle" id="styleScroll">
                                         <li ng-repeat=" item in currentQue.options" ng-click="slctOptn(item)">
-                                            <input type="radio" id="radio{{$index}}" name="option"> 
-                                            <label class="labeloptn" for="radio{{$index}}" >{{item.optn}}</label></li>
-                                        </ul>
-                                        <ul ng-if="currentQue.type == 'checkbox' && !currentQue.subTitle" id="styleScroll">
-                                            <li ng-repeat=" item in currentQue.options" ng-click="notCall!=1?slctOptn(item):''">
-                                             <input type="checkbox" id="chkqustn{{$index}}"  ng-click="slectchkbx(item,$event)" name="option" ng-model="item.selected" >
-                                             <label class="chklabel" for="chkqustn{{$index}}"  >{{item.optn}}</label>
-                                         </ul>
-                                         <ul ng-if="currentQue.subTitle" id="styleScroll">
-                                            <li ng-repeat=" item in currentQue.options" id="nstdoptn{{$index}}" ng-init="outer=$index">
-                                                <label>{{item.subTitle}}</label>
-                                                <ul>
-                                                    <li ng-repeat="data in  item.options" ng-click="slctOptn(data)">
-                                                        <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected"> 
-                                                         <label class="chklabel" for="mltioption{{$index}}.[{{outer}}]" >{{data.optn}}</label>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div ng-if="currentQue.showQueBlocks" class="que-block-container" ng-show="blockview">
-                                         <p> {{currentQue.headingText}}</p>
-                                        <div ng-repeat=" item in currentQue.queData" class='box-contianer'>
-                                           <div class="que box" id={{$index}} ng-class="item.class" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)'}">
+                                            <input type="radio" id="radio{{$index}}" name="option">
+                                            <label class="labeloptn" for="radio{{$index}}">{{item.optn}}</label>
+                                        </li>
+                                    </ul>
+                                    <ul ng-if="currentQue.type == 'checkbox' && !currentQue.subTitle" id="styleScroll">
+                                        <li ng-repeat=" item in currentQue.options" ng-click="notCall!=1?slctOptn(item):''">
+                                            <input type="checkbox" id="chkqustn{{$index}}" ng-click="slectchkbx(item,$event)" name="option" ng-model="item.selected">
+                                            <label class="chklabel" for="chkqustn{{$index}}">{{item.optn}}</label>
+                                    </ul>
+                                    <ul ng-if="currentQue.subTitle" id="styleScroll">
+                                        <li ng-repeat=" item in currentQue.options" id="nstdoptn{{$index}}" ng-init="outer=$index">
+                                            <label>{{item.subTitle}}</label>
+                                            <ul>
+                                                <li ng-repeat="data in  item.options" ng-click="slctOptn(data)">
+                                                    <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected">
+                                                    <label class="chklabel" for="mltioption{{$index}}.[{{outer}}]">{{data.optn}}</label>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div ng-if="currentQue.showQueBlocks" class="que-block-container" ng-show="blockview">
+                                    <p> {{currentQue.headingText}}</p>
+                                    <div ng-repeat=" item in currentQue.queData" class='box-contianer'>
+                                        <div class="que box" id={{$index}} ng-class="item.class" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)'}">
                                             <label class="title">{{item.data.title}}</label>
                                             <p class="desc">{{item.data.desc}}</p>
                                             <span class="points">{{item.data.points}}</span>
                                         </div>
                                     </div>
                                 </div>
-                                    </div>
-                                    <div class="lastStep" ng-show="lastStep">
-
-                                        <div class="right-content">
-                                            <h2>Congratulations! </h2>
-                                            <p>You have designed the following four-year program:</p>
-                                            <p><span>BS in Business Administration </span> with a focus in <span>Entrepreneurship </span> Minor: <span>Philosophy</span></p>
-                                            <button class="cmn-btn red-btn"><i class="fa fa-file-o" aria-hidden="true"></i>export my resume</button>
-                                            <button class="cmn-btn"><i class="fa fa-print" aria-hidden="true"></i>Print my curriculum</button>
-                                        </div>
-                                    </div>
+                                <button type="button" class="btn cmn-btn" ng-disabled="!isSelected" ng-click='getNext()'>Next</button>
+                            </div>
+                            <div class="lastStep" ng-show="lastStep">
+                                <div class="right-content">
+                                    <h2>Congratulations! </h2>
+                                    <p>You have designed the following four-year program:</p>
+                                    <p><span>BS in Business Administration </span> with a focus in <span>Entrepreneurship </span> Minor: <span>Philosophy</span></p>
+                                    <button class="cmn-btn red-btn"><i class="fa fa-file-o" aria-hidden="true"></i>export my resume</button>
+                                    <button class="cmn-btn"><i class="fa fa-print" aria-hidden="true"></i>Print my curriculum</button>
                                 </div>
                             </div>
                         </div>
-                </div>
-    </div>
-</div>
-
-<!-- /Partial View -->
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="bottom">
-            <div class="container">
-
-                <div class="col-md-2 col-sm-2 col-xs-2">
-                    <div class="start-over">
-                        <a href="javascript:window.location.reload(true)" ng-click="startOver()">
-                            <span class="hidden-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                            <p class="hidden-xs visible-lg visible-md visible-sm" >Start Over</p></a>
-                            <a href="#"><span class="left-arrow-mobile hidden-sm visible-xs"><i class="fa fa-long-arrow-left" aria-hidden="true"></i></span></a>
-                        </div>
                     </div>
-                    <div class="col-md-8 col-sm-8 col-xs-8">
-                        <div class="units-outer">
-                            <div class="total-units">
-                                <h5>Total Units</h5>
-                                <span>{{totalUnits}}
-                                    <div class="star-yellow"><img src="src/assets/images/star-yellow.png" height="18" width="17" alt="">
+                </div>
+            </div>
+            <a href="" class="help" data-toggle="modal" data-target="#help-popup"> HELP</a>
+            <!-- /Partial View -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="bottom">
+                        <div class="container">
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <div class="start-over">
+                                    <a href="javascript:window.location.reload(true)" ng-click="startOver()">
+                                            <span class="visible-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                                            <p class="hidden-xs visible-lg visible-md visible-sm" >Start Over</p></a>
+                                </div>
+                            </div>
+                            <div class="col-md-8 col-sm-8 col-xs-8">
+                                <div class="units-outer">
+                                    <div class="total-units">
+                                        <h5>Total Units</h5>
+                                        <span>{{totalUnits}}
+                                                    <div class="star-yellow"><img src="src/assets/images/star-yellow.png" height="18" width="17" alt="">
+                                                    </div>
+                                                </span>
                                     </div>
-                                </span>
+                                    <div class="total-units elective">
+                                        <h5>Electives <br> Reserve</h5>
+                                        <span class="elective-bg">{{freeElectives}}</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="total-units elective">
-                                <h5>Electives <br> Reserve</h5>
-                                <span class="elective-bg">{{freeElectives}}</span>
+                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                <!-- <button type="button" class='btn btn-primary' ng-click='getNext()'>Next</button> -->
+                                <div class="next pull-right">
+                                    <button type="button" class="hidden-xs visible-lg visible-md visible-sm" ng-disabled="!isSelected" ng-click='getNext()'>Next<i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
+                                    <a href="#" class="hidden-sm visible-xs" ng-click='getNext()'>
+                                                <span><i class="fa fa-long-arrow-right" aria-hidden="true"></span></i>
+                                            </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-2 col-sm-2 col-xs-2">
-                        <!-- <button type="button" class='btn btn-primary' ng-click='getNext()'>Next</button> -->
-                        <div class="next pull-right">
-                            <button type="button" class="hidden-xs visible-lg visible-md visible-sm" ng-disabled="!isSelected" ng-click='getNext()'>Next<i class="fa fa-arrow-right" aria-hidden="true"></i> </button>
-                            <a href="#" class="hidden-sm visible-xs" ng-click='getNext()'>
-                                <span><i class="fa fa-long-arrow-right" aria-hidden="true"></span></i>
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
         </div>
-    </div>
-
-    <!--pop up design start-->
-    <div class="row">
+        <footer class="hidden-sm hidden-xs">
+            <div class="container">
+                <div class="foot-cont">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="cont-left">
+                                <h2>USC Marshall School of Business:</h2>
+                                <p>3670 Trousdale Pkwy,
+                                    <br> Los Angeles, CA 90089,
+                                    <br> United States</p>
+                                <a href="#">Map</a>
+                                <div class="clearfix"></div>
+                                <button href="#" class="cmn-btn2 btn">Full Directory <i class="fa fa-angle-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-8">
+                            <div class="cont-right">
+                                <ul>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">FOR JOURNALISTS</a></li>
+                                    <li><a href="#">SUPPORT MARSHALL</a></li>
+                                    <li><a href="#">ALUMNI ASSOCIATION</a></li>
+                                    <li><a href="#">MARSHALL IN THE NEWS</a></li>
+                                    <li><a href="#">USC</a></li>
+                                </ul>
+                                <div class="foot-social">
+                                    <p>Visit us on Social Media</p>
+                                    <ul class="btm-social">
+                                        <li class="skype"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li class="fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li class="in"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                        <li class="insta"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="container">
+                    <div class="col-lg-2 col-md-2 col-sm-2">
+                        <div class="btm-logo">
+                            <a href="#"><img src="src/assets/images/btm-logo.jpg" height="37" width="125" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-7">
+                        <div class="foot-left">University of Southern California Marshall School of Business | Copyright 2001 - 2007</div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="foot-right pull-right">
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--pop up design start-->
+        <!-- <div class="row"> -->
         <div class="modal fade bs-example-modal-sm" tabindex="-1" id="points-popup" role="dialog" aria-labelledby="mySmallModalLabel">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <img src="src/assets/images/points-icon.png" height="78" width="78" alt="">
-                <p>You’ve saved 4 free elective credits in your bank for your minor(s)”</p>
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <img src="src/assets/images/points-icon.png" height="78" width="78" alt="">
+                    <p>You’ve saved 4 free elective credits in your bank for your minor(s)”</p>
+                </div>
             </div>
         </div>
-    </div>
-    <!--pop up design start-->
-    <div class="row">
+        <!--pop up design start-->
+        <!-- <div class="row"> -->
         <div class="modal fade bs-example-modal-sm" tabindex="-1" id="chebox-popup" role="dialog" aria-labelledby="mySmallModalLabel">
-          <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content" style="width: 236px;text-align: center;height: auto;">
-        <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" style="font-size: 35px;">&times;</button>
-        <h2 style="color: #b62600;">{{messagePop}}</h2>
-    </div>
-</div>
-</div>
-</div>
-</div>
-<!--pop up design end-->
-
-
-</div>
-<script src="src/assets/vendor/jquery/dist/jquery.js"></script>
-<script src="src/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
-<script src="src/assets/vendor/angular/angular.min.js"></script>
-<script src="src/assets/vendor/angular-dragdrop/src/angular-dragdrop.min.js"></script>
-<script src="src/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="src/assets/js/jquery.ui.touch-punch.js"></script>
-<script src="src/assets/js/angular-drag-drop.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-<script src="src/assets/js/defaultServices.js"></script>
-<script src="src/assets/js/question.json"></script>
-<script src="src/assets/js/messages.js"></script>
-<script src="app.js"></script>
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content" style="width: 236px;text-align: center;height: auto;">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" style="font-size: 35px;">&times;</button>
+                        <h2 style="color: #b62600;">{{messagePop}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!--pop up design end-->
+        <!--pop up design start-->
+        <!-- <div class="row"> -->
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" id="help-popup" role="dialog" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content" style="height: auto;">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!-- <h4 class="modal-title">Modal Header</h4> -->
+                        <h2 class="modal-title" style="color: #991b1e;text-align: center;">How to play</h2>
+                    </div>
+                    <div class="modal-body">
+                        <!-- <div class="container"> -->
+                        <div class="main-wrapper">
+                            <!-- <div class="container"> -->
+                            <div class="row">
+                                <div class="draganddrop-outer howtoplay">
+                                    <p class="sample-text">Sample curriculum</p>
+                                    <div class="game-zone-outer">
+                                        <div class="game-zone">
+                                            <table class="" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan='2'>Freshman</th>
+                                                        <th colspan='2'>Sophomore</th>
+                                                        <th colspan='2'>Junior</th>
+                                                        <th colspan='2'>Senior</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Fall</td>
+                                                        <td>Spring</td>
+                                                        <td>Fall</td>
+                                                        <td>Spring</td>
+                                                        <td>Fall</td>
+                                                        <td>Spring</td>
+                                                        <td>Fall</td>
+                                                        <td>Spring</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div ng-repeat="item in gridData" class='box-contianer'>
+                                                <div class="grid box" data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
+                                                    <label class="title">{{item.data.title}}</label>
+                                                    <p class="desc">{{item.data.desc}}</p>
+                                                    <span class="points">{{item.data.points}}</span>
+                                                </div>
+                                            </div>
+                                            <table class="btm-table" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <th colspan='2'>
+                                                            <h4>SUMMER</h4>
+                                                        </th>
+                                                        <th class="background-none" colspan='2'>
+                                                            <div class="grid box-bottom">
+                                                                <label class="title">Global Leadership Program</label>
+                                                                <p class="desc">Beijing and Shanghai, China</p>
+                                                                <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                            </div>
+                                                        </th>
+                                                        <th colspan='2'>
+                                                            <h4>SUMMER</h4>
+                                                        </th>
+                                                        <th class="background-none" colspan='2'>
+                                                            <div class="grid box-bottom">
+                                                                <label class="title">Global Leadership Program</label>
+                                                                <p class="desc">Beijing and Shanghai, China</p>
+                                                                <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="discription">
+                                        <ul class="chart-detail">
+                                            <li><span><img src="src/assets/images/required-icon.png" height="20" width="21" alt=""></span>Required courses, fixed</li>
+                                            <li><span><img src="src/assets/images/unavailable-icon.png" height="20" width="21" alt=""></span>Unavailable</li>
+                                        </ul>
+                                        <div class="bottom-notes">
+                                            <h3>Objective</h3>
+                                            <p>To build a four-year course map using your free elective units and any additional free elective units you can earn with AP, IB, and A-Level exam credit</p>
+                                            <h3>Grid Key</h3>
+                                            <p><i>*Note: Courses that are outlined cannot be waived with AP, IB, or A-Level exam credit</i></p>
+                                            <ul>
+                                                <li>BUAD=USC Marshall business core course (you must complete these courses at USC)</li>
+                                                <li>ECON=Required economics courses that must be completed at USC</li>
+                                                <li>GE and Diversity=USC’s General Education courses, which give students a liberal arts core</li>
+                                                <li>WRIT=USC’s writing requirements </li>
+                                                <li>Marshall Elective= a student’s focus in business</li>
+                                                <li>Free Elective= ‘free’ courses that can be taken in any department at USC. You begin with 32 units.</li>
+                                                <li>Minor= Minors offer you a way to explore a department, interdisciplinary theme, or topical area with less commitment of time than a major. </li>
+                                            </ul>
+                                            <p>A minor can be completed in as few as 16 units, with most minors requiring about 20 to 24 units. Minors are optional. You may complete multiple minors or none at all.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                        <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!--pop up design end-->
+        <script src="src/assets/vendor/jquery/dist/jquery.js"></script>
+        <script src="src/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
+        <script src="src/assets/vendor/angular/angular.min.js"></script>
+        <script src="src/assets/vendor/angular-animate/angular-animate.min.js"></script>
+       
+        <script src="src/assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="src/assets/js/jquery.ui.touch-punch.js"></script>
+         <script src="src/assets/vendor/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+        <!-- <script src="src/assets/js/angular-drag-drop.min.js"></script> -->
+        <script src="src/assets/js/angular-sanitize.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="src/assets/js/defaultServices.js"></script>
+        <script src="question.js"></script>
+        <script src="src/assets/js/messages.js"></script>
+        <script src="app.js"></script>
+        <script src="general.js"></script>
 </body>
 
 </html>
