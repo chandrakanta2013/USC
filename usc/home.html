@@ -9,7 +9,7 @@
     <meta name="title" content="Meta Title default content goes here..">
     <meta name="description" content="Default description goes here..">
     <meta name="keywords" content="sitename, keyword1, Keyword2">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, minimum-scale=1.0, shrink-to-fit=no">
     <script src="src/assets/js/pace.min.js"></script>
     <link id="load_plugins_before" />
     <link rel="stylesheet" href="src/assets/css/styles.css">
@@ -44,10 +44,10 @@
         </div>
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class='visible-xs visible-sm hidden-lg hidden-md que-btn' ng-click='toggleQuestion()'>
+                <!-- <button type="button" class='visible-xs visible-sm hidden-lg hidden-md que-btn' ng-click='toggleQuestion()'>
                     <i class="fa fa-angle-right" aria-hidden="true" ng-show='queBlock'></i>
                     <i class="fa fa-angle-left" aria-hidden="true" ng-show='!queBlock'></i>
-                </button>
+                </button> -->
                 <a class="navbar-brand" href="index.html"><img src="src/assets/images/logo.png" class="img-responsive" height="37" width="164" alt=""></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -214,20 +214,31 @@
                                 </ul>
                                 <!-- <hr> -->
                                 <div class='option-container'>
-                                    <ul ng-if="currentQue.type == 'radio' && !currentQue.subTitle" id="styleScroll">
+                                    <ul ng-if="currentQue.type == 'radio' && !currentQue.showoptn" id="styleScroll">
                                         <li ng-repeat=" item in currentQue.options" ng-click="slctOptn(item)">
                                             <input type="radio" id="radio{{$index}}" name="option">
                                             <label class="labeloptn" for="radio{{$index}}">{{item.optn}}</label>
+                                            <ul id="styleScroll" class="suboption" ng-show="showoptnDiv">
+                                                <li ng-repeat="data in item.suboptn" id="nstdoptn{{$index}}" >
+                                                    <!-- <label>{{item.showoptn}}</label> -->
+                                                    <!-- ul>
+                                                        <li ng-repeat="data in  item.options" ng-click="slctOptn(data)"> -->
+                                                            <input type="radio" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-value="false" ng-model="selectedRadio"  class="subradio" ng-click="slctOptn(item,data)">
+                                                            <label class="chklabel" for="mltioption{{$index}}.[{{outer}}]">{{data.optn}}</label>
+                                                       <!--  </li>
+                                                    </ul> -->
+                                                </li>
+                                            </ul>
                                         </li>
                                     </ul>
-                                    <ul ng-if="currentQue.type == 'checkbox' && !currentQue.subTitle" id="styleScroll">
+                                    <ul ng-if="currentQue.type == 'checkbox' && !currentQue.showoptn" id="styleScroll">
                                         <li ng-repeat=" item in currentQue.options" ng-click="notCall!=1?slctOptn(item):''">
                                             <input type="checkbox" id="chkqustn{{$index}}" ng-click="slectchkbx(item,$event)" name="option" ng-model="item.selected">
                                             <label class="chklabel" for="chkqustn{{$index}}">{{item.optn}}</label>
                                     </ul>
-                                    <ul ng-if="currentQue.subTitle" id="styleScroll">
+                                    <!-- <ul ng-if="currentQue.showoptn" id="styleScroll">
                                         <li ng-repeat=" item in currentQue.options" id="nstdoptn{{$index}}" ng-init="outer=$index">
-                                            <label>{{item.subTitle}}</label>
+                                            <label>{{item.showoptn}}</label>
                                             <ul>
                                                 <li ng-repeat="data in  item.options" ng-click="slctOptn(data)">
                                                     <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected">
@@ -235,12 +246,12 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                                 <div ng-if="currentQue.showQueBlocks" class="que-block-container" ng-show="blockview">
                                     <p> {{currentQue.headingText}}</p>
                                     <div ng-repeat=" item in currentQue.queData" class='box-contianer'>
-                                        <div class="que box" id={{$index}} ng-class="item.class" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)'}">
+                                        <div class="que box" id={{$index}} ng-class="item.class" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)', onDrag :'onDrag($event)'}">
                                             <label class="title">{{item.data.title}}</label>
                                             <p class="desc">{{item.data.desc}}</p>
                                             <span class="points">{{item.data.points}}</span>
@@ -271,8 +282,8 @@
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <div class="start-over">
                                     <a href="javascript:window.location.reload(true)" ng-click="startOver()">
-                                            <span class="visible-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                                            <p class="hidden-xs visible-lg visible-md visible-sm" >Start Over</p></a>
+                                        <span class="visible-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
+                                        <p class="hidden-xs visible-lg visible-md visible-sm" >Start Over</p></a>
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
@@ -280,9 +291,9 @@
                                     <div class="total-units">
                                         <h5>Total Units</h5>
                                         <span>{{totalUnits}}
-                                                    <div class="star-yellow"><img src="src/assets/images/star-yellow.png" height="18" width="17" alt="">
-                                                    </div>
-                                                </span>
+                                            <div class="star-yellow"><img src="src/assets/images/star-yellow.png" height="18" width="17" alt="">
+                                            </div>
+                                        </span>
                                     </div>
                                     <div class="total-units elective">
                                         <h5>Electives <br> Reserve</h5>

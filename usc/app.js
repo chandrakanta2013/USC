@@ -71,13 +71,23 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
     $('#help-popup').modal('show');
 
     //===============Functions for question side bar in Responsive==============//
+    angular.element('#que-block').addClass('right-menu');
+    $scope.queBlock = true;
+
     $scope.toggleQuestion = function() {
         $scope.queBlock = !$scope.queBlock;
         if ($scope.queBlock) {
-            angular.element('#que-block').addClass('right-menu')
+            angular.element('#que-block').addClass('right-menu');
         } else {
-            angular.element('#que-block').removeClass('right-menu')
+            angular.element('#que-block').removeClass('right-menu');
         }
+    }
+    $scope.onDrag = function(e) {
+        if($(window).width() < 992){
+            $(window).scrollLeft(e.clientX);
+            $(window).scrollTop(e.clientY);    
+        }
+        
     }
     $scope.onStart = function(e) {
         $scope.toggleQuestion();
@@ -129,9 +139,11 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
 
     $scope.summer = [
         { heading: "Summer"},
-        {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"},
         { heading: "Summer"},
-        {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"}
+        { heading: "Summer"},
+        // {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"},
+        { heading: "Summer"},
+        // {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"}
     ];
     console.log($scope.currentQue,"$scope.currentQue.summer")
     //===============Fn call on item dro======================================//
@@ -169,11 +181,26 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
     }
     //=======================================================================//
 
-
+    $scope.selectedArray =  [];
+    $scope.showoptnDiv=false;
+    $scope.selectedRadio = {};
     //===============Fn call on Select Option to get selected Option==========//
-    $scope.slctOptn = function(optnObj) {
+    $scope.slctOptn = function(optnObj,data) {
+
         $scope.isSelected = 1;
         $scope.selectedOption = angular.copy(optnObj);
+        console.log(data,"$scope.selectedArray")
+        if(optnObj.suboptn){
+            $('.subradio').val('');
+            $scope.selectedRadio ='';
+            $scope.showoptnDiv=true;
+        }else{
+            console.log($('.subradio').val(),"val")
+
+            $scope.showoptnDiv=false;
+        }
+        return optnObj.showoptnDiv;
+        
     }
     //=======================================================================//
 
@@ -342,9 +369,13 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
     //=====================================================================================================//
 
     $scope.blockview = true;
+    $scope.seniorArry = [];
+    $scope.seniorArry2 = [];
+    $scope.juniorArry = [];
     //==============================Funtion Call on  Next button==================================//
     $scope.getNext = function() {
-        console.log($scope.selectedOption,"$scope.selectedOption")
+        $scope.selectedArray.push($scope.selectedOption); 
+        console.log($scope.selectedArray,"$scope.selectedOption");
         if ($scope.showLast == 1) { //Condition to show Div block when 0 elective left
             $scope.lastStep = true;
             $scope.blockview = false
@@ -383,8 +414,24 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
                 return false;
             }
             $scope.currentQue = $scope.queJson[queCounter];
-
             console.log($scope.currentQue, 'free');
+            if($scope.currentQue.autoMove){
+                // console.log($scope.gridData,"grid");
+                $scope.gridData.filter(function(obj){
+                    if(obj.year=="senior"){
+                        // $scope.seniorArry.push(obj);
+                        if(obj.class!='gray' && obj.class!='cross'){
+                            $scope.seniorArry.push(obj);
+                        }
+                    }
+                    if(obj.year=="junior"){
+                        $scope.juniorArry.push(obj);
+                    }
+
+                });
+                console.log($scope.seniorArry,"$scope.seniorArry");
+                console.log($scope.juniorArry,"$scope.juniorArry");
+            }
             if($scope.currentQue.confirm){
                 console.log("in condition")
                 $scope.isSelected = 1;
@@ -393,8 +440,8 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce','$rootScope', '$http',f
                 
                 $scope.currentQue.queData = $scope.currentQue.queData.concat($scope.selectedOption.dargData);
                 $scope.questionData = angular.copy($scope.currentQue.queData);
-                $scope.summer = [];
-                $scope.summer = $scope.selectedOption.summer;
+                // $scope.summer = [];
+                // $scope.summer = $scope.selectedOption.summer;
                 $scope.selectedOption = {};
                 $scope.chkboxArry = [];
                 return false;

@@ -39,6 +39,9 @@
     .js-form-item  { position: relative; }
     .js-form-item i.fa {position: absolute; right: 10px; top: 10px; font-size: 16px; color: #fc0;}
     .search-box {    margin: 30px 0; }
+    .foot-cont {    padding: 25px 0;}
+    .cont-right ul {padding: 0 0 10px 0; }
+
 
     /*hamberger button code start*/
     .navbar-toggle { position: absolute; left: 0; top: 0; }
@@ -51,12 +54,9 @@
     #nav-icon1.open span:nth-child(2) {opacity: 0; left: -60px; }
     #nav-icon1.open span:nth-child(3) {top: 41px; -webkit-transform: rotate(-135deg); -moz-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg); }
     /*hamberger button code end*/
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover { background-color:#900;  }
 
     /*intro page code end*/
-
-
-
-
 
 }
 
@@ -77,16 +77,17 @@
     h2.page-title i.fa-times { right: 15px; }
     /*how to play page code end*/
     .game-zone-outer{overflow-x: scroll; min-height:828px;  }
-    .game-zone-outer.gamescroll{overflow-x: inherit;}
+    .game-zone-outer.gamescroll{overflow-x: inherit;width: 1000px;}
     .box-bottom { width: 250px; }
     /*home page code start*/
-    .que-zone{position: fixed; height: 90vh; background: white; top: 0px; right: -120%; width: 80%; padding: 2px 20px 2px 50px; box-shadow: 0 0 6px rgba(0,0,0,0.4);  overflow: scroll;     }
-    .que-btn{float: right; margin: 0px 10px; background: #a31919; padding: 1px 10px; color: #FFF; border: 0; }
+    .que-zone{position: fixed; height: 90vh; background: white; top: 0px; right: -68%; width: 80%; padding: 2px 20px 2px 50px; box-shadow: 0 0 6px rgba(0,0,0,0.4);  z-index: 999;       padding-bottom: 38px; }
+    .que-btn{float: right; margin: 6px 20px 0 10px; background: #a31919; padding: 1px 10px; color: #FFF; border: 0; }
     .que-btn2 {    position: absolute; left: 2px; top: 25px;} 
     .static{position: static; }
     #que-block{transition: 0.5s; }
     .right-menu{right: -1px; }
-    .bottom {position: fixed; bottom: 0; z-index: 999;     padding: 20px 0; left: 0; margin-bottom: 0;   }
+    .bottom {position: fixed; bottom: 0; z-index: 99999; padding: 20px 0; left: 0; margin-bottom: 0;   }
+    #help-popup {z-index: 999999; }
     /*home page code end*/
 
     /*intro page code start*/
@@ -95,34 +96,29 @@
     .navbar-brand { padding: 5px !important; }
     .bottom-notes {    padding: 5%; box-sizing: border-box; }
     ul.chart-detail {padding: 20px 0 10px 0; }
+    div#que-block.right-menu{overflow: auto; }
 
     /*intro page code start*/
 
 }
 
 @media only screen and (min-width: 990px) and (max-width: 1023px) {
-
-
-
     .navbar-default .navbar-toggle {    top: -10px; }
 
 }
 
-
-
-
 @media only screen and (min-width: 768px) and (max-width: 990px) {
 
-    button.que-btn { position: absolute; right: 0; }
+    button.que-btn { position: absolute;     right: -17px; }
 
     /*intro page code start*/
     .page-title {top: -127px; }
     .page-title h2 {    font-size: 24px; padding-left: 9px; }
-    .page-title h2:before {    height: 42px; left: 0; top: -3px; }
+    .page-title h2:before {    height: 42px; left: -5px; top: -5px; }
     .foot-left {padding-left: 25px; padding-top: 0;  }
+    .foot-cont {padding: 30px 0; }
     /*intro page code end*/
 }
-
 
 @media only screen and (max-width: 767px) {
 
@@ -137,12 +133,11 @@
     .bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right { color: gray}
     .total-units {    margin-left: 0;  }
     .star-yellow { display: none; }
-    #points-popup .modal-content {margin: 0 50px; }
+    #points-popup .modal-content {margin: 0 50px; z-index: 999999}
     
 
     /*how to play page code start*/
     h2.page-title {font-size: 23px;}
-
     /*how to play page code end*/
 
 
@@ -172,12 +167,15 @@
     .navbar-default {min-height: 78px !important;}
     .navbar-default .navbar-brand {margin-left: 72px !important;     }
     .navbar-default .navbar-toggle {left: 0; top: -10px;    padding: 0 15px; }
+    .logo-right { display: none; }
 
     /*intro page code end*/
 
     /*home 2 page code start*/
     /*.banner img { display: none; }
     .page-title, .breadcrump, .social-share, .foot-cont, #footer { display: none; }*/
+    .right-menu button.cmn-btn {margin-top: 10px; }
+    /*.que-zone p {     font-size: 15px; line-height: 15px; }*/
 
 
     /*home 2 page code end*/
@@ -224,7 +222,7 @@
     .next { padding-top: 12px; }
     .next a {margin: -11px -28px 0 0; }
     .units-outer {width: 280px; margin: 0 0 0 -21px; padding: 0;}
-    button.que-btn2 { top: 25px !important; }
+    button.que-btn2 { top: 15px !important; }
     .mid-description, .cont-left, .cont-right ul {text-align: center; padding: 15px 0 25px 0; }
     .cont-right li { width: 100%; }
     
@@ -245,12 +243,12 @@
     ul.btm-social { text-align: center; width: 100%; display: inline-block; }  
     ul.btm-social li { float: none; display: inline; margin: 0 !important;  }
     ul.btm-social li a {width: 45px; height: 45px;     padding: 12px 0 0 0; display: inline-block; }
-    button.que-btn {position: absolute; right: 110px; top: 9px; z-index: 9999;} 
     .cont-left button {margin: 35px 0 0 0; }
     .social-share {padding: 20px 0 12px 0;}
+    /*.labeloptn{ padding: 0px 0px; }*/
     /*intro page code end*/
-
-
+    /*div#que-block.right-menu{overflow: auto; }*/
+    .navbar-static-top{ z-index: 999!important }
 
 }
 
@@ -267,17 +265,18 @@
     .total-units h5 {font-size: 10px; }
     .bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right {font-size: 26px;}
     .navbar-brand>img {max-width: 57%; margin-top: 8px; }
-    .labeloptn{ width: 93%; }
+    .labeloptn{ width: 93%; padding: 0px 0px}
 
 
 }
 
 
 
-@media only screen and (max-width: 320px) {
-
+@media only screen and (max-width: 324px) {
+    .labeloptn{ width: 93%; padding: 0px 0px}
     .login-head h3 {font-size: 20px; }
     .login-head p { font-size: 14px;}
     .units-outer {margin: 0 0 0 -60px; }
+    .labeloptn{width: 81%;padding: 0px 5px;}
 
 }

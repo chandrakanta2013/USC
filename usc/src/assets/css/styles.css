@@ -43,9 +43,9 @@ button.cmn-btn2:focus, button.cmn-btn2:active {  color: #fff; }
 .game-zone table { text-align: center; }
 .game-zone table th { text-align: center; background: #e3e2df; color: #000; text-transform: uppercase; font-size: 17px; border-right: 5px solid #f6f6f4; padding: 5px 0; width: 225px; }
 .game-zone table td {font-size: 12px; text-transform: uppercase; color: #51524e; font-weight: bold; min-width: 50px;  }
-.que-zone { text-align: left;font-size: 15px;}
+.que-zone { text-align: left;font-size: 14px;}
 
-table.btm-table th {border-radius: 10px; padding: 0;  }
+table.btm-table th {border-radius: 10px; padding: 10px;  }
 
 .box{    border-radius: 10px; /*margin-top: 5px; margin-left: 6px; margin-bottom: 5px;*/ padding: 8px; width: 98px; height: 104px; color: #fff; border: 2px solid #000; }
 .box label.title {font-weight: 400; font-size: 14px; margin: 0; padding: 0; line-height: 18px; font-family: arial; }
@@ -477,3 +477,6 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     opacity: 1.0;
 }*/
 /*block animation code end */
+.suboption{ margin-left: 27px; }
+.suboption li label{ padding-left: 7px; }
+.suboption li input[type=radio]{ margin: 12px 0px 0px; }

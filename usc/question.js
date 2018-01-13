@@ -9,19 +9,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false
+                        fixed: false,
+                        year: 'senior'
                     },
                     { data: { title: "ACCT 473",  desc: "Financial Statement Auditing",points: 4 }, 
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data:{ title: "ACCT 474",  desc: "Tax Issues for Business",points: 4 } ,
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     }
                     ],summer: [
                         {title:"Global Leader Program",desc: "Beijing and Shanghai, China"},
@@ -35,19 +38,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data: { title: "DSO 431",  desc: "Foundation of Digital Business Innovation",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data: { title: "DSO 433",  desc: "Business Process Design",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     }
                     ],summer: [
                         {title:"Learning about International Commerce",desc: "Hong Kong"},
@@ -61,19 +67,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data:  { title: "BAEP 491",  desc: "Social Entrepreneurship",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data: { title: "BAEP 453",  desc: "Venture Managemen",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     }
                     ],  summer: [
                             {title:"Learning about International Commerce",desc: "Buenos Aires, Argentina"},
@@ -87,19 +96,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data:  { title: "FBE 458",  desc: " Law and Finance",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false ,
+                        year: 'senior'
                     },
                     { data: { title: "FBE 460",  desc: " Mergers, Acquisitions and Restructuring",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false, 
+                        year: 'senior'
                     }
                     ],summer: [
                         {title:"Global Leader Program",desc: "Beijing and Shanghai, China"},
@@ -113,19 +125,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data:  { title: "MKT 405",  desc: "Advertising and Promotion Management",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false, 
+                        year: 'senior'
                     },
                     { data: { title: "MKT 465",  desc: "Global Marketing Management",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     }
                     ],summer: [
                         {title:"Global Leader Program",desc: "Beijing and Shanghai, China"},
@@ -139,19 +154,22 @@ var questionJson = [{
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data:  { title: "FBE 466",  desc: "Real Estate Feasibility Studies",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     },
                     { data: { title: "FBE 489",  desc: "Real Estate Capital Markets",points: 4 },
                         class: 'purple',
                         draggable: true,
                         droppable: false,
-                        fixed: false 
+                        fixed: false,
+                        year: 'senior' 
                     }
                     ], summer: [
                         {title:"Learning about International Commerce",desc: "Tokyo, Japan"},
@@ -180,9 +198,9 @@ var questionJson = [{
             que: 'Have you taken or will you take:',
             type: 'radio',
             options: [
-                { optn: 'AP Calculus exam? (Score of 4 or 5 only)', points: 4 },
-                { optn: 'IB Mathematics Higher Level-exam (Score of 5, 6, or 7)', points: 4 },
-                { optn: 'A-Level Mathematics exam (Score of A*, A, or B)', points: 4 },
+                { optn: 'AP Calculus exam? (Score of 4 or 5 only)', points: 4, course: 'AP' },
+                { optn: 'IB Mathematics Higher Level-exam (Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'A-Level Mathematics exam (Score of A*, A, or B)', points: 4, course: 'A-Level' },
                 { optn: 'None', points: 0, ques: 0 }
             ],
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -201,14 +219,14 @@ var questionJson = [{
             que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
             type: 'radio',
             options: [
-                { optn: 'AP Art History (Score of 4 or 5)', points: 4 },
-                { optn: 'IB Dance (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Film (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Music (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Theater (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Visual Arts (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'A-Level Art & Design (Score of A*, A, or B)', points: 4 },
-                { optn: 'A-Level Music (Score of A*, A, or B)', points: 4 },
+                { optn: 'AP Art History (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'IB Dance (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'IB Film (Higher Level; Score of 5, 6, or 7)', points: 4,course: 'IB' },
+                { optn: 'IB Music (Higher Level; Score of 5, 6, or 7)', points: 4,course: 'IB' },
+                { optn: 'IB Theater (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'IB Visual Arts (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'A-Level Art & Design (Score of A*, A, or B)', points: 4, course: 'A-level' },
+                { optn: 'A-Level Music (Score of A*, A, or B)', points: 4, course: 'A-level' },
                 { optn: 'None', points: 0, ques: 1 }
             ],
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -220,10 +238,10 @@ var questionJson = [{
             que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
             type: 'radio',
             options: [
-                { optn: 'AP Biology(Score of 4 or 5)', points: 4 },
-                { optn: 'IB Biology(Score of 5,6 or 7)', points: 4 },
-                { optn: 'A-Level Biology(Score of A*, A, or B)', points: 4 },
-                { optn: 'A-Level Marine Science(Score of A*, A, or B)', points: 4 },
+                { optn: 'AP Biology(Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'IB Biology(Score of 5,6 or 7)', points: 4, course: 'IB' },
+                { optn: 'A-Level Biology(Score of A*, A, or B)', points: 4, course: 'A-level' },
+                { optn: 'A-Level Marine Science(Score of A*, A, or B)', points: 4, course: 'A-level' },
                 { optn: 'None', points: 0, ques: 2 }
             ],
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -235,16 +253,16 @@ var questionJson = [{
             que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
             type: 'radio',
             options: [
-                { optn: 'AP Chemistry (Score of 4 or 5)', points: 4 },
-                { optn: 'AP Physics 1 (Score of 4 or 5)', points: 4 },
-                { optn: 'AP Physics 2 (Score of 4 or 5)', points: 4 },
-                { optn: 'AP Physics B (Score of 4 or 5)', points: 4 },
-                { optn: "AP Physics (C'Electricity/Magnetism) (Score of 4 or 5)", points: 4 },
-                { optn: "AP Physics (C'Mechanics) (Score of 4 or 5)", points: 4 },
-                { optn: 'IB Chemistry (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Physics (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'A-Level Chemistry (Score of A*, A, or B)', points: 4 },
-                { optn: 'A-Level Physics  (Score of A*, A, or B)', points: 4 },
+                { optn: 'AP Chemistry (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'AP Physics 1 (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'AP Physics 2 (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'AP Physics B (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: "AP Physics (C'Electricity/Magnetism) (Score of 4 or 5)", points: 4, course: 'AP' },
+                { optn: "AP Physics (C'Mechanics) (Score of 4 or 5)", points: 4, course: 'AP' },
+                { optn: 'IB Chemistry (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'IB Physics (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'A-Level Chemistry (Score of A*, A, or B)', points: 4, course: 'A-level' },
+                { optn: 'A-Level Physics  (Score of A*, A, or B)', points: 4, course: 'A-level' },
                 { optn: 'None', points: 0, ques: 3 }
             ],
             points: 4,
@@ -257,11 +275,11 @@ var questionJson = [{
             que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
             type: 'radio',
             options: [
-                { optn: 'IB Blobal Politics', points: 4 },
-                { optn: 'IB Asia and Oceania(Higher Level;Score of 5,6 or 7)', points: 4 },
-                { optn: 'IB History of Africa(Higher Level;Score of 4 or 5)', points: 4 },
-                { optn: 'IB History of Americas(Higher Level;Score of 4 or 5)', points: 4 },
-                { optn: 'A-Level History (Score of A*, A, or B)', points: 4 },
+                { optn: 'IB Blobal Politics', points: 4, course: 'IB' },
+                { optn: 'IB Asia and Oceania(Higher Level;Score of 5,6 or 7)', points: 4, course: 'IB' },
+                { optn: 'IB History of Africa(Higher Level;Score of 4 or 5)', points: 4, course: 'IB' },
+                { optn: 'IB History of Americas(Higher Level;Score of 4 or 5)', points: 4, course: 'IB' },
+                { optn: 'A-Level History (Score of A*, A, or B)', points: 4, course: 'A-Level' },
                 { optn: 'None', points: 0, ques: 4 }
             ],
             points: 4,
@@ -274,14 +292,14 @@ var questionJson = [{
             que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
             type: 'radio',
             options: [
-                { optn: 'AP European History (Score of 4 or 5)', points: 4 },
-                { optn: 'AP US History (Score of 4 or 5)', points: 4 },
-                { optn: 'AP World History (Score of 4 or 5)', points: 4 },
-                { optn: 'IB History of Europe & Islamic World (Score of 5, 6, or 7)', points: 4 },
-                { optn: 'IB Europe and the Middle East (Higher Level; Score of 5, 6, or 7)', points: 4 },
-                { optn: 'A-Level Classical Studies (Score of A*, A, or B)', points: 4 },
-                { optn: 'A-Level Divinity (Score of A*, A, or B)', points: 4 },
-                { optn: 'A-Level Islamic Studies (Score of A*, A, or B)', points: 4 },
+                { optn: 'AP European History (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'AP US History (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'AP World History (Score of 4 or 5)', points: 4, course: 'AP' },
+                { optn: 'IB History of Europe & Islamic World (Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'IB Europe and the Middle East (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
+                { optn: 'A-Level Classical Studies (Score of A*, A, or B)', points: 4, course: 'A-Level' },
+                { optn: 'A-Level Divinity (Score of A*, A, or B)', points: 4, course: 'A-Level' },
+                { optn: 'A-Level Islamic Studies (Score of A*, A, or B)', points: 4, course: 'A-Level' },
                 { optn: 'None', points: 0, ques: 5 }
             ],
             points: 4,
@@ -294,11 +312,26 @@ var questionJson = [{
             que: 'Nice! You have (x amount) of credits. Now you have the following options:',
             type: 'radio',
             options: [
-                { optn: 'Add on a Progressive Degree and graduate within 4 years with a Master Degree', points: 4 },
-                { optn: 'Get Undergraduate Degree early and start your career', points: 4 }
+                    { optn: 'Add on a Progressive Degree and graduate within 4 years with a Master Degree',showoptn: false, suboptn: [
+                    { optn: 'Master in Accounting (Accounting)' },
+                    { optn: 'SAP Graduate Certificate (Consulting)' },
+                    { optn: 'Master of Science in Social Entrepreneurship (Entrepreneurship)'},
+                    { optn: 'Master of Science in Finance (Finance)' },
+                    { optn: 'Master of Science in Marketing (Marketing)' },
+                    { optn: 'Master of Construction Management (Real Estate)' }
+                ]},
+                { optn: 'Get Undergraduate Degree early and start your career', points: 4 },
+                { optn: 'Explore minors outside of business at USC', points: 4 }
             ],
-            points: 4,
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
+            enableNext: false
+        },
+        { 
+            title: '',
+            heading: '',
+            que: 'We’ve rearranged the grid for your Master program',
+            successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
+            autoMove: true,
             enableNext: false
         },
         {
@@ -476,7 +509,8 @@ var questionJson = [{
             class: 'orange defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'freshman'
         }, {
             data: {
                 title: 'ECON 351x',
@@ -486,7 +520,8 @@ var questionJson = [{
             class: 'pink defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'freshman'
         }, {
             data: {
                 title: 'ECON 352x',
@@ -496,7 +531,8 @@ var questionJson = [{
             class: 'pink defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'sophomore'
         }, {
             data: {
                 title: 'BUAD 307',
@@ -506,7 +542,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'sophomore'
         }, {
             data: {
                 title: 'BUAD 311',
@@ -516,7 +553,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'junior'
         }, {
             data: {
                 title: 'BUAD 497',
@@ -526,7 +564,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'junior'
         }, {
             data: {
                 title: 'BUAD 425',
@@ -536,13 +575,15 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: {
                 title: 'GESM',
@@ -552,7 +593,8 @@ var questionJson = [{
             class: 'orange defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'freshman'
         }, {
             data: {
                 title: 'BUAD 310',
@@ -562,7 +604,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'freshman'
         }, {
             data: {
                 title: 'BUAD 280',
@@ -572,7 +615,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'sophomore'
         }, {
             data: {
                 title: 'BUAD 281',
@@ -582,7 +626,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'sophomore'
         }, {
             data: {
                 title: 'BUAD 306',
@@ -592,7 +637,8 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'junior'
         }, {
             data: {
                 title: 'WRIT 340',
@@ -602,7 +648,8 @@ var questionJson = [{
             class: 'orange defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'junior'
         }, {
             data: {
                 title: 'GE - C',
@@ -612,19 +659,22 @@ var questionJson = [{
             class: 'orange defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'freshman'
         }, {
             data: {
                 title: 'BUAD 304',
@@ -634,13 +684,15 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'freshman'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'sophomore'
         }, {
             data: {
                 title: 'BUAD 302',
@@ -650,127 +702,148 @@ var questionJson = [{
             class: 'red defaultselect',
             draggable: false,
             droppable: false,
-            fixed: true
+            fixed: true,
+            year: 'sophomore'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
+            year: 'freshman'
         },
         {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'freshman'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'sophomore'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'sophomore'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'cross',
             draggable: false,
             droppable: false,
-            fixed: false
+            fixed: false,
+            year: 'freshman'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'freshman'
         }, {
             data: 'blank',
             class: 'cross',
             draggable: false,
             droppable: false,
-            fixed: false
+            fixed: false,
+            year: 'sophomore'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'sophomore'
         }, {
             data: 'blank',
             class: 'cross',
             draggable: false,
             droppable: false,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'cross',
             draggable: false,
             droppable: false,
-            fixed: false
+            fixed: false,
+            year: 'junior'
         }, {
             data: 'blank',
             class: 'gray',
             draggable: false,
             droppable: true,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }, {
             data: 'blank',
             class: 'cross',
             draggable: false,
             droppable: false,
-            fixed: false
+            fixed: false,
+            year: 'senior'
         }
     ]
     // $scope.signout = function() {
