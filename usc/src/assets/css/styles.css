@@ -45,12 +45,12 @@ button.cmn-btn2:focus, button.cmn-btn2:active {  color: #fff; }
 .game-zone table td {font-size: 12px; text-transform: uppercase; color: #51524e; font-weight: bold; min-width: 50px;  }
 .que-zone { text-align: left;font-size: 14px;}
 
-table.btm-table th {border-radius: 10px; padding: 10px;  }
+table.btm-table th {border-radius: 10px; padding: 10px 10px;  }
 
-.box{    border-radius: 10px; /*margin-top: 5px; margin-left: 6px; margin-bottom: 5px;*/ padding: 8px; width: 98px; height: 104px; color: #fff; border: 2px solid #000; }
-.box label.title {font-weight: 400; font-size: 14px; margin: 0; padding: 0; line-height: 18px; font-family: arial; }
+.box{    border-radius: 10px; padding: 0 8px; width: 98px; height: 98px; color: #fff; border: 2px solid #000; text-align: left;  }
+.box label.title {font-weight: 600; font-size: 13px; margin: 0; padding: 9px 0; line-height: 16px; font-family: arial; word-wrap: break-word;}
 .box p.desc {font-size: 11px; line-height: 12px; margin: 0; padding: 0; }
-.box span.points {     margin: 0; padding: 4px 8px; font-size: 13px; line-height: 14px; background: #000; position: absolute; bottom: 3px; left: 8px; border-radius: 80px; }
+.box span.points {     margin: 0; padding: 3px 6px; font-size: 11px; line-height: 12px; background: #000; position: absolute; bottom: 3px; left: 8px; border-radius: 10px; }
 
 .box-bottom{    border-radius: 10px; margin-top: 5px; margin-bottom: 5px; padding: 8px; width: 98px; height: 104px; color: #fff; position: relative; border-radius: 10px; margin-top: 0; margin-right: 0; margin-bottom: 0; padding: 8px; width: 204px; height: 60px; color: #fff; /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffb910+1,ffb910+50,ffab0e+52,ffab0e+100 */
     background: #ffb910; /* Old browsers */
@@ -62,7 +62,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb910', end
 .box-bottom p.desc {font-size: 11px; line-height: 13px; margin: 0; padding: 0; text-align: left; text-transform: none;  }
 .box-bottom span.star {     position: absolute; right: 5px; top: 22px; }
 
-.box-contianer{    display: block; float: left; margin-top: 5px; margin-left: 6px; background: #eee1e1; border-radius: 10px; margin-bottom: 5px;}
+.box-contianer{    display: block; float: left; margin-top: 5px; margin-left: 5px; background: #eee1e1; border-radius: 10px; margin-bottom: 5px;}
 
 .que-block-container{width: 100%; float: left; min-height: 200px; }
 
@@ -111,8 +111,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#69d6b5', end
     background: -webkit-linear-gradient(-45deg, #59cacc 1%,#59cacc 50%,#4bc0c2 53%,#4bc0c2 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #59cacc 1%,#59cacc 50%,#4bc0c2 53%,#4bc0c2 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59cacc', endColorstr='#4bc0c2',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */}
+.blue{ 
+    background: #75a6fa; / Old browsers /
+    background: -moz-linear-gradient(-45deg, #75a6fa 0%, #75a6fa 0%, #75a6fa 50%, #6497fa 50%); 
+    background: -webkit-linear-gradient(-45deg, #75a6fa 0%,#75a6fa 0%,#75a6fa 50%,#6497fa 50%); 
+    background: linear-gradient(135deg, #75a6fa 0%,#75a6fa 0%,#75a6fa 50%,#6497fa 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#75a6fa', endColorstr='#6497fa',GradientType=1 ); 
+}
 
-.cross {display: block; margin: auto; width: 98px; height: 104px; position: relative; border: solid 1px #c8c6c4; background: #e3e2df; position: relative; border-radius: 10px; /*margin-top: 5px; margin-left: 6px; margin-bottom: 5px; */}
+.cross {display: block; margin: auto; width: 98px; height: 98px; position: relative; border: solid 1px #c8c6c4; background: #e3e2df; position: relative; border-radius: 10px; /*margin-top: 5px; margin-left: 6px; margin-bottom: 5px; */}
 .cross:before {     content: ''; position: absolute; top: 50%; left: -16px; width: 130px; height: 1px; background: #c8c6c4; transform: rotate(45deg); } 
 .cross:after { content: ''; position: absolute; top: 50%; left: -16px; width: 130px; height: 1px; background: #c8c6c4; transform: rotate(-45deg); }
 
@@ -175,7 +182,7 @@ span.elective-bg { background: url(../images/elective-icon.png) no-repeat center
 
 .indstry{  -webkit-appearance: menulist-button; height: 47px!important; }
 .labeloptn{ width: 94%; padding: 0px 5px; font-weight: 400}
-.option-container ul{ list-style: none;    max-height: 487px; overflow: auto; padding: 3px; }
+.option-container ul{ list-style: none;    max-height: 487px; overflow: hidden; padding: 3px; }
 .option-container input[type=radio]{float: left; margin:8px 0px 0px;}
 .chklabel{  width: 92%; font-weight: 400;vertical-align: text-top; margin-top: -4px;}
 .brown{ background:#d19b53 }
@@ -324,6 +331,12 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 .help:hover{ color: #a11b1f; text-decoration: none;}
 .help:focus{ outline: none}
 .modal-header .close{ font-size: 37px; }
+
+/*game page code start*/
+.blue .points{ display: none }
+.box.rmvBorder{ border:none; }
+/*game page code end*/
+
 
 
 /*block animation code start */
@@ -475,8 +488,8 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 }
 100% {
     opacity: 1.0;
-}*/
-/*block animation code end */
-.suboption{ margin-left: 27px; }
-.suboption li label{ padding-left: 7px; }
-.suboption li input[type=radio]{ margin: 12px 0px 0px; }
+    }*/
+    /*block animation code end */
+    .suboption{ margin-left: 27px; }
+    .suboption li label{ padding-left: 7px; }
+    .suboption li input[type=radio]{ margin: 12px 0px 0px; }

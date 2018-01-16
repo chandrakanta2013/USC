@@ -1,4 +1,11 @@
-var questionJson = [{
+var questionJson = [
+        { title: '',
+        heading: 'Required Course',
+        que: 'Required courses (60 units) are prefilled for you. They are fixed and cannot be moved. Let’s begin.',
+        type: 'text',
+        enableNext: true
+        },
+        {
             title: 'Q1',
             heading: 'Calculus',
             que: 'After graduation, which of the following are you interested in pursuing? ',
@@ -312,7 +319,7 @@ var questionJson = [{
             que: 'Nice! You have (x amount) of credits. Now you have the following options:',
             type: 'radio',
             options: [
-                    { optn: 'Add on a Progressive Degree and graduate within 4 years with a Master Degree',showoptn: false, suboptn: [
+                    { optn: 'Add on a Progressive Degree and graduate within 4 years with a Master Degree', optionType: 'Progressive' ,showoptn: false, suboptn: [
                     { optn: 'Master in Accounting (Accounting)' },
                     { optn: 'SAP Graduate Certificate (Consulting)' },
                     { optn: 'Master of Science in Social Entrepreneurship (Entrepreneurship)'},
@@ -320,23 +327,23 @@ var questionJson = [{
                     { optn: 'Master of Science in Marketing (Marketing)' },
                     { optn: 'Master of Construction Management (Real Estate)' }
                 ]},
-                { optn: 'Get Undergraduate Degree early and start your career', points: 4 },
-                { optn: 'Explore minors outside of business at USC', points: 4 }
+                { optn: 'Get Undergraduate Degree early and start your career', optionType: 'Undergraduate'},
+                { optn: 'Explore minors outside of business at USC', optionType: 'business'}
             ],
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
             enableNext: false
         },
         { 
-            title: '',
+            title: 'Progressive degree',
             heading: '',
             que: 'We’ve rearranged the grid for your Master program',
             successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
             autoMove: true,
-            enableNext: false
-        },
+            enableNext: true
+            },
         {
             title: 'Q9',
-            heading: 'Now It’s time to use your bank credits! In total, USC offers over 150 different minor programs for undergraduate students.  The minors below represent some of the most popular minor programs amongst USC Marshall students.  ',
+            heading: 'Now It’s time to use your bank credits!   ',
             que: 'Select one or more minor programs depending on the free elective units in your bank',
             type: 'checkbox',
             options: [
