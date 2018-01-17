@@ -43,11 +43,18 @@ button.cmn-btn2:focus, button.cmn-btn2:active {  color: #fff; }
 .game-zone table { text-align: center; }
 .game-zone table th { text-align: center; background: #e3e2df; color: #000; text-transform: uppercase; font-size: 17px; border-right: 5px solid #f6f6f4; padding: 5px 0; width: 225px; }
 .game-zone table td {font-size: 12px; text-transform: uppercase; color: #51524e; font-weight: bold; min-width: 50px;  }
-.que-zone { text-align: left;font-size: 14px;}
+.que-zone { text-align: left;font-size: 16px;line-height: 27px;}
+/*.que-zone p{font-size: 14px;}*/
 
 table.btm-table th {border-radius: 10px; padding: 10px 10px;  }
 
-.box{    border-radius: 10px; padding: 0 8px; width: 98px; height: 98px; color: #fff; border: 2px solid #000; text-align: left;  }
+.box{border-radius: 10px; padding: 0 8px; width: 98px; height: 98px; color: #fff; border: 2px solid #000; text-align: left; 
+    /*-webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+    -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);*/
+
+ }
 .box label.title {font-weight: 600; font-size: 13px; margin: 0; padding: 9px 0; line-height: 16px; font-family: arial; word-wrap: break-word;}
 .box p.desc {font-size: 11px; line-height: 12px; margin: 0; padding: 0; }
 .box span.points {     margin: 0; padding: 3px 6px; font-size: 11px; line-height: 12px; background: #000; position: absolute; bottom: 3px; left: 8px; border-radius: 10px; }
@@ -64,7 +71,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb910', end
 
 .box-contianer{    display: block; float: left; margin-top: 5px; margin-left: 5px; background: #eee1e1; border-radius: 10px; margin-bottom: 5px;}
 
-.que-block-container{width: 100%; float: left; min-height: 200px; }
+.que-block-container{width: 100%; float: left; height: auto;  min-height: 148px;}
 
 .orange{ /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff954e+1,ff954e+49,ff7f42+52,ff7f42+52,ff7f42+100 */
     background: #ff954e; /* Old browsers */
@@ -186,6 +193,7 @@ span.elective-bg { background: url(../images/elective-icon.png) no-repeat center
 .option-container input[type=radio]{float: left; margin:8px 0px 0px;}
 .chklabel{  width: 92%; font-weight: 400;vertical-align: text-top; margin-top: -4px;}
 .brown{ background:#d19b53 }
+#styleScroll{ overflow: auto; }
 #styleScroll::-webkit-scrollbar{width: 8px; }
 #styleScroll::-webkit-scrollbar-track {background: #80808061; border: 5px solid transparent; background-clip: content-box; } 
 #styleScroll::-webkit-scrollbar-thumb{background: rgb(172, 32, 15); border-radius: 24px;}
@@ -340,7 +348,7 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 
 
 /*block animation code start */
-/*.box-contianer .defaultselect {
+.box-contianer .defaultselect {
   -webkit-animation: fadeIn 0.3s;
   animation: fadeIn 0.3s;
   -webkit-animation-fill-mode: forwards;
@@ -488,8 +496,53 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 }
 100% {
     opacity: 1.0;
-    }*/
+    }
+}
     /*block animation code end */
     .suboption{ margin-left: 27px; }
     .suboption li label{ padding-left: 7px; }
     .suboption li input[type=radio]{ margin: 12px 0px 0px; }
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 0;
+  /*display: none;*/
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 1;
+  will-change: transform;
+  background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}
+.rightBox{ background: none;}
+/*.rightBox:first-child{ margin-left: 0px!important }*/
+
+   /* position: relative;
+    left: 25%;
+    top: -107px;*/

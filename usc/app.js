@@ -54,13 +54,50 @@ App.controller('loginCtrl', ['$scope', 'errorMsgFactory', function($scope, error
 
 //========================================Controller for Home.html Page=================================================//
 App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http', function($timeout, $scope, $sce, $rootScope, $http) {
-    //=======================JSON Array For Question Flow====================//
+    //=======================Function for swipe====================//   
+    var touchsurface = document.getElementById('que-block'),
+        detecttouch = !!('ontouchstart' in window) || !!('ontouchstart' in document.documentElement) || !!window.ontouchstart || !!window.Touch || !!window.onmsgesturechange || (window.DocumentTouch && window.document instanceof window.DocumentTouch),
+        startX,
+        startY,
+        dist,
+        threshold = 5;
+        touchsurface.addEventListener('touchstart', function(e){
+            var touchobj = e.changedTouches[0]
+            swipedir = 'none'
+            dist = 0
+            startX = touchobj.pageX
+            startY = touchobj.pageY
+        
+        }, false);
+        touchsurface.addEventListener('touchmove', function(e){
+        }, false)
+
+        touchsurface.addEventListener('touchend', function(e){
+            var touchobj = e.changedTouches[0]
+            distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
+            distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
+            if (Math.abs(distX) >= threshold ){ // 2nd condition for horizontal swipe met
+                swipedir = (distX < 0)? 'left' : 'right'
+            }
+            handleswipe(swipedir)
+        }, false)
+
+        function handleswipe(isrightswipe){
+            if (isrightswipe == 'left'){
+                angular.element('#que-block').addClass('right-menu');
+            }else if (isrightswipe == 'right'){
+                angular.element('#que-block').removeClass('right-menu');
+            }
+        }
+    //=======================Function for swipe====================//
+
+    var scrolltop = $('.main-wrapper').offset().top
+    $(window).scrollTop(scrolltop);
     $scope.queJson = questionJson;
     $scope.gridData = gridBlock;
-
     if (window.location.href.indexOf("file") === -1) {
         var path = window.location.href.split('home.html');
-        console.log("path", path);
+        // console.log("path", path);
     }
     if (window.location.href.indexOf("4015") === -1 && window.location.href.indexOf("4005") === -1) {
         var path = window.location.href.split('usc');
@@ -83,13 +120,28 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     }
     $scope.onDrag = function(e) {
         if ($(window).width() < 992) {
-            $(window).scrollLeft(e.clientX);
+            $(window).scrollLeft(e.clientX+100);
             $(window).scrollTop(e.clientY);
         }
 
     }
     $scope.onStart = function(e) {
         $scope.toggleQuestion();
+    }
+
+
+    $timeout(function(){
+        $('.gridbox').css({'opacity':'0'});
+    },10)
+
+    //====Function for animation of block on popup close====//
+    $scope.closepopUp = function(){
+        console.log("close popup");
+        $('.gridbox').css({'opacity':'1'});
+        $('.box-contianer').find('.red').addClass('defaultselect')
+        $('.box-contianer').find('.pink').addClass('defaultselect')
+        $('.box-contianer').find('.orange').addClass('defaultselect')
+
     }
     //==========================================================================//
 
@@ -140,9 +192,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         { heading: "Summer" },
         { heading: "Summer" },
         { heading: "Summer" },
-        // {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"},
         { heading: "Summer" },
-        // {title: "Global Leadership Program", desc: "Beijing and Shanghai, China"}
     ];
     console.log($scope.currentQue, "$scope.currentQue.summer")
     //===============Fn call on item dro======================================//
@@ -228,6 +278,12 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $scope.selectedOption.name = 'FREE ELECTIVE';
                 $scope.selectedOption.points = $scope.freeElectives;
                 $scope.color = 'sky-blue rmvBorder';
+                if(i == 0 || i==5 || i==10){
+                     $scope.margin = '0px'
+                }
+                else{
+                     $scope.margin = '-60px'
+                }
                 $scope.gridData.filter(function(objct) {
                     if (objct.class == 'gray') {
                         cnt++
@@ -237,10 +293,23 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             if ($scope.currentQue.nextBlock == 'afterQ4') { //condition for QUESTN 4
                 $scope.color = 'purple rmvBorder';
                 $scope.blckPoints = '4';
+                if(i == 0 || i==5 || i==10){
+                     $scope.margin = '0px'
+                }
+                else{
+                     $scope.margin = '-60px'
+                }
                 $scope.selectedOption.name = $scope.chkboxArry[i].optn;
             } else if ($scope.currentQue.nextBlock != 'afterQ5' && $scope.currentQue.nextBlock != 'afterQ4') { //condition for QUESTN 5
                 $scope.color = 'green rmvBorder';
                 $scope.blckPoints = '4';
+                if(i == 0 || i==5 || i==10){
+                     $scope.margin = '0px'
+                }
+                else{
+                     $scope.margin = '-60px'
+                }
+               
                 $scope.chkboxArry.filter(function(objct) {
                     if (objct.name) {
                         $scope.selectedOption.name = objct.name;
@@ -257,7 +326,10 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 class: $scope.color,
                 draggable: true,
                 droppable: false,
-                fixed: false
+                fixed: false,
+                stylecss: {
+                    marginLeft: $scope.margin
+                }
             }
             //=====================================//
             console.log($scope.currentQue,"$scope.currentQue")
@@ -374,28 +446,6 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         droppable: false,
         fixed: false
     }
-    // $scope.purpleBlock = [{
-    //         data: { title: "FBE 453", desc: "Advanced Practicum in Investment Management", points: 4 },
-    //         class: 'purple rmvBorder',
-    //         draggable: true,
-    //         droppable: false,
-    //         fixed: false
-    //     },
-    //     {
-    //         data: { title: "FBE 453", desc: "Advanced Practicum in Investment Management", points: 4 },
-    //         class: 'purple rmvBorder',
-    //         draggable: true,
-    //         droppable: false,
-    //         fixed: false
-    //     },
-    //     {
-    //         data: { title: "FBE 453", desc: "Advanced Practicum in Investment Management", points: 4 },
-    //         class: 'purple rmvBorder',
-    //         draggable: true,
-    //         droppable: false,
-    //         fixed: false
-    //     }
-    // ]
     $scope.blockview = true;
     $scope.seniorArry = [];
     $scope.seniorArry2 = [];
@@ -404,8 +454,12 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     $scope.apCourse = [];
     //==============================Funtion Call on  Next button==================================//
     $scope.getNext = function() {
+
         $scope.selectedArray.push($scope.selectedOption);
         console.log($scope.selectedArray, "$scope.selectedOption");
+        if($scope.currentQue.removeClass){
+            $('.box-contianer ').find('.defaultselect').removeClass('defaultselect');
+        }
         if ($scope.showLast == 1) { //Condition to show Div block when 0 elective left
             $scope.lastStep = true;
             $scope.blockview = false
@@ -455,11 +509,11 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
 
 
             if ($scope.currentQue.autoMove) { //Condition for Question 8
-
+                console.log($scope.gridData,"griddata");
                 $scope.gridData = $scope.gridData.map(function(obj) {
                     if (obj.year == "senior") {
                         $scope.seniorArry.push(obj);
-                        if (obj.class == 'purple') {
+                        if (obj.class == 'purple rmvBorder') {
                             $scope.purpleBlock.push(obj);
                         }
                         $scope.blueBox.data.title = 'Master in' + " " + $scope.selectedArray[1].optn + "";
@@ -521,8 +575,6 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $scope.currentQue.content1 = "You will have opportunity to participate in Academic Project," + "<strong>" + $scope.selectedOption.content + "</strong>";
                 $scope.currentQue.queData = $scope.currentQue.queData.concat($scope.selectedOption.dargData);
                 $scope.questionData = angular.copy($scope.currentQue.queData);
-                // $scope.summer = [];
-                // $scope.summer = $scope.selectedOption.summer;
                 $scope.selectedOption = {};
                 $scope.chkboxArry = [];
                 return false;

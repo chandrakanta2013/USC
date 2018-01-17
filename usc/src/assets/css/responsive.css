@@ -22,7 +22,8 @@
     .header__bottom ul.right li { margin: 0 0px 0 15px; }
     .page-title {position: absolute; top: -197px; left: 0; padding: 20px 23px; }
     #navbar ul { display: none !important; }
-    .navbar-default .navbar-toggle {border-color: #ddd; background: #900; height: 87px; width: 70px; padding: 0 23px; position: absolute; left: 0; top: 0; border-radius: 0; border: 0; display: block; z-index: 999;   }
+    .navbar-default .navbar-toggle {border-color: #ddd; background: #900; height: 72px;
+    width: 57px; padding: 0 23px; position: absolute; left: 0; top: 0; border-radius: 0; border: 0; display: block; z-index: 999;   }
     .header__bottom {background: none !important; }
     .header__bottom__inner.container {width: 50% !important; }
     .header__bottom__inner { background-color: #900; width: 100% !important; margin: 0; padding: 0 10px; float: left; display: none;   }
@@ -46,7 +47,7 @@
     /*hamberger button code start*/
     .navbar-toggle { position: absolute; left: 0; top: 0; }
     #nav-icon1 {position: absolute; margin: 0 auto; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .5s ease-in-out; -moz-transition: .5s ease-in-out; -o-transition: .5s ease-in-out; transition: .5s ease-in-out; cursor: pointer; }
-    #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {display: block; position: absolute; height: 5px; width: 50%; background: #fff; border-radius: 9px; opacity: 1; left: 16px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; }
+    #nav-icon1 span, #nav-icon3 span, #nav-icon4 span {display: block; position: absolute; height: 5px; width: 46%; background: #fff; border-radius: 9px; opacity: 1; left: 16px; -webkit-transform: rotate(0deg); -moz-transform: rotate(0deg); -o-transform: rotate(0deg); transform: rotate(0deg); -webkit-transition: .25s ease-in-out; -moz-transition: .25s ease-in-out; -o-transition: .25s ease-in-out; transition: .25s ease-in-out; }
     #nav-icon1 span:nth-child(1) {top: 30px; }
     #nav-icon1 span:nth-child(2) {top: 42px; }
     #nav-icon1 span:nth-child(3) {top: 54px; }
@@ -98,7 +99,7 @@
     /*home page code end*/
 
     /*intro page code start*/
-    .navbar-default {    padding: 14px 0; min-height: 88px !important; }
+    .navbar-default {    padding: 11px 0; min-height: 88px !important; }
     #navbar {margin: 0 0 0 10px; }
     .navbar-brand { padding: 5px !important; }
     .bottom-notes {    padding: 5%; box-sizing: border-box; }
@@ -175,7 +176,7 @@
     .btm-logo { text-align: center;  }
     .foot-left {padding-left: 0px; padding-top: 0;  }
     .cont-left:after { display: none; }
-    .navbar-default {min-height: 78px !important;}
+    .navbar-default {min-height: 63px !important;}
     .navbar-default .navbar-brand {margin-left: 72px !important;     }
     .navbar-default .navbar-toggle {left: 0; top: -10px;    padding: 0 15px; }
     .logo-right { display: none; }
@@ -271,6 +272,7 @@
     .box label.title{ font-size: 11px;line-height: 16px; }
     .box p.desc{ font-size: 9px;
     line-height: 10px; }
+    .rightBox{ height: 98px; width: 98px }
    /* .box:hover{ position: absolute;
     width: 98px;
     height: 98px;

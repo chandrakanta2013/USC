@@ -44,10 +44,6 @@
         </div>
         <div class="container">
             <div class="navbarbar-header">
-                <!-- <button type="button" class='visible-xs visible-sm hidden-lg hidden-md que-btn' ng-click='toggleQuestion()'>
-                    <i class="fa fa-angle-right" aria-hidden="true" ng-show='queBlock'></i>
-                    <i class="fa fa-angle-left" aria-hidden="true" ng-show='!queBlock'></i>
-                </button> -->
                 <a class="navbar-brand" href="index.html"><img src="src/assets/images/logo.png" class="img-responsive" height="37" width="164" alt=""></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -146,22 +142,8 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <!-- <div *ngFor="let item of getGridData(), index as index" class='box-contianer'>
-                                        <div class="box" droppable draggable [dragData]="{index:index, source: 'grid', div: item}" [dragEnabled]='item.draggable' [dropEnabled]='item.droppable' id={{index}} (onDrop)="onItemDrop($event,index)" [ngClass]="item.class">   
-                                            <label>{{item.data.title}}</label>
-                                            <p>{{item.data.desc}}</p>
-                                            <p>{{item.data.points}}</p>
-                                        </div>  
-                                    </div> -->
-                                    <!-- <div ng-repeat="item in gridData" class='box-contianer'>
-                                        <div class="grid box" data="'bhole'" ng-class='item.class' droppable draggable dragData="{index:$index, source: 'grid', div: item}" dragEnabled='{{item.draggable}}' dropEnabled='{{item.droppable}}' id={{index}} onDrop="onItemDrop($event,index)">
-                                            <label>{{item.data.title}}</label>
-                                            <p>{{item.data.desc}}</p>
-                                            <p>{{item.data.points}}</p>
-                                        </div>
-                                    </div> -->
-                                    <div ng-repeat="item in gridData" class='box-contianer'>
-                                        <div class="grid box slideInDown" data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
+                                    <div ng-repeat="item in gridData" class='box-contianer gridbox' ng-mouseover="scaleImage(item)">
+                                        <div class="grid box slideInDown"  data="'bhole'" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'onItemDrop($event, $index)',onOver: 'getItem(item)', animate:true}">
                                             <label class="title">{{item.data.title}}</label>
                                             <p class="desc">{{item.data.desc}}</p>
                                             <span class="points">{{item.data.points}}</span>
@@ -170,9 +152,7 @@
                                     <table class="btm-table" width="100%">
                                         <thead>
                                             <tr>
-                                                <!--  <th colspan='2'>
-                                                    <h4>SUMMER</h4>
-                                                </th> -->
+                                                
                                                 <th colspan='2' ng-repeat="item in summer">
                                                     <h4 ng-if="item.heading" style="color: grey;">SUMMER</h4>
                                                     <div class="grid box-bottom" ng-if="item.title">
@@ -181,16 +161,6 @@
                                                         <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
                                                     </div>
                                                 </th>
-                                                <!-- <th colspan='2'>
-                                                    <h4>SUMMER</h4>
-                                                </th>
-                                                <th colspan='2'>
-                                                    <div class="grid box-bottom">
-                                                        <label class="title">Global Leadership Program</label>
-                                                        <p class="desc">Beijing and Shanghai, China</p>
-                                                        <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
-                                                    </div>
-                                                </th> -->
                                             </tr>
                                         </thead>
                                     </table>
@@ -199,14 +169,14 @@
                         </div>
                         <div class='col-md-3 static'>
                             <div class="que-zone" id='que-block'>
-                                <button type="button" class="visible-xs visible-sm hidden-lg hidden-md que-btn que-btn2" ng-click="toggleQuestion()">
+                                <button  type="button" class="visible-xs visible-sm hidden-lg hidden-md que-btn que-btn2" ng-click="toggleQuestion()">
                                     <i class="fa fa-angle-right" aria-hidden="true" ng-show="queBlock"></i>
                                     <i class="fa fa-angle-left ng-hide" aria-hidden="true" ng-show="!queBlock"></i>
                                 </button>
-                                <h3 style="font-weight: 600;color: #a32319;">{{currentQue.title}}</h3>
-                                <h4 style="font-weight: 600;color: #a32319;"> {{currentQue.heading}}</h4>
+                                <!-- <h3 style="font-weight: 600;color: #a32319;">{{currentQue.title}}</h3> -->
+                                <h4 style="font-weight: bold;color: #a32319;font-size: 24px;"> {{currentQue.heading}}</h4>
                                 <p ng-if="!currentQue.confirm"> {{currentQue.que}}</p>
-                                 <p ng-if="currentQue.autoMove">{{currentQue.subcontent}}</p>
+                                 <p ng-if="currentQue.autoMove || currentQue.subcontent">{{currentQue.subcontent}}</p>
                                 <p ng-if="currentQue.confirm" ng-bind-html="currentQue.que"></p>
                                 
                                 <p ng-if="currentQue.confirm" ng-bind-html="currentQue.content1"></p>
@@ -220,12 +190,6 @@
                                         <li ng-repeat=" item in currentQue.options" ng-click="slctOptn(item)">
                                             <input type="radio" id="radio{{$index}}" name="option">
                                             <label class="labeloptn" for="radio{{$index}}">{{item.optn}}</label>
-                                            <!-- <ul id="styleScroll" class="suboption" ng-show="showoptnDiv">
-                                                <li ng-repeat="data in item.suboptn" id="nstdoptn{{$index}}" >
-                                                    <input type="radio" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-value="false" ng-model="selectedRadio"  class="subradio" ng-click="slctOptn(item,data)">
-                                                    <label class="chklabel" for="mltioption{{$index}}.[{{outer}}]">{{data.optn}}</label>
-                                                </li>
-                                            </ul> -->
                                         </li>
                                     </ul>
                                     <ul ng-if="currentQue.type == 'checkbox' && !currentQue.showoptn" id="styleScroll">
@@ -233,21 +197,11 @@
                                             <input type="checkbox" id="chkqustn{{$index}}" ng-click="slectchkbx(item,$event)" name="option" ng-model="item.selected">
                                             <label class="chklabel" for="chkqustn{{$index}}">{{item.optn}}</label>
                                     </ul>
-                                    <!-- <ul ng-if="currentQue.showoptn" id="styleScroll">
-                                        <li ng-repeat=" item in currentQue.options" id="nstdoptn{{$index}}" ng-init="outer=$index">
-                                            <label>{{item.showoptn}}</label>
-                                            <ul>
-                                                <li ng-repeat="data in  item.options" ng-click="slctOptn(data)">
-                                                    <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected">
-                                                    <label class="chklabel" for="mltioption{{$index}}.[{{outer}}]">{{data.optn}}</label>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul> -->
                                 </div>
                                 <div ng-if="currentQue.showQueBlocks" class="que-block-container" ng-show="blockview">
                                     <p> {{currentQue.headingText}}</p>
-                                    <div ng-repeat=" item in currentQue.queData" class='box-contianer'>
+                                    <div ng-repeat=" item in currentQue.queData" class='box-contianer rightBox' ng-style="{'margin-left': item.stylecss.marginLeft}">
+                                        <!-- ng-style="{top: item.stylecss.top,left: item.stylecss.left}" -->
                                         <div class="que box" id={{$index}} ng-class="item.class" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)', onDrag :'onDrag($event)'}">
                                             <label class="title">{{item.data.title}}</label>
                                             <p class="desc">{{item.data.desc}}</p>
@@ -397,11 +351,11 @@
         <!--pop up design end-->
         <!--pop up design start-->
         <!-- <div class="row"> -->
-        <div class="modal fade bs-example-modal-sm" tabindex="-1" id="help-popup" role="dialog" aria-labelledby="mySmallModalLabel">
-            <div class="modal-dialog modal-lg" role="document">
+        <div class="modal fade bs-example-modal-sm" tabindex="-1" id="help-popup" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="mySmallModalLabel">
+            <div class="modal-dialog modal-lg" role="document"> 
                 <div class="modal-content" style="height: auto;">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" ng-click="closepopUp()">&times;</button>
                         <!-- <h4 class="modal-title">Modal Header</h4> -->
                         <h2 class="modal-title" style="color: #991b1e;text-align: center;">How to play</h2>
                     </div>
@@ -451,22 +405,12 @@
                                                         </th>
                                                         <th  colspan='2' style="color: grey">
                                                             <h4>SUMMER</h4>
-                                                            <!-- <div class="grid box-bottom">
-                                                                <label class="title">Global Leadership Program</label>
-                                                                <p class="desc">Beijing and Shanghai, China</p>
-                                                                <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
-                                                            </div> -->
                                                         </th>
                                                         <th colspan='2' style="color: grey">
                                                             <h4>SUMMER</h4>
                                                         </th>
                                                         <th colspan='2' style="color: grey">
                                                             <h4>SUMMER</h4>
-                                                            <!-- <div class="grid box-bottom">
-                                                                <label class="title">Global Leadership Program</label>
-                                                                <p class="desc">Beijing and Shanghai, China</p>
-                                                                <span class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
-                                                            </div> -->
                                                         </th>
                                                     </tr>
                                                 </thead>
@@ -518,13 +462,14 @@
          <script src="src/assets/vendor/angular-dragdrop/src/angular-dragdrop.min.js"></script>
         <!-- <script src="src/assets/js/angular-drag-drop.min.js"></script> -->
         <script src="src/assets/js/angular-sanitize.js"></script>
-        <!-- <script src="src/assets/vendor/slideout-1.0.1/dist/slideout.min.js"></script> -->
+        <script src="src/assets/vendor/slideout-1.0.1/dist/slideout.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
         <script src="src/assets/js/defaultServices.js"></script>
         <script src="question.js"></script>
         <script src="src/assets/js/messages.js"></script>
         <script src="app.js"></script>
         <script src="general.js"></script>
+
 </body>
 
 </html>
