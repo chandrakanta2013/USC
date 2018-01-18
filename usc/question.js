@@ -8,7 +8,7 @@ var questionJson = [{
     },
     {
         title: 'Q1',
-        heading: 'Calculus',
+        heading: 'Industry Focus',
         que: 'After graduation, which of the following are you interested in pursuing? ',
         type: 'radio',
         options: [{
@@ -374,7 +374,7 @@ var questionJson = [{
         que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
         type: 'radio',
         options: [
-            { optn: 'IB Blobal Politics', points: 4, course: 'IB' },
+            { optn: 'IB Global Politics', points: 4, course: 'IB' },
             { optn: 'IB Asia and Oceania (Higher Level; Score of 5,6 or 7)', points: 4, course: 'IB' },
             { optn: 'IB History of Africa (Higher Level; Score of 4 or 5)', points: 4, course: 'IB' },
             { optn: 'IB History of Americas (Higher Level; Score of 4 or 5)', points: 4, course: 'IB' },
@@ -430,9 +430,9 @@ var questionJson = [{
         enableNext: false
     },
     {
-        title: 'Progressive Degree',
-        heading: '',
-        que: 'We’ve rearranged Your grid ',
+        title: '',
+        heading: 'Progressive Degree',
+        que: 'We’ve rearranged your grid ',
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
         autoMove: true,
         enableNext: true
@@ -442,6 +442,8 @@ var questionJson = [{
         heading: 'Minor',
         que: 'Now It’s time to use your bank credits!',
         subcontent: 'In total, USC offers over 150 different minor programs for undergraduate students.  The minors below represent some of the most popular minor programs amongst USC Marshall students.',
+        content1: 'Select 1 minor program, or 2 minor programs if you have 40+ elective credits in the bank.',
+        link: '*You will be qualified for ',
         type: 'checkbox',
         options: [
             { optn: 'Philosophy (20 units of free electives needed)*', name: 'Philosophy Minor', points: '20', ques: 'minor' },
@@ -464,9 +466,10 @@ var questionJson = [{
     },
     {
         title: 'Q10',
+        heading: 'Free Electives',
         enableNext: true,
         showQueBlocks: true,
-        headingText: "You have elective credits left.Drag and drop to the grid",
+        headingText: "You have elective credits left. Drag and drop to the grid",
         nextBlock: 'afterQ5',
         queData: []
     },
@@ -512,7 +515,7 @@ var dragBox = [{
                 desc: 'Fund. Principle of the Calculus',
                 points: '4'
             },
-            class: 'brown',
+            class: 'brown rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false
@@ -527,7 +530,7 @@ var dragBox = [{
                 desc: '',
                 points: '4'
             },
-            class: 'orange',
+            class: 'orange rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false
@@ -542,7 +545,7 @@ var dragBox = [{
                 desc: '',
                 points: '4'
             },
-            class: 'orange',
+            class: 'orange rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false
@@ -558,7 +561,7 @@ var dragBox = [{
                 desc: '',
                 points: '4'
             },
-            class: 'orange',
+            class: 'orange rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false
@@ -574,7 +577,7 @@ var dragBox = [{
                 desc: '',
                 points: '4'
             },
-            class: 'orange',
+            class: 'orange rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false
@@ -590,7 +593,7 @@ var dragBox = [{
                 desc: '',
                 points: '4'
             },
-            class: 'orange',
+            class: 'orange rmvBorder',
             draggable: true,
             droppable: false,
             fixed: false

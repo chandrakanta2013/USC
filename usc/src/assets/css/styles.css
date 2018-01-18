@@ -2,7 +2,7 @@ body {font-family: 'Raleway', sans-serif !important; font-size: 17px !important;
 a.cmn-btn { background-color: #ffc028; color: #fff; text-transform: uppercase; font-weight: bold; border: none; padding: 12px;      }
 a.cmn-btn:hover { background-color: #000; color: #fff;  }
 
-button.cmn-btn { background-color: #ffc028; color: #fff; text-transform: uppercase; font-weight: bold; border: none; padding: 12px; width: 100%;    }
+button.cmn-btn { background-color: #ffc028; color: #fff; text-transform: uppercase; font-weight: bold; border: none; padding: 12px; width: 100%; margin-top: 14px   }
 button.cmn-btn:hover { background-color: #000; color: #fff;   }
 
 button.cmn-btn2 { background-color: #a11b1f; color: #fff; border-radius: 0; font-size: 14px; line-height: normal; padding: 10px 30px; margin-top: 20px;       }
@@ -69,7 +69,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb910', end
 .box-bottom p.desc {font-size: 11px; line-height: 13px; margin: 0; padding: 0; text-align: left; text-transform: none;  }
 .box-bottom span.star {     position: absolute; right: 5px; top: 22px; }
 
-.box-contianer{    display: block; float: left; margin-top: 5px; margin-left: 5px; background: #eee1e1; border-radius: 10px; margin-bottom: 5px;}
+.box-contianer{    display: block; float: left; margin-top: 5px; margin-left: 5px; background: #eee1e1; border-radius: 10px; /*margin-bottom: 5px;*/}
 
 .que-block-container{width: 100%; float: left; height: auto;  min-height: 148px;}
 
@@ -541,6 +541,12 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
   display: block;
 }
 .rightBox{ background: none;}
+/*.contentQue{     max-height: 604px;
+    overflow: auto; }*/
+    .resonacelink{ color: #ac210f;
+    text-decoration: underline; }
+.bottom-table{margin-top: 6px;
+    display: -webkit-inline-box;}
 /*.rightBox:first-child{ margin-left: 0px!important }*/
 
    /* position: relative;
