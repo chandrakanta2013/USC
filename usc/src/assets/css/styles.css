@@ -30,7 +30,7 @@ button.cmn-btn2:focus, button.cmn-btn2:active {  color: #fff; }
 
 /*Home page css start*/
 
-.draganddrop-outer { display: inline-block; float: left; width: 100%; padding: 2% 0; width: 100%; text-align: center   }
+.draganddrop-outer { display: inline-block; float: left; width: 100%; padding: 2% 0; width: 100%; text-align: center;padding-bottom: 11px;   }
 #header{ background: #d7d7d7; display: block; min-height: 72px; }
 /*.main-wrapper{width: 100%;padding: 0px 20px;}*/
 .main-logo{padding: 11px;  padding-top: 2px;}
@@ -170,11 +170,12 @@ ul.header-right li.social a {    font-size: 15px; text-align: center; vertical-a
 
 .bottom { background-color: #980000; padding:5px 0; display: inline-block; width: 100%;margin-bottom: 61px; }
 .bottom .start-over { padding-top: 15px; display:block; }
-.bottom .start-over span {float: left; margin-right: 10px; }
+.bottom .start-over:hover span,.bottom .start-over:hover .startover{ color: white }
+.bottom .start-over span {float: left; margin-right: 10px;color: #ffc129 }
 .bottom i.fa-refresh { font-size: 33px; }
 .bottom i.fa-arrow-right { font-size: 33px; }
 .bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right  { font-size: 33px; font-weight: lighter; line-height: normal; display: inline-block; }
-.bottom .start-over a { color: #ddd; font-size: 16px; text-decoration: none;   }
+.bottom .start-over a { color: #ffc22a; font-size: 16px; text-decoration: none;   }
 .units-outer {display: inline-block; text-align: center; width: 100%;}
 .total-units { text-align: center; font-family: arial; float:none; display: inline-block; margin-left: 25px;    }
 .total-units h5 { display: inline-block; font-size: 14px; text-transform: uppercase; color: #fff;     margin: -12px 14px 0 0 ;vertical-align: middle;  }
@@ -335,7 +336,7 @@ ul.btm-social li.insta a { background-color: #990000;  }
 a.cmn-btn2 { background-color: #a11b1f; color: #fff; border-radius: 0; font-size: 14px; line-height: normal; padding: 10px 30px; margin-top: 20px;       }
 a.cmn-btn2:hover { color: #fff; }
 a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
-.help{ color: #a11b1f; text-decoration: none; display: block; padding-bottom: 7px;}
+.help{ color: #a11b1f; text-decoration: none; display: block;}
 .help:hover{ color: #a11b1f; text-decoration: none;}
 .help:focus{ outline: none}
 .modal-header .close{ font-size: 37px; }
@@ -547,6 +548,13 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     text-decoration: underline; }
 .bottom-table{margin-top: 6px;
     display: -webkit-inline-box;}
+.startover{ 
+    color: #ffc129;
+    }
+    /*.startover:hover{ color: white }*/
+.startover:focus{ outline: none; }
+.start-over button{ width: 75%; background: none;color: #ffc129;
+    border: 0px; }
 /*.rightBox:first-child{ margin-left: 0px!important }*/
 
    /* position: relative;

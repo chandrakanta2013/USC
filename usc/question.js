@@ -4,7 +4,8 @@ var questionJson = [{
         que: 'Required courses (60 units) are prefilled for you. They are fixed and cannot be moved. Let’s begin.',
         type: 'text',
         removeClass: 'defaultselect',
-        enableNext: true
+        enableNext: true,
+        number: '1'
     },
     {
         title: 'Q1',

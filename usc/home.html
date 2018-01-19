@@ -240,9 +240,10 @@
                         <div class="container">
                             <div class="col-md-2 col-sm-2 col-xs-2">
                                 <div class="start-over">
-                                    <a href="javascript:window.location.reload(true)" ng-click="startOver()">
+                                    <button href="javascript:window.location.reload(true)" ng-click="startOver()" ng-disabled="currentQue.number==1">
                                         <span class="visible-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
-                                        <p class="hidden-xs visible-lg visible-md visible-sm" >Start Over</p></a>
+                                        <a class="hidden-xs visible-lg visible-md visible-sm startover" >Start Over</a>
+                                    </button>
                                 </div>
                             </div>
                             <div class="col-md-8 col-sm-8 col-xs-8">
@@ -250,7 +251,7 @@
                                     <div class="total-units">
                                         <h5>Total Units</h5>
                                         <span>{{totalUnits}}
-                                            <div class="star-yellow"><img src="src/assets/images/star-yellow.png" height="18" width="17" alt="">
+                                            <div class="star-yellow"><!-- <img src="src/assets/images/star-yellow.png" height="18" width="17" alt=""> -->
                                             </div>
                                         </span>
                                     </div>

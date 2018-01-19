@@ -89,13 +89,13 @@
     .game-zone-outer.gamescroll{overflow-x: inherit;    width: 913px;}
     .box-bottom { width: 250px; }
     /*home page code start*/
-    .que-zone{position: fixed; height: 90vh; background: white; top: 0px; right: -68%; width: 80%; padding: 2px 20px 2px 50px; box-shadow: 0 0 6px rgba(0,0,0,0.4);  z-index: 999;       padding-bottom: 38px; }
+    .que-zone{position: fixed; height: 91vh; background: white; top: 0px; right: -68%; width: 80%; padding: 2px 20px 2px 50px; box-shadow: 0 0 6px rgba(0,0,0,0.4);  z-index: 999;       padding-bottom: 38px; }
     .que-btn{float: right; margin: 6px 20px 0 10px; background: #a31919; padding: 1px 10px; color: #FFF; border: 0; }
     .que-btn2 {    position: absolute; left: 2px; top: 25px;} 
     .static{position: static; }
     #que-block{transition: 0.5s; }
     .right-menu{right: -1px; }
-    .bottom {position: fixed; bottom: 0; z-index: 99999; padding: 20px 0; left: 0; margin-bottom: 0;   }
+    .bottom {position: fixed; bottom: 0; z-index: 99999; padding: 7px 0; left: 0; margin-bottom: 0;   }
     #help-popup {z-index: 999999; }
     /*home page code end*/
 
@@ -209,7 +209,7 @@
     .total-units span {     font-size: 16px; margin: 0 0; padding: 4px 5px;}
     .total-units .star-yellow {top: -13px; }
 
-    span.elective-bg { vertical-align: top;     margin: -8px 8px -15px; padding: 12px 5px }
+    span.elective-bg { vertical-align: top;     margin: -6px 8px -15px; padding: 16px 5px }
     .next { padding-top: 0; }
     .total-units h5 {width: 52px !important; margin: 0px 5px 0 0; font-size: 12px;   }
     .units-outer .total-units.elective h5 { width: 78px !important;  }
@@ -293,7 +293,10 @@
     left: 117px; }
     .box label.title:hover{ font-size: 12px }*/
     .gamebox img{ width: 100% }
-
+    .mid-part{ padding: 1% 0; }
+    /*.game-zone-outer{ transform: scale(0.8);
+    margin-left: -91px;
+    margin-top: -65px; }*/
 }
 
 @media only screen and (min-width: 320px) and (max-width: 380px) {
@@ -303,7 +306,7 @@
     span.left-arrow-mobile {margin: 0 0 0 -16px; }
     .units-outer {margin: 0 0 0 -40px; }
     .units-outer .total-units.elective h5 {width: 78px !important; }
-    span.elective-bg { margin: -9px -5px -15px; }
+    span.elective-bg { margin: -6px -5px -15px; }
     i.fa-long-arrow-left {font-size: 24px; }
     .next a {  margin: -9px -34px 0 8px !important; }
     .total-units h5 {font-size: 10px; }
