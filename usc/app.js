@@ -102,7 +102,11 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         $scope.toggleQuestion();
     }
 
-
+    $scope.startOver = function(){
+        window.location.href = path[0] + 'home.html';
+        console.log(path,"path")
+        // window.location.href('/home.html')
+    }
     $timeout(function(){
         $('.gridbox').css({'opacity':'0'});
     },10)
@@ -204,6 +208,9 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             }
         });
     };
+
+
+
     //===========================//
 
     $scope.summer = [
@@ -417,6 +424,10 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     $scope.getData = function() {
         return newBoxData;
     }
+    if($scope.currentQue.number=='1'){
+        console.log($scope.currentQue,"$scope.currentQue")
+        $scope.currentQue.que = 'Required courses <strong> 60 units </strong> are prefilled for you. They are fixed and cannot be moved. Let’s begin.'
+    }
 
     //================Funtion Call on  Select CheckBox Options===========//
     $scope.slectchkbx = function(itmObj, event) {
@@ -507,7 +518,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     $scope.apCourse = [];
     //==============================Funtion Call on  Next button==================================//
     $scope.getNext = function() {
-
+        
         $scope.selectedArray.push($scope.selectedOption);
         console.log($scope.selectedArray, "$scope.selectedOption");
         if($scope.currentQue.removeClass){
@@ -529,10 +540,15 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             if ($scope.selectedOption.points == 4) { //Condition  for point popup 
                 $scope.freeElectives = $scope.freeElectives + $scope.selectedOption.points;
                 $scope.currentQue = $scope.queJson[queCounter];
+                console.log($scope.currentQue,"$scope.currentQue")
                 $('#points-popup').modal('show');
                 $timeout(function() {
                     $('#points-popup').modal('hide');
-                }, 4000);
+                }, 3000);
+                 if($scope.currentQue.title=='Q8'){
+                    console.log("called")
+                   $scope.currentQue.que = 'Nice! You have <strong>' + $scope.freeElectives + '</strong> of credits. Now you have the following options:' 
+                }
                 if ($scope.currentQue.enableNext) {
                     $scope.isSelected = 1; //to disable button
                 } else {
@@ -544,6 +560,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             }
             if ($scope.selectedOption.points == 0) { //condition when select on a None option 
                 $scope.currentQue = $scope.blockBox[$scope.selectedOption.ques];
+                console.log($scope.currentQue,"$scope.currentQue")
                 $scope.isSelected = 0;
                 $scope.selectedOption = {};
                 $scope.chkboxArry = []
@@ -551,7 +568,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 return false;
             }
             $scope.currentQue = $scope.queJson[queCounter];
-            console.log($scope.currentQue, 'free');
+            console.log($scope.currentQue,"$scope.currentQue")
 
             $scope.selectedArray.filter(function(obj){
                 if(obj.course=='AP'){
@@ -560,7 +577,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 }
             })
 
-
+           
             if ($scope.currentQue.autoMove) { //Condition for Question 8
                 console.log($scope.gridData,"griddata");
                 $scope.gridData = $scope.gridData.map(function(obj,val) {
@@ -610,7 +627,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                     if ($scope.selectedOption.optionType == 'Undergraduate') {
                         $scope.currentQue.subcontent = "Note: Your extra credits are used for your early Graduation";
                     } else {
-                        $scope.currentQue.subcontent = "Note: Your extra credits are used for your" +  " " + $scope.selectedArray[1].optn + "" ;
+                        $scope.currentQue.subcontent = "Note: Your extra credits are used for your Master in " +  " " + $scope.selectedArray[1].optn + "degree.";
                     }
                     $scope.gridData[21] = $scope.seniorArry[0];
                     $scope.gridData[20] = $scope.seniorArry[2];
@@ -624,7 +641,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                     // Bind HTML contents by Array Loop
                     var arrayNumber = [21,20,28,29,37,32,34,36];
                     $scope.bindHTMLArray(arrayNumber);
-
+                    $scope.freeElectives = '32';
 
                 }
                 if ($scope.selectedOption.optionType == 'business') {

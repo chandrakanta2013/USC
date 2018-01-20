@@ -180,9 +180,9 @@
                                 <!-- <h3 style="font-weight: 600;color: #a32319;">{{currentQue.title}}</h3> -->
                                 <h4 style="font-weight: bold;color: #a32319;font-size: 24px;"> {{currentQue.heading}}</h4>
                                 <div class="contentQue">
-                                    <p ng-if="!currentQue.confirm"> {{currentQue.que}}</p>
+                                    <p ng-if="!currentQue.confirm && currentQue.title!='Q8' && currentQue.number!='1'"> {{currentQue.que}}</p>
                                      <p ng-if="currentQue.autoMove || currentQue.subcontent">{{currentQue.subcontent}}</p>
-                                    <p ng-if="currentQue.confirm" ng-bind-html="currentQue.que"></p>
+                                    <p ng-if="currentQue.confirm || currentQue.title=='Q8' || currentQue.number=='1'" ng-bind-html="currentQue.que"></p>
                                     <p ng-if="!currentQue.confirm && currentQue.content1 ">{{currentQue.content1}}</p>
                                     <p ng-if="currentQue.confirm" ng-bind-html="currentQue.content1"></p>
                                     <p ng-if="currentQue.confirm ">{{currentQue.content2}}</p>
@@ -238,7 +238,7 @@
                 <div class="row">
                     <div class="bottom">
                         <div class="container">
-                            <div class="col-md-2 col-sm-2 col-xs-2">
+                            <div class="col-md-2 col-sm-2 col-xs-3">
                                 <div class="start-over">
                                     <button href="javascript:window.location.reload(true)" ng-click="startOver()" ng-disabled="currentQue.number==1">
                                         <span class="visible-xs visible-lg visible-md visible-sm"><i class="fa fa-refresh" aria-hidden="true"></i></span>
@@ -246,7 +246,7 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="col-md-8 col-sm-8 col-xs-8">
+                            <div class="col-md-8 col-sm-8 col-xs-7">
                                 <div class="units-outer">
                                     <div class="total-units">
                                         <h5>Total Units</h5>

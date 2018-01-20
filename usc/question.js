@@ -1,7 +1,6 @@
 var questionJson = [{
         title: '',
         heading: 'Required Courses',
-        que: 'Required courses (60 units) are prefilled for you. They are fixed and cannot be moved. Let’s begin.',
         type: 'text',
         removeClass: 'defaultselect',
         enableNext: true,
@@ -409,7 +408,6 @@ var questionJson = [{
     {
         title: 'Q8',
         heading: 'Progressive Degree',
-        que: 'Nice! You have (x amount) of credits. Now you have the following options:',
         type: 'radio',
         options: [{
                 optn: 'Add on a Progressive Degree and graduate within 4 years with a Master Degree',
@@ -428,7 +426,7 @@ var questionJson = [{
             { optn: 'Explore minors outside of business at USC', optionType: 'business' }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
-        enableNext: false
+        enableNext: false,
     },
     {
         title: '',

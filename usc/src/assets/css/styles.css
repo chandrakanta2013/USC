@@ -560,3 +560,4 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
    /* position: relative;
     left: 25%;
     top: -107px;*/
+.start-over button{ outline: none }
