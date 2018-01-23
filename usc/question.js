@@ -48,12 +48,16 @@ var questionJson = [{
 
                     }
                 ],
-                summer: [
-                    { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                    { title: "Summer Leadership Program", desc: "PWC" },
-                    { title: "Deal Advisory Internship", desc: "Ernst & Young" },
-                    { title: "International Exchange Program", desc: "Paris, France" }
-                ],
+                summer: {
+                    Internship: [
+                        { title: "Summer Leadership Program", desc: "PWC" },
+                        { title: "Deal Advisory Internship", desc: "Ernst & Young" },
+                    ],
+                    International: [
+                     { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
+                     { title: "International Exchange Program", desc: "Paris, France" }
+                    ]
+                },
                 content: "National Tax Case Study Competition"
             },
             {
@@ -92,12 +96,16 @@ var questionJson = [{
                         }
                     }
                 ],
-                summer: [
-                    { title: "Learning about International Commerce", desc: "Hong Kong" },
-                    { title: "Associate Consultant Internship", desc: "Capgemini Consulting" },
-                    { title: "Consulting Summer Analyst", desc: "Accenture" },
-                    { title: "ExCel (International Experiential Corporate Learning Program)", desc: "Milan, Italy" }
-                ],
+                summer: {
+                    Internship: [
+                        { title: "Associate Consultant Internship", desc: "Capgemini Consulting" },
+                        { title: "Consulting Summer Analyst", desc: "Accenture" }
+                    ],
+                    International:[
+                        { title: "Learning about International Commerce", desc: "Hong Kong" },
+                       { title: "ExCel (International Experiential Corporate Learning Program)", desc: "Milan, Italy" }
+                    ]
+                },
                 content: "Consulting Project for Frito Lay with the Center for Global Supply Chain Management "
             },
             {
@@ -136,12 +144,16 @@ var questionJson = [{
                         }
                     }
                 ],
-                summer: [
-                    { title: "Learning about International Commerce", desc: "Buenos Aires, Argentina" },
-                    { title: "Winslow-Maxwell Global Summer Internship", desc: "Sydney, Australia" },
-                    { title: "Global Brigades @ Marshall", desc: "Panama" },
-                    { title: "Art/Design Spring and Summer Internship", desc: "Universal Creative" }
-                ],
+                summer: {
+                    Internship:[
+                        { title: "Art/Design Spring and Summer Internship", desc: "Universal Creative" },
+                        { title: "Winslow-Maxwell Global Summer Internship", desc: "Sydney, Australia" }
+                    ],
+                    International:[
+                        { title: "Learning about International Commerce", desc: "Buenos Aires, Argentina" },
+                        { title: "Global Brigades @ Marshall", desc: "Panama" }
+                    ]
+                },
                 content: "Undergraduate Scholars Mentoring Program with the Brittingham Social Enterprise Lab"
             },
             {
@@ -180,12 +192,16 @@ var questionJson = [{
                         }
                     }
                 ],
-                summer: [
-                    { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                    { title: "Private Wealth Internship", desc: "Merrill Lynch" },
-                    { title: "Corporate Finance Internship", desc: "FTI Consulting" },
-                    { title: "International Exchange Program", desc: "Madrid, Spain" }
-                ],
+                summer: {
+                    Internship:[
+                        { title: "Private Wealth Internship", desc: "Merrill Lynch" },
+                        { title: "Corporate Finance Internship", desc: "FTI Consulting" },
+                    ],
+                    International: [
+                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
+                        { title: "International Exchange Program", desc: "Madrid, Spain" }
+                    ]
+                },
                 content: "Marshall’s International Case Competition"
             },
             {
@@ -224,12 +240,16 @@ var questionJson = [{
                         }
                     }
                 ],
-                summer: [
-                    { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                    { title: "Social Media Marketing Internship", desc: "Disney" },
-                    { title: "Product and Promotion Internship", desc: "Target" },
-                    { title: "International Exchange Program", desc: "Paris, France" }
-                ],
+                summer: {
+                    Internship: [
+                        { title: "Social Media Marketing Internship", desc: "Disney" },
+                        { title: "Product and Promotion Internship", desc: "Target" }
+                    ],
+                    International: [
+                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
+                        { title: "International Exchange Program", desc: "Paris, France" }
+                    ]
+                },
                 content: "Future of Media Research Project with the Institute for Communication Technology Managemen"
             },
             {
@@ -268,12 +288,16 @@ var questionJson = [{
                         }
                     }
                 ],
-                summer: [
-                    { title: "Learning about International Commerce", desc: "Tokyo, Japan" },
-                    { title: "Real Estate Banking Internship", desc: "PNC Financial Services" },
-                    { title: "Summer Real Estate Intern", desc: "JLL" },
-                    { title: "International Exchange Program", desc: "Brussels, Belgium" }
-                ],
+                summer: {
+                    Internship: [
+                        { title: "Real Estate Banking Internship", desc: "PNC Financial Services" },
+                        { title: "Summer Real Estate Intern", desc: "JLL" }
+                    ],
+                    International:[
+                        { title: "Learning about International Commerce", desc: "Tokyo, Japan" },
+                        { title: "International Exchange Program", desc: "Brussels, Belgium" }
+                    ]
+                },
                 content: "International Real Estate Case Competition"
             }
         ],
@@ -297,9 +321,9 @@ var questionJson = [{
         que: 'Have you taken or will you take:',
         type: 'radio',
         options: [
-            { optn: 'AP Calculus exam? (Score of 4 or 5 only)', points: 4, course: 'AP' },
-            { optn: 'IB Mathematics Higher Level-exam (Score of 5, 6, or 7)', points: 4, course: 'IB' },
-            { optn: 'A-Level Mathematics exam (Score of A*, A, or B)', points: 4, course: 'A-Level' },
+            { optn: 'AP Calculus exam? (Score of 4 or 5 only)', points: 4},
+            { optn: 'IB Mathematics Higher Level-exam (Score of 5, 6, or 7)', points: 4},
+            { optn: 'A-Level Mathematics exam (Score of A*, A, or B)', points: 4},
             { optn: 'None', points: 0, ques: 0 }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -326,7 +350,7 @@ var questionJson = [{
             { optn: 'IB Visual Arts (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
             { optn: 'A-Level Art & Design (Score of A*, A, or B)', points: 4, course: 'A-level' },
             { optn: 'A-Level Music (Score of A*, A, or B)', points: 4, course: 'A-level' },
-            { optn: 'None', points: 0, ques: 1 }
+            { optn: 'None', points: 0, course: 'none' ,ques: 1 }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
         enableNext: false
@@ -341,7 +365,7 @@ var questionJson = [{
             { optn: 'IB Biology(Score of 5,6 or 7)', points: 4, course: 'IB' },
             { optn: 'A-Level Biology(Score of A*, A, or B)', points: 4, course: 'A-level' },
             { optn: 'A-Level Marine Science(Score of A*, A, or B)', points: 4, course: 'A-level' },
-            { optn: 'None', points: 0, ques: 2 }
+            { optn: 'None', points: 0, course: 'none',ques: 2 }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
         enableNext: false
@@ -362,7 +386,7 @@ var questionJson = [{
             { optn: 'IB Physics (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
             { optn: 'A-Level Chemistry (Score of A*, A, or B)', points: 4, course: 'A-level' },
             { optn: 'A-Level Physics  (Score of A*, A, or B)', points: 4, course: 'A-level' },
-            { optn: 'None', points: 0, ques: 3 }
+            { optn: 'None', points: 0, course: 'none',ques: 3 }
         ],
         points: 4,
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -378,8 +402,8 @@ var questionJson = [{
             { optn: 'IB Asia and Oceania (Higher Level; Score of 5,6 or 7)', points: 4, course: 'IB' },
             { optn: 'IB History of Africa (Higher Level; Score of 4 or 5)', points: 4, course: 'IB' },
             { optn: 'IB History of Americas (Higher Level; Score of 4 or 5)', points: 4, course: 'IB' },
-            { optn: 'A-Level History (Score of A*, A, or B)', points: 4, course: 'A-Level' },
-            { optn: 'None', points: 0, ques: 4 }
+            { optn: 'A-Level History (Score of A*, A, or B)', points: 4, course: 'A-level' },
+            { optn: 'None', points: 0, course: 'none',ques: 4 }
         ],
         points: 4,
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -391,17 +415,17 @@ var questionJson = [{
         que: 'Have you taken or will you take one of the following exams, with its corresponding score?',
         type: 'radio',
         options: [
-            { optn: 'AP European History (Score of 4 or 5)', points: 4, course: 'AP' },
-            { optn: 'AP US History (Score of 4 or 5)', points: 4, course: 'AP' },
-            { optn: 'AP World History (Score of 4 or 5)', points: 4, course: 'AP' },
-            { optn: 'IB History of Europe & Islamic World (Score of 5, 6, or 7)', points: 4, course: 'IB' },
-            { optn: 'IB Europe and the Middle East (Higher Level; Score of 5, 6, or 7)', points: 4, course: 'IB' },
-            { optn: 'A-Level Classical Studies (Score of A*, A, or B)', points: 4, course: 'A-Level' },
-            { optn: 'A-Level Divinity (Score of A*, A, or B)', points: 4, course: 'A-Level' },
-            { optn: 'A-Level Islamic Studies (Score of A*, A, or B)', points: 4, course: 'A-Level' },
-            { optn: 'None', points: 0, ques: 5 }
+            { optn: 'AP European History (Score of 4 or 5)', course: 'AP',Category: 'H' },
+            { optn: 'AP US History (Score of 4 or 5)', course: 'AP',Category: 'H'  },
+            { optn: 'AP World History (Score of 4 or 5)', course: 'AP',Category: 'H'  },
+            { optn: 'IB History of Europe & Islamic World (Score of 5, 6, or 7)', course: 'IB',Category: 'H'  },
+            { optn: 'IB Europe and the Middle East (Higher Level; Score of 5, 6, or 7)', course: 'IB',Category: 'H'  },
+            { optn: 'A-Level Classical Studies (Score of A*, A, or B)', course: 'A-level',Category: 'H'  },
+            { optn: 'A-Level Divinity (Score of A*, A, or B)', course: 'A-level',Category: 'H'  },
+            { optn: 'A-Level Islamic Studies (Score of A*, A, or B)', course: 'A-level',Category: 'H'  },
+            { optn: 'None', course: 'none',points: 0,ques: 5,Category: 'H' }
         ],
-        points: 4,
+       
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
         enableNext: false
     },
@@ -461,6 +485,7 @@ var questionJson = [{
         enableNext: true,
         showQueBlocks: true,
         headingText: "Drag and Drop.",
+        minordrag: true,
         queData: []
     },
     {
@@ -470,6 +495,7 @@ var questionJson = [{
         showQueBlocks: true,
         headingText: "You have elective credits left. Drag and drop to the grid",
         nextBlock: 'afterQ5',
+        minordrag: true,
         queData: []
     },
     {
@@ -477,28 +503,22 @@ var questionJson = [{
         heading: 'Extracurricular Activities',
         que: 'Please select all the programs that you are interested in participating and drag them to all four Summers.',
         type: 'checkbox',
-        options: [{
-            subTitle: 'Internship',
-            options: [
-                { optn: 'Summer Leadership Program at PWC' },
-                { optn: 'Deal Advisory Summer Internship at Ernst & Young' },
-            ],
-        }, {
-            subTitle: 'International Experiences',
-            options: [
-                { optn: 'Global Leadership Program (GLP) in Beijing and Shanghai, China' },
-                { optn: 'International Exchange Program (IEP) in Paris, France You will be qualified for Global Scholar' },
-            ],
-        }],
+        subTitle: true,
+        options: [],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
-        enableNext: false
+        enableNext: false,
+        minordrag: true,
     },
     {
+        heading: 'Extracurricular Activities',
         enableNext: true,
         showQueBlocks: true,
         headingText: "Drag and Drop",
-        nextBlock: 'afterQ5',
-        queData: []
+        nextBlock: 'afterQ11',
+        minordrag: true,
+        sumrdrag: true,
+        queData: [],
+        lastStep: true
     },
 ]
 
@@ -596,7 +616,8 @@ var dragBox = [{
             draggable: true,
             droppable: false,
             fixed: false
-        }]
+        }],
+        jumpto: 'minor'
     }
 ]
 
