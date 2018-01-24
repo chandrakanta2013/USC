@@ -50,12 +50,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship: [
-                        { title: "Summer Leadership Program", desc: "PWC" },
-                        { title: "Deal Advisory Internship", desc: "Ernst & Young" },
+                        { title: "Summer Leadership Program", desc: "PWC",summerchk: true },
+                        { title: "Deal Advisory Internship", desc: "Ernst & Young",summerchk: true },
                     ],
                     International: [
-                     { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                     { title: "International Exchange Program", desc: "Paris, France" }
+                     { title: "Global Leader Program", desc: "Beijing and Shanghai, China",summerchk: true, onlink: 'https://www.marshall.usc.edu/current-students/international-programs/global-leadership-program-glp' },
+                     { title: "International Exchange Program", desc: "Paris, France",summerchk: true,onlink: 'https://www.marshall.usc.edu/current-students/international-programs/international-exchange-program' }
                     ]
                 },
                 content: "National Tax Case Study Competition"
@@ -98,12 +98,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship: [
-                        { title: "Associate Consultant Internship", desc: "Capgemini Consulting" },
-                        { title: "Consulting Summer Analyst", desc: "Accenture" }
+                        { title: "Associate Consultant Internship", desc: "Capgemini Consulting",summerchk: true },
+                        { title: "Consulting Summer Analyst", desc: "Accenture",summerchk: true }
                     ],
                     International:[
-                        { title: "Learning about International Commerce", desc: "Hong Kong" },
-                       { title: "ExCel (International Experiential Corporate Learning Program)", desc: "Milan, Italy" }
+                       { title: "Learning about International Commerce", desc: "Hong Kong",summerchk: true,onlink: 'https://www.marshall.usc.edu/current-students/international-programs/marshall-learning-about-international-commerce-linc-program' },
+                       { title: "ExCel (International Experiential Corporate Learning Program)", desc: "Milan, Italy",summerchk: true,onlink: 'https://www.marshall.usc.edu/current-students/international-programs/excel-international-experiential-corporate-learning-program' }
                     ]
                 },
                 content: "Consulting Project for Frito Lay with the Center for Global Supply Chain Management "
@@ -146,12 +146,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship:[
-                        { title: "Art/Design Spring and Summer Internship", desc: "Universal Creative" },
-                        { title: "Winslow-Maxwell Global Summer Internship", desc: "Sydney, Australia" }
+                        { title: "Art/Design Spring and Summer Internship", desc: "Universal Creative",summerchk: true,onlink:'https://www.marshall.usc.edu/current-students/international-programs/winslow-maxwell-global-summer-internships' },
+                        { title: "Winslow-Maxwell Global Summer Internship", desc: "Sydney, Australia",summerchk: true }
                     ],
                     International:[
-                        { title: "Learning about International Commerce", desc: "Buenos Aires, Argentina" },
-                        { title: "Global Brigades @ Marshall", desc: "Panama" }
+                        { title: "Learning about International Commerce(LINC)", desc: "Buenos Aires, Argentina",summerchk: true },
+                        { title: "Global Brigades @ Marshall", desc: "Panama",summerchk: true,onlink:'https://www.marshall.usc.edu/current-students/international-programs/global-brigades-marshall'  }
                     ]
                 },
                 content: "Undergraduate Scholars Mentoring Program with the Brittingham Social Enterprise Lab"
@@ -194,12 +194,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship:[
-                        { title: "Private Wealth Internship", desc: "Merrill Lynch" },
-                        { title: "Corporate Finance Internship", desc: "FTI Consulting" },
+                        { title: "Private Wealth Internship", desc: "Merrill Lynch",summerchk: true },
+                        { title: "Corporate Finance Internship", desc: "FTI Consulting", summerchk: true },
                     ],
                     International: [
-                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                        { title: "International Exchange Program", desc: "Madrid, Spain" }
+                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China",summerchk: true },
+                        { title: "International Exchange Program", desc: "Madrid, Spain",summerchk: true }
                     ]
                 },
                 content: "Marshall’s International Case Competition"
@@ -242,12 +242,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship: [
-                        { title: "Social Media Marketing Internship", desc: "Disney" },
-                        { title: "Product and Promotion Internship", desc: "Target" }
+                        { title: "Social Media Marketing Internship", desc: "Disney",summerchk: true },
+                        { title: "Product and Promotion Internship", desc: "Target",summerchk: true }
                     ],
                     International: [
-                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China" },
-                        { title: "International Exchange Program", desc: "Paris, France" }
+                        { title: "Global Leader Program", desc: "Beijing and Shanghai, China",summerchk: true },
+                        { title: "International Exchange Program", desc: "Paris, France",summerchk: true }
                     ]
                 },
                 content: "Future of Media Research Project with the Institute for Communication Technology Managemen"
@@ -290,12 +290,12 @@ var questionJson = [{
                 ],
                 summer: {
                     Internship: [
-                        { title: "Real Estate Banking Internship", desc: "PNC Financial Services" },
-                        { title: "Summer Real Estate Intern", desc: "JLL" }
+                        { title: "Real Estate Banking Internship", desc: "PNC Financial Services",summerchk: true },
+                        { title: "Summer Real Estate Intern", desc: "JLL",summerchk: true }
                     ],
                     International:[
-                        { title: "Learning about International Commerce", desc: "Tokyo, Japan" },
-                        { title: "International Exchange Program", desc: "Brussels, Belgium" }
+                        { title: "Learning about International Commerce", desc: "Tokyo, Japan",summerchk: true },
+                        { title: "International Exchange Program", desc: "Brussels, Belgium",summerchk: true }
                     ]
                 },
                 content: "International Real Estate Case Competition"
@@ -503,6 +503,7 @@ var questionJson = [{
         heading: 'Extracurricular Activities',
         que: 'Please select all the programs that you are interested in participating and drag them to all four Summers.',
         type: 'checkbox',
+        link1: '*You will be qualified for ',
         subTitle: true,
         options: [],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
@@ -515,8 +516,8 @@ var questionJson = [{
         showQueBlocks: true,
         headingText: "Drag and Drop",
         nextBlock: 'afterQ11',
-        minordrag: true,
         sumrdrag: true,
+        minordrag: true,
         queData: [],
         lastStep: true
     },
@@ -620,12 +621,6 @@ var dragBox = [{
         jumpto: 'minor'
     }
 ]
-
-
-
-
-
-
 
 //==============================JSON Array For Grid Data======================================================//
 var gridBlock = [{

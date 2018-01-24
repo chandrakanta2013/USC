@@ -28,7 +28,7 @@ button.cmn-btn2:focus, button.cmn-btn2:active {  color: #fff; }
 
 .draganddrop-outer { display: inline-block; float: left; width: 100%; padding: 2% 0; width: 100%; text-align: center;padding-bottom: 11px;   }
 #header{ background: #d7d7d7; display: block; min-height: 72px; }
-.game-zone { /*width: 1040px*/ background: #f6f6f4;padding: 20px 7px; box-sizing: border-box; }
+.game-zone { /*width: 1040px*/ background: #f6f6f4;padding: 20px 7px; box-sizing: border-box; float: left; }
 .game-zone table { text-align: center; }
 .game-zone table th { text-align: center; background: #e3e2df; color: #000; text-transform: uppercase; font-size: 17px; border-right: 5px solid #f6f6f4; /*padding: 5px 0;*/ width: 225px; }
 .game-zone table td {font-size: 12px; text-transform: uppercase; color: #51524e; font-weight: bold; min-width: 50px;  }
@@ -54,7 +54,7 @@ table.btm-table th {border-radius: 10px; /*padding: 10px 10px;*/  }
     background: -webkit-linear-gradient(-45deg, #ffb910 1%,#ffb910 50%,#ffab0e 52%,#ffab0e 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg, #ffb910 1%,#ffb910 50%,#ffab0e 52%,#ffab0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffb910', endColorstr='#ffab0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */  }
-.box-bottom label.title {font-weight: 700; font-size: 14px; margin: 0; padding: 0; line-height: 15px; font-family: arial; text-align: left; text-transform: none; display: inherit; }
+.box-bottom label.title {font-weight: 700; font-size: 13px; margin: 0; padding: 0; line-height: 15px; font-family: arial; text-align: left; text-transform: none; display: inherit; }
 .box-bottom p.desc {font-size: 11px; line-height: 13px; margin: 0; padding: 0; text-align: left; text-transform: none;  }
 .box-bottom span.star {     position: absolute; right: 5px; top: 22px; }
 
@@ -128,7 +128,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59cacc', end
 
 .right-content h2 { font-size: 24px; line-height:  normal; color: #991b1e; font-weight: 600; padding-top: 25px;    }
 .right-content p { font-size: 16px; line-height: normal; color: #000; padding-bottom: 20px;     }
-.right-content p span { font-weight: bold; }
+/*.right-content p span { font-weight: bold; }*/
 .right-content button { width: 100%; margin-bottom: 10px; font-size: 16px; padding: 8px 0; position: relative;      }
 .right-content button i.fa {     position: absolute; left: 14px; top: 16px; font-size: 18px; }
 .right-content button.red-btn { background: #a31919; }
@@ -190,7 +190,7 @@ span.elective-bg { background: url(../images/elective-icon.png) no-repeat center
 
 
 /*how to play code start*/
-p.sample-text { color: #000; font-weight: bold;  }
+p.sample-text { color: #000; font-weight: bold;text-align: center  }
 .howtoplay .game-zone {float: none; display: inline-block; }
 .discription { float: left; width: 100%; display: inline-block;  padding-left: 3%; color: #000; font-size: 16px;     }
 ul.chart-detail { float: left; margin: 0; padding: 20px 0 40px 0; }
@@ -254,13 +254,13 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 
 
 /*block animation code start */
-.box-contianer .defaultselect {-webkit-animation: fadeIn 0.3s; animation: fadeIn 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; }
+.box-contianer .defaultselect {-webkit-animation: fadeIn 0.3s; animation: fadeIn 0.3s; -webkit-animation-fill-mode: forwards; animation-fill-mode: forwards; opacity: 1;}
 .box-contianer:nth-child(n+1) .defaultselect{opacity: 0; -webkit-animation-delay: 0.5s; animation-delay: 0.5s; }
 .box-contianer:nth-child(n+2) .defaultselect{opacity: 0; -webkit-animation-delay: 0.7s; animation-delay: 0.7s; }
 .box-contianer:nth-child(n+3) .defaultselect{opacity: 0; -webkit-animation-delay: 0.9s; animation-delay: 0.9s; }
 .box-contianer:nth-child(n+4) .defaultselect{opacity: 0; -webkit-animation-delay: 1.1s; animation-delay: 1.1s; }
 .box-contianer:nth-child(n+5) .defaultselect{opacity: 0; -webkit-animation-delay: 1.3s; animation-delay: 1.3s; }
-.box-contianer:nth-child(n+6) .defaultselect{    opacity: 0; -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
+.box-contianer:nth-child(n+6) .defaultselect{opacity: 0; -webkit-animation-delay: 1.5s; animation-delay: 1.5s; }
 .box-contianer:nth-child(n+7) .defaultselect{opacity: 0; -webkit-animation-delay: 1.7s; animation-delay: 1.7s; }
 .box-contianer:nth-child(n+8) .defaultselect{opacity: 0; -webkit-animation-delay: 1.9s; animation-delay: 1.9s; } 
 .box-contianer:nth-child(n+9) .defaultselect{opacity: 0; -webkit-animation-delay: 2.1s; animation-delay: 2.1s; }
@@ -280,23 +280,24 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 .box-contianer:nth-child(n+23) .defaultselect{opacity: 0; -webkit-animation-delay: 4.9s; animation-delay: 4.9s; }
 .box-contianer:nth-child(n+24) .defaultselect{opacity: 0; -webkit-animation-delay: 5.1s; animation-delay: 5.1s; }
 
-/ Animation steps /
+/* Animation steps */
+.opacityBlock .box-contianer .defaultselect{opacity: 1 !important;}
 
 @-webkit-keyframes fadeIn {
   0% {
-    opacity: 0.0;
+    opacity: 0;
 }
 100% {
-    opacity: 1.0;
+    opacity: 1;
 }
 }
 
 @keyframes fadeIn {
   0% {
-    opacity: 0.0;
+    opacity: 0;
 }
 100% {
-    opacity: 1.0;
+    opacity: 1;
 }
 }
 /*block animation code end */
@@ -312,7 +313,7 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 .rightBox{ background: none;}
 /*.contentQue{     max-height: 604px; overflow: auto; }*/
 .resonacelink{ color: #ac210f; text-decoration: underline; } 
-.bottom-table{margin-top: 6px; display: -webkit-inline-box;} 
+.bottom-table{margin-top: 6px; display: block; float: left; width: 100%;} 
 .startover{color: #ffc129; }
 /*.startover:hover{ color: white }*/
 .startover:focus{ outline: none; }
@@ -326,9 +327,12 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 
 .btm-table .gridbox{ margin-top: 0px;margin-left: 0px }
 .summerBlock{ padding: 10px }
-
-
-
+.smr{padding: 10px 9px; }
+.clickLink{ color: #970000;
+    text-decoration: underline;
+    cursor: pointer; }
+.btm-text{ font-style: italic;font-size: 14px!important; }
+.btm-input .form-control{ padding: 20px 12px }
 
 /************************************************************Responsive code start*********************************************************************/
 @media only screen and (max-width: 1200px) {
@@ -501,7 +505,6 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
 
 @media only screen and (min-width: 320px) and (max-width: 380px) {
 
-
     .bottom .start-over span {margin: 0 0 0 -15px; }
     span.left-arrow-mobile {margin: 0 0 0 -16px; }
     .units-outer {margin: 0 0 0 -40px; }
@@ -511,9 +514,20 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     .next a {  margin: -9px -34px 0 8px !important; }
     .total-units h5 {font-size: 10px; }
     .bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right {font-size: 26px;}
-    .labeloptn{ width: 93%; padding: 0px 5px}
+    .labeloptn{ width: 92%; padding: 0px 5px}
     .units-outer {margin: 0 0 0 -60px; }
+}
 
-
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+}
+#canvasGrid{display: none;}
+@media print { 
+ /* All your print styles go here */
+ .navbar, .container-fluid, .banner-part, .static, .container-fluid, footer, .help,#gamePage{ display: none !important; } 
+ #canvasGrid{display: block;}
 }
 /************************************************************Responsive code end*********************************************************************/
