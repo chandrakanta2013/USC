@@ -446,7 +446,7 @@ var questionJson = [{
                     { optn: 'Master of Construction Management (Real Estate)' }
                 ]
             },
-            { optn: 'Get Undergraduate Degree early and start your career', optionType: 'Undergraduate' },
+            { optn: 'Get Undergraduate Degree early and start your career', name:'',optionType: 'Undergraduate' },
             { optn: 'Explore minors outside of business at USC', optionType: 'business' }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',

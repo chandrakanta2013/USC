@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="main-wrapper">
                         <div class='col-md-9'>
-                            <div class="game-zone-outer gamescroll" >
+                            <div class="game-zone-outer gamescroll">
                                 <div class="game-zone" id="capture">
                                     <table class="" width="100%">
                                         <thead>
@@ -168,13 +168,13 @@
                                                 <tr>
                                                     <th colspan='2' ng-repeat="item in summer">
                                                         <!-- <div class="summerBlock"> -->
-                                                            <div class="grid smr" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'sumrItemDrop($event, $index)',onOver: 'getSmrItem(item)', animate:true}">
-                                                                <h4 ng-if="item.heading" style="color: grey;">SUMMER</h4>
-                                                                <label ng-if="item.data.title" class="title">{{item.data.title}}</label>
-                                                                <p ng-if="item.data.desc" class="desc">{{item.data.desc}}</p>
-                                                                <!-- <span ng-class="item.class=='box-bottom rmvBorder'? '':'points'">{{item.data.points}}</span> -->
-                                                                <span ng-if="item.class=='box-bottom rmvBorder'" class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
-                                                            </div>
+                                                        <div class="grid smr" ng-class='item.class' data-drop="{{item.droppable}}" data-drag="{{item.draggable}}" data-jqyoui-options="{revert: 'invalid'}" id='{{$index}}' jqyoui-draggable="{index:$index, animate:true}" jqyoui-droppable="{onDrop : 'sumrItemDrop($event, $index)',onOver: 'getSmrItem(item)', animate:true}">
+                                                            <h4 ng-if="item.heading" style="color: grey;">SUMMER</h4>
+                                                            <label ng-if="item.data.title" class="title">{{item.data.title}}</label>
+                                                            <p ng-if="item.data.desc" class="desc">{{item.data.desc}}</p>
+                                                            <!-- <span ng-class="item.class=='box-bottom rmvBorder'? '':'points'">{{item.data.points}}</span> -->
+                                                            <span ng-if="item.class=='box-bottom rmvBorder'" class="star"><img src="src/assets/images/star-icon.png" height="20" width="21" alt=""></span>
+                                                        </div>
                                                         <!-- </div> -->
                                                     </th>
                                                 </tr>
@@ -221,9 +221,9 @@
                                                 <label>{{item.subTitle}}</label>
                                                 <ul>
                                                     <li ng-repeat="data in  item.options" ng-click="slctOptn(data)">
-                                                        <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected"> 
-                                                         <!-- <label ng-if="data.optn" class="chklabel" for="mltioption{{$index}}.[{{outer}}]" >{{data.optn.title}} at {{data.optn.desc}}</label> -->
-                                                          <label  ng-if="data.optn" class="chklabel" ng-class="!data.optn.onlink?'':'clickLink'" for="mltioption{{$index}}.[{{outer}}]" >{{data.optn.title}} at {{data.optn.desc}}</label>
+                                                        <input type="checkbox" name="mltioptn" id="mltioption{{$index}}.[{{outer}}]" ng-click="slectchkbx(data,$event)" ng-model="data.selected">
+                                                        <!-- <label ng-if="data.optn" class="chklabel" for="mltioption{{$index}}.[{{outer}}]" >{{data.optn.title}} at {{data.optn.desc}}</label> -->
+                                                        <span ng-if="data.optn" class="chklabel" ng-class="!data.optn.onlink?'':'clickLink'" for="mltioption{{$index}}.[{{outer}}]" ng-click="redirectTo(data)">{{data.optn.title}} at {{data.optn.desc}}</span>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -242,25 +242,27 @@
                                         </div>
                                     </div>
                                     <p ng-if="currentQue.link">{{currentQue.link}}<a href="http://ahf.usc.edu/commencement-honors/renaissance/" class="resonacelink" target="_blank">Renaissance Scholar</a></p>
-                                     <p ng-if="currentQue.link1">{{currentQue.link1}}<a href="http://ahf.usc.edu/commencement-honors/global/" class="resonacelink" target="_blank">Global Scholar</a></p>
+                                    <p ng-if="currentQue.link1">{{currentQue.link1}}<a href="http://ahf.usc.edu/commencement-honors/global/" class="resonacelink" target="_blank">Global Scholar</a></p>
                                 </div>
                                 <button type="button" class="btn cmn-btn" ng-disabled="!isSelected" ng-click='getNext()'>Next</button>
-                               
                             </div>
-                             <div class="lastStep" ng-show="lastStep">
+                            <div class="lastStep" ng-show="lastStep">
                                 <div class="right-content">
                                     <h2>Congratulations! </h2>
                                     <p>You have designed the following four-year program:</p>
-                                    <p><span>BS in Business Administration</span> with a focus in <span ng-bind-html="lastContent"></span></p>
-                                    <div class="form-group btm-input">
-                                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Name">
-                                    </div>
-                                    <div class="form-group btm-input">
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Email Address">
-                                      </div>
-                                      <p id="emailHelp" class="btm-text">The Above Information is needed only to generate your sample resume</p>
-                                    <button class="cmn-btn red-btn"><i class="fa fa-file-o" aria-hidden="true"></i>export my resume</button>
-                                    <button class="cmn-btn" ng-click="captureScrenshot()"><i class="fa fa-print" aria-hidden="true" ></i>Print my curriculum</button>
+                                    <p><span>BS in Business Administration</span> with a focus in <span ng-bind-html="lastContent"></span><br><span ng-if="!showmaster==1"
+                                        ng-bind-html="lastContent1"></span></p>
+                                    <form name="finishForm" novalidate="">
+                                        <div class="form-group btm-input">
+                                            <input type="text" class="form-control" id="name"  ng-model="user.name" required placeholder="Enter Name">
+                                        </div>
+                                        <div class="form-group btm-input">
+                                            <input type="email" class="form-control" id="email" ng-model="user.email" required placeholder="Enter Email Address">
+                                        </div>
+                                        <p id="emailHelp" class="btm-text">The above information is needed only to generate your sample resume.</p>
+                                        <button type="submit" class="cmn-btn red-btn" ng-disabled="finishForm.$invalid" ng-click="exportResume(user)"><i class="fa fa-file-o" aria-hidden="true"></i>export my resume</button>
+                                        <button class="cmn-btn" ng-click="captureScrenshot()"><i class="fa fa-print" aria-hidden="true"></i>Print my curriculum</button>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -451,10 +453,71 @@
             </div>
         </div>
     </div>
-    </div>
     <!-- </div> -->
+    <!--pop up design fro resume-->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" id="resume-popup" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="height: auto;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <div class="resume-top">
+                        <a class="iconpdf" ng-click="downloadpdf()">
+                            <i class="fa fa-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="main-wrapper">
+                        <div class="resume-outer" id="resumeouter">
+                            <div class="resume-top">
+                            </div>
+                            <div class="resume">
+                                <div class="info">
+                                    <h2>{{username}}</h2>
+                                    <span class="email"><a href="#">{{emailId}}</a></span>
+                                </div>
+                                <div class="education">
+                                    <h3>EDUCATION</h3>
+                                    <h4>University of Southern California <br> Marshall School of Business <span>May 2020</span> </h4>
+                                    <p>{{masterIn}}</p>
+                                    <p>Bachelor of Science in Business Administration, with a specialization in {{ques1Selectn}}
+                                        <br> Minor in {{minor}}, Second minor
+                                        <br> Global Scholar
+                                        <br> Renaissance Scholar</p>
+                                    <h5 class="acadmic">ACADEMIC PROJECT</h5>
+                                    <h4>{{academinProject}}</h4>
+                                </div>
+                                <div class="education workExp">
+                                    <h3>WORK EXPERIENCES</h3>
+                                    <div class="intenship" ng-repeat="data in internship">
+                                        <h4>{{data.title}} at {{data.desc}}  <span>Summer 2020</span> </h4>
+                                    </div>
+                                </div>
+                                <div class="education internationalExp">
+                                    <h3>INTERNATIONAL EXPERIENCES</h3>
+                                    <div class="intrnationl" ng-repeat="data in international">
+                                        <h4>{{data.title}}<span>Summer 2018</span> </h4>
+                                        <p>{{data.desc}}</p>
+                                    </div>
+                                </div>
+                                <div class="education">
+                                    <h3>LEADERSHIP INVOLVEMENTS</h3>
+                                    <h4>{{ques1Selectn}} Society</h4>
+                                    <h4>Applied Statistic Club</h4>
+                                    <h4>Marshall Business Student Government</h4>
+                                </div>
+                                <div class="resume-bottom">
+                                    <p>Sample resume is created by </p>
+                                    <img src="src/assets/images/logo2.png" height="31" width="138" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    </div>
     <div id="canvasGrid">
         <h2 style="text-align: center;padding: 20px 0px;font-weight: bold;color: grey;">Business Administration Course Grid</h2>
         <div id="canDoIt"></div>
@@ -469,6 +532,7 @@
     <script src="src/assets/js/angular-sanitize.js"></script>
     <script src="src/assets/vendor/slideout-1.0.1/dist/slideout.min.js"></script>
     <script src="src/assets/vendor/html2canvas/dist/html2canvas.min.js"></script>
+    <script src="src/assets/vendor/jspdf/dist/jspdf.min.js"></script>
     <script src="https://goldfirestudios.com/proj/howlerjs/howler.min.js?v=1.1.28"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="src/assets/js/defaultServices.js"></script>

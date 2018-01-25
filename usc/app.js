@@ -26,7 +26,13 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         $('#gamePage').show();
         $('#introPage').hide();
         $('#help-popup').modal('show');
-        localStorage.removeItem('startover')
+
+        if ($(window).width() < 768) {
+            $('.banner').css('display', 'none');
+            $('.banner-part').css('display', 'none');
+            $('footer').css('display', 'none');
+        }
+        localStorage.removeItem('startover');
     }
     var scrolltop = $('.main-wrapper').offset().top
     $(window).scrollTop(scrolltop);
@@ -120,17 +126,6 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     }
 
     $scope.selectedArray = []
-    console.log($scope.selectedArray, "array")
-    // $scope.lastStep = true;
-    // // $scope.currentQue = [];
-    // $('#que-block').hide();
-    // $scope.master = $scope.selectedArray[1].optn;
-    // $scope.selectedArray.filter(function(obj){
-    //     if(obj.ques=='minor' && obj.name){
-    //         $scope.minor = obj.name;
-    //     }
-    // });
-    // $scope.lastContent = "<strong>" + $scope.master + "</strong><br> Minor in <strong>" + $scope.minor + "</strong><br> Master in <strong>" + $scope.master + ""
 
     //====Make gray Block JSON====//
     $scope.blankBox = {
@@ -257,6 +252,9 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             $scope.summer[srcIndex] = $scope.summerBlock;
             $scope.summer[dstIndex] = temp;
         }
+        var sound = new Howl({
+            urls: [path[0] + '/src/assets/audio/totalunit.mp3']
+        }).play();
     }
 
 
@@ -301,9 +299,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             } else {
                 $scope.isSelected = 0;
             }
-            var sound = new Howl({
-                urls: [path[0] + '/src/assets/audio/totalunit.mp3']
-            }).play();
+
             $scope.totalUnits = parseInt($scope.totalUnits) + parseInt($scope.gridData[dstIndex].data.points);
         } else if (index.draggable.context.classList[0] == 'grid') { //Condition for when item drag from grid(from one bock to onother block) 
             var temp = angular.copy($scope.gridData[srcIndex]);
@@ -326,6 +322,9 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             $('#' + dstIndex).parent().replaceWith(linkFn);
             // ============= custom binding HTML add Drag contents =============
         }
+        var sound = new Howl({
+            urls: [path[0] + '/src/assets/audio/totalunit.mp3']
+        }).play();
     }
     //=======================================================================//
 
@@ -389,7 +388,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $scope.selectedOption.points = $scope.freeElectives;
                 $scope.freeElectives = 0;
                 $scope.color = 'sky-blue rmvBorder';
-                if (i == 0 || i == 5 || i == 10 || i == 15) {
+                if (i == 0 || i == 4 || i == 9 || i == 14) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -404,7 +403,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 console.log("in 4")
                 $scope.color = 'purple rmvBorder';
                 $scope.blckPoints = '4';
-                if (i == 0 || i == 5 || i == 10 || i == 15) {
+                if (i == 0 || i == 4 || i == 9 || i == 14) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -419,15 +418,18 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                     $scope.selectedOption.name = $scope.summmerchkboxArry[i].optn.title;
                     $scope.selectedOption.desc = $scope.summmerchkboxArry[i].optn.desc;
                 }
-                if (i == 0 || i == 5 || i == 10 || i == 15) {
+                if (i == 0 || i == 4 || i == 9 || i == 14) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '0px'
                 }
+                if ($(window).width() < 768) {
+                    console.log($('.box-bottom').parent(), "")
+                }
             } else if ($scope.currentQue.nextBlock != 'afterQ5' && $scope.currentQue.nextBlock != 'afterQ4') { //condition for QUESTN 5
                 $scope.color = 'green rmvBorder';
                 $scope.blckPoints = '4';
-                if (i == 0 || i == 5 || i == 10 || i == 15) {
+                if (i == 0 || i == 4 || i == 9 || i == 14) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -564,13 +566,27 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         }
         console.log(itmObj, "itmobj")
         if (itmObj.optn) {
-            if (itmObj.optn.summerchk == true) {
-                if (itmObj.optn.onlink) {
-                    window.open(itmObj.optn.onlink, 'blank');
+            if (itmObj.selected == true) {
+                if (itmObj.optn.summerchk == true) {
+                    $scope.summmerchkboxArry.push(itmObj);
+                    console.log($scope.summmerchkboxArry, "$scope.chkboxArry true");
+                    $scope.isSelected = 1;
                 }
-                $scope.summmerchkboxArry.push(itmObj);
-                console.log($scope.summmerchkboxArry, "$scope.chkboxArry");
-                $scope.isSelected = 1;
+            }
+
+            if (itmObj.selected == false) {
+                var indx = $scope.summmerchkboxArry.indexOf(itmObj)
+                $scope.summmerchkboxArry.splice(indx, 1);
+                console.log($scope.summmerchkboxArry, "$scope.chkboxArry false");
+            }
+        }
+    }
+
+
+    $scope.redirectTo = function(dataObj) {
+        if (dataObj.optn.summerchk == true) {
+            if (dataObj.optn.onlink) {
+                window.open(dataObj.optn.onlink, 'blank');
             }
         }
     }
@@ -609,21 +625,20 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             }
         });
         console.log($scope.countIB, $scope.countAP, $scope.countALevel, $scope.courseNone >= 3, "IB AP ALevel count");
-        if ($scope.countIB == 3 || $scope.countAP == 5 || $scope.countALevel == 2) {
+        if ($scope.countIB >= 3 || $scope.countAP >= 5 || $scope.countALevel >= 2) {
             $scope.countLevel = false;
             $scope.none = 0;
-        } else if ($scope.countIB != 3 || $scope.countAP != 5 || $scope.countALevel != 2) {
+        } else if ($scope.countIB < 3 || $scope.countAP < 5 || $scope.countALevel < 2) {
             $scope.countLevel = true;
             $scope.none = 1;
         }
         return $scope.countLevel;
     }
     //=====================================================================================================//
-
+    $scope.showmaster = 0;
     //==============================Funtion Call on  Next button==================================//
     $scope.getNext = function() {
         $scope.selectedArray.push($scope.selectedOption);
-        console.log($scope.selectedArray, $scope.currentQue, "$scope.selectedOption");
         if ($scope.currentQue.lastStep) {
             var sound = new Howl({
                 urls: [path[0] + '/src/assets/audio/final.mp3']
@@ -634,10 +649,21 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             $scope.master = $scope.selectedArray[1].optn;
             $scope.selectedArray.filter(function(obj) {
                 if (obj.ques == 'minor' && obj.name) {
-                    $scope.minor = obj.name;
+                    $scope.minor = obj.name
+
+                }
+                if (obj.optionType == 'Progressive') {
+                    $scope.optntype = obj.optionType;
                 }
             });
-            $scope.lastContent = "<strong>" + $scope.master + "</strong><br> Minor in <strong>" + $scope.minor + "</strong><br> Master in <strong>" + $scope.master + ""
+            if ($scope.optntype == 'Progressive') {
+                console.log("inside")
+                $scope.showmaster = 1;
+            } else {
+                $scope.showmaster = 0;
+            }
+            $scope.lastContent = "<strong>" + $scope.master + "</strong><br> Minor in <strong>" + $scope.minor + "</strong>";
+            $scope.lastContent1 = "Master in <strong>" + $scope.master + ""
             return false
         }
         if ($scope.selectedOption.Category == 'H') {
@@ -678,9 +704,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $timeout(function() {
                     $('#points-popup').modal('hide');
                 }, 3000);
-                if ($scope.currentQue.title == 'Q8') {
-                    $scope.currentQue.que = 'Nice! You have <strong>' + $scope.freeElectives + '</strong> of credits. Now you have the following options:'
-                }
+
                 if ($scope.currentQue.enableNext) {
                     $scope.isSelected = 1; //to disable button
                 } else {
@@ -751,7 +775,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                             if ($scope.selectedOption.optionType == 'Undergraduate') {
                                 $scope.currentQue.subcontent = "Note: Your extra credits are used for your early Graduation";
                             } else {
-                                $scope.currentQue.subcontent = "Note: Your extra credits are used for your Master in " + " " + $scope.selectedArray[1].optn + "degree.";
+                                $scope.currentQue.subcontent = "Note: Your extra credits are used for your Master in " + " " + $scope.selectedArray[1].optn + " " + "degree.";
                             }
                             $scope.gridData[21] = $scope.seniorArry[0];
                             $scope.gridData[20] = $scope.seniorArry[2];
@@ -787,6 +811,12 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 }
             }
 
+        }
+        if ($scope.currentQue.title == 'Q8') {
+            $scope.collegeCredit = 16
+            $scope.freeElectives = $scope.freeElectives - $scope.collegeCredit;
+            console.log($scope.freeElectives, $scope.collegeCredit, "$scope.freeElectives");
+            $scope.currentQue.que = 'Nice! You have <strong>' + $scope.freeElectives + '</strong> in your elective credits and <strong>' + $scope.collegeCredit + '</strong> college credits. Now you have the following options:'
         }
         if ($scope.currentQue.title == 'Q11') { //Conditions for question 11(Extra Curicular Activities)
             console.log($scope.selectedArray[0], "question 12");
@@ -840,12 +870,47 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             console.log(canvas);
             // $(canvas).attr('id', 'canvasGrid');
             $('#canDoIt').html(canvas);
-            
-            
+
+
             $timeout(function() {
                 window.print()
             }, 1000);
         });
+    }
+    $scope.exportResume = function(data) {
+        $scope.username = data.name;
+        $scope.emailId = data.email;
+        $('#resume-popup').modal('show');
+        $scope.ques1Selectn = $scope.selectedArray[1].optn;
+        $scope.academinProject = $scope.selectedArray[1].content;
+        $scope.selectedArray.filter(function(obj) {
+            console.log(obj);
+            if (obj.optionType == 'Progressive') {
+                $scope.masterIn = 'Master in ' + $scope.ques1Selectn;
+            }
+            if (obj.ques == 'minor') {
+                $scope.minor = obj.name;
+            }
+            if (obj.summer) {
+                $scope.internship = obj.summer.Internship;
+                $scope.international = obj.summer.International;
+            }
+        })
+    }
+
+    $scope.downloadpdf = function() {
+        html2canvas(document.querySelector("#resumeouter")).then(canvas => {
+            var imgData = $('#canDoIt').html(canvas);
+            // document.body.appendChild(canvas);
+            var image = new Image();
+            $scope.imagesrc = canvas.toDataURL("image/png");
+        });
+        $timeout(function() {
+            var image = $scope.imagesrc;
+            var cv = new jsPDF();
+            cv.addImage(image, 'JPEG', 10, 10)
+            cv.save('RESUME.pdf');
+        }, 1000)
     }
     //=====================================================================================================//
 }]);

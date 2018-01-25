@@ -165,7 +165,7 @@ span.elective-bg { background: url(../images/elective-icon.png) no-repeat center
 .labeloptn{ width: 94%; padding: 0px 5px; font-weight: 400}
 .option-container ul{ list-style: none;    max-height: 487px; overflow: hidden; padding: 3px; height: auto;}
 .option-container input[type=radio]{float: left; margin:8px 0px 0px;}
-.chklabel{  width: 92%; font-weight: 400;vertical-align: text-top; margin-top: -4px;}
+.chklabel{  width: 91%; font-weight: 400;vertical-align: text-top; margin-top: -4px;}
 .brown{ background:#d19b53 }
 #styleScroll{ overflow: auto; }
 #styleScroll::-webkit-scrollbar{width: 8px; }
@@ -206,22 +206,23 @@ table th.background-none { background: transparent !important; }
 /*how to play code end*/
 
 /*Resume page code start*/
-.resume-outer { margin: 0 auto; max-width: 700px;  }
-.resume {  min-height: 700px; border: 1px solid #ddd; border-top: 10px solid #ffcb2f; display: inline-block; width: 100%; padding:10% 10% 5% 10% }
-.resume-top {width: 100%; padding: 10px 0;}
+.resume-outer { margin: 0 auto; max-width: 724px;  }
+.resume {  min-height: 700px; border: 1px solid #ddd; border-top: 10px solid #ffcb2f; display: inline-block; width: 100%; padding: 6% 6% 4% 6%; }
+.resume-top {width: 100%;}
 .resume-top ul { margin: 0; padding: 0; float: left;  }
 .resume-top li { margin: 0 0 0 5px  ; padding: 0; float: left; list-style-type: none;  }
 .resume-top span { margin-top: 5px; float: right; }
 .resume-top span i.fa-times { font-size: 22px; cursor: pointer; }
 .resume-top span i.fa-times:hover { color: #a31919; }
 .resume h2 {     font-size: 40px; line-height: 30px; font-weight: bold; color: #a31919; margin: 0; padding: 0; }
-.resume .email { font-size: 16px; line-height: normal; margin: 0; padding: 0;  }
+.resume .info{ text-align: center; padding-bottom: 24px}
+.resume .email { font-size: 16px; line-height: normal; margin: 0; padding: 0; font-weight: 600 }
 .resume .email a { color: #000; }
-.resume .education { padding: 0; margin-top: 32px; border-top: 1px solid #000; display: inline-block; }
-.resume .education h3 { display: inline-block; color: #a31919; text-transform: uppercase;   }
-.resume .education h4 { display: inline-block; float: left; width: 100%; color: #000; font-weight: bold; margin: 0; padding: 10px 0; font-size: 16px;  }
+.resume .education {width: 100%; padding: 0; margin-top: 6px; border-top: 1px solid #80808075; display: inline-block; }
+.resume .education h3 { display: block; float:left; color: #a31919; text-transform: uppercase;   }
+.resume .education h4 { display: inline-block; float: left; width: 100%; color: #000; font-weight: bold; margin: 0; padding: 3px 0; font-size: 16px;  }
 .resume .education span { float: right;     margin: -3px 0 0 0; font-weight: normal; color: #8b8b8b; font-size: 15px;   }
-.resume .education p {     width: 330px; font-size: 15px; line-height: 18px; color: #000; float: left; font-weight: 500; }
+.resume .education p {     width: 461px; font-size: 15px; line-height: 18px; color: #000; float: left; font-weight: 500; }
 .resume-bottom { float: right; padding-top: 50px;  }
 .resume-bottom p { float: left; font-size: 12px; margin-right: 40px;   }
 /*Resume page code end*/
@@ -333,6 +334,21 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     cursor: pointer; }
 .btm-text{ font-style: italic;font-size: 14px!important; }
 .btm-input .form-control{ padding: 20px 12px }
+#resume-popup .modal-header{ padding: 5px 28px!important; }
+#resume-popup .modal-content{ width: 724px!important; }
+#resume-popup .modal-body{ padding: 0px!important }
+.acadmic{font-size: 18px;display: block; float: left; color: #a31919; text-transform: uppercase; }
+.iconpdf{margin-top: 8px; cursor: pointer;display: block }
+.iconpdf i{  font-size: 24px; color: brown;}
+.box-bottom{ width: 204px; height: 60px; }
+button:disabled,
+button[disabled]{
+  /*border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;*/
+  cursor: not-allowed;
+}
+
 
 /************************************************************Responsive code start*********************************************************************/
 @media only screen and (max-width: 1200px) {
@@ -485,7 +501,7 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     .box.gray, .box.cross{ transform: scale(1); }
     .box label.title{ font-size: 11px;line-height: 16px; }
     .box p.desc{ font-size: 9px; line-height: 10px; }
-    .rightBox{ height: 98px; width: 98px }
+    .rightBox{ height: auto; width: auto }
     ul#styleScroll{ overflow: hidden }
     .contentQue#styleScroll{ overflow: hidden }
     .contentQue{max-height: 934px;}
@@ -516,6 +532,16 @@ a.cmn-btn2:focus, a.cmn-btn2:active {  color: #fff; }
     .bottom span i.fa-long-arrow-left, .bottom span i.fa-long-arrow-right {font-size: 26px;}
     .labeloptn{ width: 92%; padding: 0px 5px}
     .units-outer {margin: 0 0 0 -60px; }
+    .option-container ul{ max-height: 597px; }
+    .right-box2{
+        margin-left: 0px;
+        width: 204px;
+        height: 60px;
+        float: left;
+        display: block;
+    }
+    .box-bottom{ width: 184px;
+        height: 60px; }
 }
 
 @media print and (color) {
