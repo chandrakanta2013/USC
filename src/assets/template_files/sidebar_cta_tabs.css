@@ -1,0 +1,23 @@
+.paragraph.paragraph--type--sidebar-cta-tabs.paragraph--view-mode--default {
+    margin-bottom: 42px;
+}
+
+.paragraph.paragraph--type--sidebar-cta-tabs.paragraph--view-mode--default a {
+    position: relative;
+    padding: .6em;
+    color: white;
+    background-color: #c42f2f;
+    display: block;
+    margin-bottom: 14px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.paragraph.paragraph--type--sidebar-cta-tabs.paragraph--view-mode--default a:after {
+    content: ">";
+    color: #fff;
+    position: absolute;
+    right: 1.3rem;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}

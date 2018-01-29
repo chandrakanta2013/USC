@@ -1,0 +1,10 @@
+@media (min-width: 78.75em){
+  .main-menu > li > .expanded-menu__menu-child > .expanded-menu__inner, .main-menu > li > .expanded-menu__menu-child > .expanded-menu__inner .expanded-menu__menu-child .expanded-menu__inner{
+    margin-left: calc((50% - 75rem)/2);
+    margin-right: 0;
+    max-width: 75rem;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 480px;
+  }
+}

@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)https://www.marshall.usc.edu/current-students -->
+<html lang="en" dir="ltr"
+      prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# "
+      class="no-touchevents details js wf-adobecaslonpro-n4-active wf-adobecaslonpro-i7-active wf-adobecaslonpro-n7-active wf-active"
+      style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="text/javascript" src="./template_files/cf096c9a4e"></script>
+    <script type="text/javascript" src="./template_files/300lo.json"></script>
+    <script src="./template_files/nr-1071.min.js"></script>
+    <script async="" src="./template_files/analytics.js"></script>
+    <script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+        function r(n) {
+            if (!t[n]) {
+                var o = t[n] = {exports: {}};
+                e[n][0].call(o.exports, function (t) {
+                    var o = e[n][1][t];
+                    return r(o || t)
+                }, o, o.exports)
+            }
+            return t[n].exports
+        }
+
+        if ("function" == typeof __nr_require)return __nr_require;
+        for (var o = 0; o < n.length; o++)r(n[o]);
+        return r
+    }({
+        1: [function (e, t, n) {
+            function r() {
+            }
+
+            function o(e, t, n) {
+                return function () {
+                    return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+                }
+            }
+
+            var i = e("handle"), a = e(2), u = e(3), c = e("ee").get("tracer"), f = e("loader"), s = NREUM;
+            "undefined" == typeof window.newrelic && (newrelic = s);
+            var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"],
+                d = "api-", l = d + "ixn-";
+            a(p, function (e, t) {
+                s[t] = o(d + t, !0, "api")
+            }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports = newrelic, s.interaction = function () {
+                return (new r).get()
+            };
+            var m = r.prototype = {
+                createTracer: function (e, t) {
+                    var n = {}, r = this, o = "function" == typeof t;
+                    return i(l + "tracer", [f.now(), e, n], r), function () {
+                        if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o)try {
+                            return t.apply(this, arguments)
+                        } catch (e) {
+                            throw c.emit("fn-err", [arguments, this, e], n), e
+                        } finally {
+                            c.emit("fn-end", [f.now()], n)
+                        }
+                    }
+                }
+            };
+            a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+                m[t] = o(l + t)
+            }), newrelic.noticeError = function (e) {
+                "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+            }
+        }, {}], 2: [function (e, t, n) {
+            function r(e, t) {
+                var n = [], r = "", i = 0;
+                for (r in e)o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+                return n
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}], 3: [function (e, t, n) {
+            function r(e, t, n) {
+                t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+                for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;)i[r] = e[t + r];
+                return i
+            }
+
+            t.exports = r
+        }, {}], 4: [function (e, t, n) {
+            t.exports = {exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart}
+        }, {}], ee: [function (e, t, n) {
+            function r() {
+            }
+
+            function o(e) {
+                function t(e) {
+                    return e && e instanceof r ? e : e ? c(e, u, i) : i()
+                }
+
+                function n(n, r, o, i) {
+                    if (!d.aborted || i) {
+                        e && e(n, r, o);
+                        for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++)u[f].apply(a, r);
+                        var p = s[y[n]];
+                        return p && p.push([b, n, r, a]), a
+                    }
+                }
+
+                function l(e, t) {
+                    v[e] = m(e).concat(t)
+                }
+
+                function m(e) {
+                    return v[e] || []
+                }
+
+                function w(e) {
+                    return p[e] = p[e] || o(n)
+                }
+
+                function g(e, t) {
+                    f(e, function (e, n) {
+                        t = t || "feature", y[n] = t, t in s || (s[t] = [])
+                    })
+                }
+
+                var v = {}, y = {},
+                    b = {on: l, emit: n, get: w, listeners: m, context: t, buffer: g, abort: a, aborted: !1};
+                return b
+            }
+
+            function i() {
+                return new r
+            }
+
+            function a() {
+                (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+            }
+
+            var u = "nr@context", c = e("gos"), f = e(2), s = {}, p = {}, d = t.exports = o();
+            d.backlog = s
+        }, {}], gos: [function (e, t, n) {
+            function r(e, t, n) {
+                if (o.call(e, t))return e[t];
+                var r = n();
+                if (Object.defineProperty && Object.keys)try {
+                    return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
+                } catch (i) {
+                }
+                return e[t] = r, r
+            }
+
+            var o = Object.prototype.hasOwnProperty;
+            t.exports = r
+        }, {}], handle: [function (e, t, n) {
+            function r(e, t, n, r) {
+                o.buffer([e], r), o.emit(e, t, n)
+            }
+
+            var o = e("ee").get("handle");
+            t.exports = r, r.ee = o
+        }, {}], id: [function (e, t, n) {
+            function r(e) {
+                var t = typeof e;
+                return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                    return o++
+                })
+            }
+
+            var o = 1, i = "nr@id", a = e("gos");
+            t.exports = r
+        }, {}], loader: [function (e, t, n) {
+            function r() {
+                if (!x++) {
+                    var e = h.info = NREUM.info, t = d.getElementsByTagName("script")[0];
+                    if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t))return s.abort();
+                    f(y, function (t, n) {
+                        e[t] || (e[t] = n)
+                    }), c("mark", ["onload", a() + h.offset], null, "api");
+                    var n = d.createElement("script");
+                    n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+                }
+            }
+
+            function o() {
+                "complete" === d.readyState && i()
+            }
+
+            function i() {
+                c("mark", ["domContent", a() + h.offset], null, "api")
+            }
+
+            function a() {
+                return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(), u)) - h.offset
+            }
+
+            var u = (new Date).getTime(), c = e("handle"), f = e(2), s = e("ee"), p = window, d = p.document,
+                l = "addEventListener", m = "attachEvent", w = p.XMLHttpRequest, g = w && w.prototype;
+            NREUM.o = {
+                ST: setTimeout,
+                SI: p.setImmediate,
+                CT: clearTimeout,
+                XHR: w,
+                REQ: p.Request,
+                EV: p.Event,
+                PR: p.Promise,
+                MO: p.MutationObserver
+            };
+            var v = "" + location, y = {
+                    beacon: "bam.nr-data.net",
+                    errorBeacon: "bam.nr-data.net",
+                    agent: "js-agent.newrelic.com/nr-1071.min.js"
+                }, b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+                h = t.exports = {offset: u, now: a, origin: v, features: {}, xhrWrappable: b};
+            e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+            var x = 0, E = e(4)
+        }, {}]
+    }, {}, ["loader"]);</script>
+    <script>(function (i, s, o, g, r, a, m) {
+        i["GoogleAnalyticsObject"] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+    ga("create", "UA-3793218-3", {"cookieDomain": "auto"});
+    ga("set", "anonymizeIp", true);
+    ga("send", "pageview");</script>
+    <meta name="title" content="Current Students | USC Marshall">
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="https://www.marshall.usc.edu/profiles/usc_marshall/usc_marshall.ico"
+          type="image/vnd.microsoft.icon">
+    <link rel="canonical" href="https://www.marshall.usc.edu/current-students">
+    <link rel="shortlink" href="https://www.marshall.usc.edu/node/181">
+    <link rel="revision" href="https://www.marshall.usc.edu/current-students">
+
+    <title>Current Students | USC Marshall</title>
+    <script src="./template_files/oef5gja.js"></script>
+    <style type="text/css">.tk-adobe-caslon-pro {
+        font-family: "adobe-caslon-pro", serif;
+    }</style>
+    <style type="text/css">@font-face {
+        font-family: tk-adobe-caslon-pro-n4;
+        src: url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: tk-adobe-caslon-pro-n7;
+        src: url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: tk-adobe-caslon-pro-i7;
+        src: url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"), url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"), url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");
+        font-weight: 700;
+        font-style: italic;
+    }</style>
+    <script>try {
+        Typekit.load({async: true});
+    } catch (e) {
+    }</script>
+    <link rel="stylesheet" href="./template_files/css_WCGeCu2inggI7EKpiEdmymmxBBMd1GlCzC98Wcgiq_c.css" media="all">
+    <link rel="stylesheet" href="./template_files/css_rBKh_K5lJXnyhP02JsGmw8n-Sc5Boo_wQd6t2O5z0ww.css" media="all">
+    <link rel="stylesheet" href="./template_files/css_MzSYe7Y8whOnXID4TegOUa8lC5OncI6LgVFkAnX0i2Q.css" media="all">
+    <link rel="stylesheet" href="./template_files/header_tweaks_info_for_links_.css" media="all">
+    <link rel="stylesheet" href="./template_files/main_navigation_menu_f.css" media="all">
+    <link rel="stylesheet" href="./template_files/overwritting_strong_and_em_tags.css" media="all">
+    <link rel="stylesheet" href="./template_files/sidebar_cta_tabs.css" media="all">
+
+
+    <!--[if lte IE 8]>
+    <script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+    <![endif]-->
+    <script src="./template_files/modernizr.min.js"></script>
+
+    <style type="text/css">.fancybox-margin {
+        margin-right: 15px;
+    }</style>
+    <style type="text/css">@font-face {
+        font-family: adobe-caslon-pro;
+        src: url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff2"), url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("woff"), url(https://use.typekit.net/af/f34fc4/000000000000000000012d68/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3) format("opentype");
+        font-weight: 400;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: adobe-caslon-pro;
+        src: url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff2"), url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("woff"), url(https://use.typekit.net/af/3b109e/000000000000000000012d65/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3) format("opentype");
+        font-weight: 700;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: adobe-caslon-pro;
+        src: url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff2"), url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("woff"), url(https://use.typekit.net/af/7ef461/000000000000000000012d66/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3) format("opentype");
+        font-weight: 700;
+        font-style: italic;
+    }</style>
+    <script type="text/javascript" src="chrome-extension://aadgmnobpdmgmigaicncghmmoeflnamj/ng-inspector.js"></script>
+    <style type="text/css">.at-icon {
+        fill: #fff;
+        border: 0
+    }
+    .at-icon-wrapper {
+        display: inline-block;
+        overflow: hidden
+    }
+    a .at-icon-wrapper {
+        cursor: pointer
+    }
+    .at-rounded, .at-rounded-element .at-icon-wrapper {
+        border-radius: 12%
+    }
+    .at-circular, .at-circular-element .at-icon-wrapper {
+        border-radius: 50%
+    }
+    .addthis_32x32_style .at-icon {
+        width: 2pc;
+        height: 2pc
+    }
+    .addthis_24x24_style .at-icon {
+        width: 24px;
+        height: 24px
+    }
+    .addthis_20x20_style .at-icon {
+        width: 20px;
+        height: 20px
+    }
+    .addthis_16x16_style .at-icon {
+        width: 1pc;
+        height: 1pc
+    }
+    #at16lb {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1001;
+        background-color: #000;
+        opacity: .001
+    }
+    #at_complete, #at_error, #at_share, #at_success {
+        position: static !important
+    }
+    .at15dn {
+        display: none
+    }
+    #at15s, #at16p, #at16p form input, #at16p label, #at16p textarea, #at_share .at_item {
+        font-family: arial, helvetica, tahoma, verdana, sans-serif !important;
+        font-size: 9pt !important;
+        outline-style: none;
+        outline-width: 0;
+        line-height: 1em
+    }
+    * html #at15s.mmborder {
+        position: absolute !important
+    }
+    #at15s.mmborder {
+        position: fixed !important;
+        width: 250px !important
+    }
+    #at15s {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);
+        float: none;
+        line-height: 1em;
+        margin: 0;
+        overflow: visible;
+        padding: 5px;
+        text-align: left;
+        position: absolute
+    }
+    #at15s a, #at15s span {
+        outline: 0;
+        direction: ltr;
+        text-transform: none
+    }
+    #at15s .at-label {
+        margin-left: 5px
+    }
+    #at15s .at-icon-wrapper {
+        width: 1pc;
+        height: 1pc;
+        vertical-align: middle
+    }
+    #at15s .at-icon {
+        width: 1pc;
+        height: 1pc
+    }
+    .at4-icon {
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: top left;
+        margin: 0;
+        overflow: hidden;
+        cursor: pointer
+    }
+    .addthis_16x16_style .at4-icon, .addthis_default_style .at4-icon, .at4-icon, .at-16x16 {
+        width: 1pc;
+        height: 1pc;
+        line-height: 1pc;
+        background-size: 1pc !important
+    }
+    .addthis_32x32_style .at4-icon, .at-32x32 {
+        width: 2pc;
+        height: 2pc;
+        line-height: 2pc;
+        background-size: 2pc !important
+    }
+    .addthis_24x24_style .at4-icon, .at-24x24 {
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        background-size: 24px !important
+    }
+    .addthis_20x20_style .at4-icon, .at-20x20 {
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        background-size: 20px !important
+    }
+    .at4-icon.circular, .circular .at4-icon, .circular.aticon {
+        border-radius: 50%
+    }
+    .at4-icon.rounded, .rounded .at4-icon {
+        border-radius: 4px
+    }
+    .at4-icon-left {
+        float: left
+    }
+    #at15s .at4-icon {
+        text-indent: 20px;
+        padding: 0;
+        overflow: visible;
+        white-space: nowrap;
+        background-size: 1pc;
+        width: 1pc;
+        height: 1pc;
+        background-position: top left;
+        display: inline-block;
+        line-height: 1pc
+    }
+    .addthis_vertical_style .at4-icon, .at4-follow-container .at4-icon {
+        margin-right: 5px
+    }
+    html > body #at15s {
+        width: 250px !important
+    }
+    #at15s.atm {
+        background: none !important;
+        padding: 0 !important;
+        width: 10pc !important
+    }
+    #at15s_inner {
+        background: #fff;
+        border: 1px solid #fff;
+        margin: 0
+    }
+    #at15s_head {
+        position: relative;
+        background: #f2f2f2;
+        padding: 4px;
+        cursor: default;
+        border-bottom: 1px solid #e5e5e5
+    }
+    .at15s_head_success {
+        background: #cafd99 !important;
+        border-bottom: 1px solid #a9d582 !important
+    }
+    .at15s_head_success a, .at15s_head_success span {
+        color: #000 !important;
+        text-decoration: none
+    }
+    #at15s_brand, #at15sptx, #at16_brand {
+        position: absolute
+    }
+    #at15s_brand {
+        top: 4px;
+        right: 4px
+    }
+    .at15s_brandx {
+        right: 20px !important
+    }
+    a#at15sptx {
+        top: 4px;
+        right: 4px;
+        text-decoration: none;
+        color: #4c4c4c;
+        font-weight: 700
+    }
+    #at15sptx:hover {
+        text-decoration: underline
+    }
+    #at16_brand {
+        top: 5px;
+        right: 30px;
+        cursor: default
+    }
+    #at_hover {
+        padding: 4px
+    }
+    #at_hover .at_item, #at_share .at_item {
+        background: #fff !important;
+        float: left !important;
+        color: #4c4c4c !important
+    }
+    #at_share .at_item .at-icon-wrapper {
+        margin-right: 5px
+    }
+    #at_hover .at_bold {
+        font-weight: 700;
+        color: #000 !important
+    }
+    #at_hover .at_item {
+        width: 7pc !important;
+        padding: 2px 3px !important;
+        margin: 1px;
+        text-decoration: none !important
+    }
+    #at_hover .at_item.athov, #at_hover .at_item:focus, #at_hover .at_item:hover {
+        margin: 0 !important
+    }
+    #at_hover .at_item.athov, #at_hover .at_item:focus, #at_hover .at_item:hover, #at_share .at_item.athov, #at_share .at_item:hover {
+        background: #f2f2f2 !important;
+        border: 1px solid #e5e5e5;
+        color: #000 !important;
+        text-decoration: none
+    }
+    .ipad #at_hover .at_item:focus {
+        background: #fff !important;
+        border: 1px solid #fff
+    }
+    .at15t {
+        display: block !important;
+        height: 1pc !important;
+        line-height: 1pc !important;
+        padding-left: 20px !important;
+        background-position: 0 0;
+        text-align: left
+    }
+    .addthis_button, .at15t {
+        cursor: pointer
+    }
+    .addthis_toolbox a.at300b, .addthis_toolbox a.at300m {
+        width: auto
+    }
+    .addthis_toolbox a {
+        margin-bottom: 5px;
+        line-height: initial
+    }
+    .addthis_toolbox.addthis_vertical_style {
+        width: 200px
+    }
+    .addthis_button_facebook_like .fb_iframe_widget {
+        line-height: 100%
+    }
+    .addthis_button_facebook_like iframe.fb_iframe_widget_lift {
+        max-width: none
+    }
+    .addthis_toolbox a.addthis_button_counter, .addthis_toolbox a.addthis_button_facebook_like, .addthis_toolbox a.addthis_button_facebook_send, .addthis_toolbox a.addthis_button_facebook_share, .addthis_toolbox a.addthis_button_foursquare, .addthis_toolbox a.addthis_button_google_plusone, .addthis_toolbox a.addthis_button_linkedin_counter, .addthis_toolbox a.addthis_button_pinterest_pinit, .addthis_toolbox a.addthis_button_stumbleupon_badge, .addthis_toolbox a.addthis_button_tweet {
+        display: inline-block
+    }
+    .at-share-tbx-element .google_plusone_iframe_widget > span > div {
+        vertical-align: top !important
+    }
+    .addthis_toolbox span.addthis_follow_label {
+        display: none
+    }
+    .addthis_toolbox.addthis_vertical_style span.addthis_follow_label {
+        display: block;
+        white-space: nowrap
+    }
+    .addthis_toolbox.addthis_vertical_style a {
+        display: block
+    }
+    .addthis_toolbox.addthis_vertical_style.addthis_32x32_style a {
+        line-height: 2pc;
+        height: 2pc
+    }
+    .addthis_toolbox.addthis_vertical_style .at300bs {
+        margin-right: 4px;
+        float: left
+    }
+    .addthis_toolbox.addthis_20x20_style span {
+        line-height: 20px
+    }
+    .addthis_toolbox.addthis_32x32_style span {
+        line-height: 2pc
+    }
+    .addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact, .addthis_toolbox.addthis_pill_combo_style a {
+        float: left
+    }
+    .addthis_toolbox.addthis_pill_combo_style a.addthis_button_tweet {
+        margin-top: -2px
+    }
+    .addthis_toolbox.addthis_pill_combo_style .addthis_button_compact .at15t_compact {
+        margin-right: 4px
+    }
+    .addthis_default_style .addthis_separator {
+        margin: 0 5px;
+        display: inline
+    }
+    div.atclear {
+        clear: both
+    }
+    .addthis_default_style .addthis_separator, .addthis_default_style .at4-icon, .addthis_default_style .at300b, .addthis_default_style .at300bo, .addthis_default_style .at300bs, .addthis_default_style .at300m {
+        float: left
+    }
+    .at300b img, .at300bo img {
+        border: 0
+    }
+    a.at300b .at4-icon, a.at300m .at4-icon {
+        display: block
+    }
+    .addthis_default_style .at300b, .addthis_default_style .at300bo, .addthis_default_style .at300m {
+        padding: 0 2px
+    }
+    .at300b, .at300bo, .at300bs, .at300m {
+        cursor: pointer
+    }
+    .addthis_button_facebook_like.at300b:hover, .addthis_button_facebook_like.at300bs:hover, .addthis_button_facebook_send.at300b:hover, .addthis_button_facebook_send.at300bs:hover {
+        opacity: 1
+    }
+    .addthis_20x20_style .at15t, .addthis_20x20_style .at300bs {
+        overflow: hidden;
+        display: block;
+        height: 20px !important;
+        width: 20px !important;
+        line-height: 20px !important
+    }
+    .addthis_32x32_style .at15t, .addthis_32x32_style .at300bs {
+        overflow: hidden;
+        display: block;
+        height: 2pc !important;
+        width: 2pc !important;
+        line-height: 2pc !important
+    }
+    .at300bs {
+        overflow: hidden;
+        display: block;
+        background-position: 0 0;
+        height: 1pc;
+        width: 1pc;
+        line-height: 1pc !important
+    }
+    .addthis_default_style .at15t_compact, .addthis_default_style .at15t_expanded {
+        margin-right: 4px
+    }
+    #at_share .at_item {
+        width: 123px !important;
+        padding: 4px;
+        margin-right: 2px;
+        border: 1px solid #fff
+    }
+    #at16p {
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);
+        z-index: 10000001;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        padding: 10px;
+        margin: 0 auto;
+        margin-top: -185px;
+        margin-left: -155px;
+        font-family: arial, helvetica, tahoma, verdana, sans-serif;
+        font-size: 9pt;
+        color: #5e5e5e
+    }
+    #at_share {
+        margin: 0;
+        padding: 0
+    }
+    #at16pt {
+        position: relative;
+        background: #f2f2f2;
+        height: 13px;
+        padding: 5px 10px
+    }
+    #at16pt a, #at16pt h4 {
+        font-weight: 700
+    }
+    #at16pt h4 {
+        display: inline;
+        margin: 0;
+        padding: 0;
+        font-size: 9pt;
+        color: #4c4c4c;
+        cursor: default
+    }
+    #at16pt a {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: #4c4c4c;
+        text-decoration: none;
+        padding: 2px
+    }
+    #at15sptx:focus, #at16pt a:focus {
+        outline: thin dotted
+    }
+    #at15s #at16pf a {
+        top: 1px
+    }
+    #_atssh {
+        width: 1px !important;
+        height: 1px !important;
+        border: 0 !important
+    }
+    .atm {
+        width: 10pc !important;
+        padding: 0;
+        margin: 0;
+        line-height: 9pt;
+        letter-spacing: normal;
+        font-family: arial, helvetica, tahoma, verdana, sans-serif;
+        font-size: 9pt;
+        color: #444;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABtJREFUeNpiZGBgaGAgAjAxEAlGFVJHIUCAAQDcngCUgqGMqwAAAABJRU5ErkJggg==);
+        padding: 4px
+    }
+    .atm-f {
+        text-align: right;
+        border-top: 1px solid #ddd;
+        padding: 5px 8px
+    }
+    .atm-i {
+        background: #fff;
+        border: 1px solid #d5d6d6;
+        padding: 0;
+        margin: 0;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, .15)
+    }
+    .atm-s {
+        margin: 0 !important;
+        padding: 0 !important
+    }
+    .atm-s a:focus {
+        border: transparent;
+        outline: 0;
+        transition: none
+    }
+    #at_hover.atm-s a, .atm-s a {
+        display: block;
+        text-decoration: none;
+        padding: 4px 10px;
+        color: #235dab !important;
+        font-weight: 400;
+        font-style: normal;
+        transition: none
+    }
+    #at_hover.atm-s .at_bold {
+        color: #235dab !important
+    }
+    #at_hover.atm-s a:hover, .atm-s a:hover {
+        background: #2095f0;
+        text-decoration: none;
+        color: #fff !important
+    }
+    #at_hover.atm-s .at_bold {
+        font-weight: 700
+    }
+    #at_hover.atm-s a:hover .at_bold {
+        color: #fff !important
+    }
+    .atm-s a .at-label {
+        vertical-align: middle;
+        margin-left: 5px;
+        direction: ltr
+    }
+    .at_PinItButton {
+        display: block;
+        width: 40px;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url(//s7.addthis.com/static/t00/pinit00.png);
+        background-repeat: no-repeat
+    }
+    .at_PinItButton:hover {
+        background-position: 0 -20px
+    }
+    .addthis_toolbox .addthis_button_pinterest_pinit {
+        position: relative
+    }
+    .at-share-tbx-element .fb_iframe_widget span {
+        vertical-align: baseline !important
+    }
+    #at16pf {
+        height: auto;
+        text-align: right;
+        padding: 4px 8px
+    }
+    .at-privacy-info {
+        position: absolute;
+        left: 7px;
+        bottom: 7px;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: helvetica, arial, sans-serif;
+        font-size: 10px;
+        line-height: 9pt;
+        letter-spacing: .2px;
+        color: #666
+    }
+    .at-privacy-info:hover {
+        color: #000
+    }
+    .body .wsb-social-share .wsb-social-share-button-vert {
+        padding-top: 0;
+        padding-bottom: 0
+    }
+    .body .wsb-social-share.addthis_counter_style .addthis_button_tweet.wsb-social-share-button {
+        padding-top: 40px
+    }
+    .body .wsb-social-share.addthis_counter_style .addthis_button_google_plusone.wsb-social-share-button {
+        padding-top: 0
+    }
+    .body .wsb-social-share.addthis_counter_style .addthis_button_facebook_like.wsb-social-share-button {
+        padding-top: 21px
+    }
+    @media print {
+        #at4-follow, #at4-share, #at4-thankyou, #at4-whatsnext, #at4m-mobile, #at15s, .at4, .at4-recommended {
+            display: none !important
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .at4win {
+            width: 100%
+        }
+    }
+    @media screen and (max-height: 700px) and (max-width: 400px) {
+        .at4-thankyou-inner .at4-recommended-container {
+            height: 122px;
+            overflow: hidden
+        }
+        .at4-thankyou-inner .at4-recommended .at4-recommended-item:first-child {
+            border-bottom: 1px solid #c5c5c5
+        }
+    }</style>
+    <style type="text/css">.at-branding-logo {
+        font-family: helvetica, arial, sans-serif;
+        text-decoration: none;
+        font-size: 10px;
+        display: inline-block;
+        margin: 2px 0;
+        letter-spacing: .2px
+    }
+    .at-branding-logo .at-branding-icon {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAMAAAC67D+PAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF////+GlNUkcc1QAAAB1JREFUeNpiYIQDBjQmAwMmkwEM0JnY1WIxFyDAABGeAFEudiZsAAAAAElFTkSuQmCC")
+    }
+    .at-branding-logo .at-branding-icon, .at-branding-logo .at-privacy-icon {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        margin-left: 4px;
+        margin-right: 3px;
+        margin-bottom: -1px;
+        background-repeat: no-repeat
+    }
+    .at-branding-logo .at-privacy-icon {
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAKCAMAAABR24SMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABhQTFRF8fr9ot/xXcfn2/P5AKva////////AKTWodjhjAAAAAd0Uk5T////////ABpLA0YAAAA6SURBVHjaJMzBDQAwCAJAQaj7b9xifV0kUKJ9ciWxlzWEWI5gMF65KUTv0VKkjVeTerqE/x7+9BVgAEXbAWI8QDcfAAAAAElFTkSuQmCC")
+    }
+    .at-branding-logo span {
+        text-decoration: none
+    }
+    .at-branding-logo .at-branding-addthis, .at-branding-logo .at-branding-powered-by {
+        color: #666
+    }
+    .at-branding-logo .at-branding-addthis:hover {
+        color: #333
+    }
+    .at-cv-with-image .at-branding-addthis, .at-cv-with-image .at-branding-addthis:hover {
+        color: #fff
+    }
+    a.at-branding-logo:visited {
+        color: initial
+    }
+    .at-branding-info {
+        display: inline-block;
+        padding: 0 5px;
+        color: #666;
+        border: 1px solid #666;
+        border-radius: 50%;
+        font-size: 10px;
+        line-height: 9pt;
+        opacity: .7;
+        transition: all .3s ease;
+        text-decoration: none
+    }
+    .at-branding-info span {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px
+    }
+    .at-branding-info:before {
+        content: 'i';
+        font-family: Times New Roman
+    }
+    .at-branding-info:hover {
+        color: #0780df;
+        border-color: #0780df
+    }</style>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="./template_files/menu.e332241bfecd146e1781.js"></script>
+</head>
+<body>
+<a href="https://www.marshall.usc.edu/current-students#main-content" class="visually-hidden focusable">
+    Skip to main content
+</a>
+
+<div class="page-wrap">
+    <header id="header" class="header js-header" role="banner" aria-label="Site header">
+        <span class="header__button"></span>
+        <div class="header__top">
+
+            <div class="header__top__inner container">
+                <div id="block-sitebranding" class="header__top__left">
+
+
+                    <a href="https://www.marshall.usc.edu/" title="Home" rel="home"
+                       class="site-branding__logo main-logo">
+                        <img src="./template_files/logo.svg" width="309" height="73" alt="Home">
+                    </a>
+                </div>
+                <div class="header__top__main">
+                    <nav role="navigation" aria-labelledby="block-topnavigation-menu" id="block-topnavigation"
+                         class="menu-info js-menu-info">
+
+                        <span id="block-topnavigation-menu" class="menu-info__label">More:</span>
+
+
+                        <ul class="more-items">
+                            <li>
+                                <a href="https://www.marshall.usc.edu/admissions" target="" rel=""
+                                   data-drupal-link-system-path="node/50576">Admissions</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/alumni-support"
+                                   data-drupal-link-system-path="node/12321">Alumni &amp; Support</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/career-services"
+                                   data-drupal-link-system-path="node/46796">Career Services</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/current-students" target="" rel=""
+                                   data-drupal-link-system-path="node/181" class="is-active">Current Students</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/library"
+                                   data-drupal-link-system-path="node/46476">Library</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/parents-families"
+                                   data-drupal-link-system-path="node/196">Parents &amp; Families</a>
+                            </li>
+                            <li>
+                                <a href="https://www.marshall.usc.edu/programs" target="" rel=""
+                                   data-drupal-link-system-path="node/81">Prospective Students</a>
+                            </li>
+                        </ul>
+
+
+                        <span class="menu-info__button">
+        <span class="menu-info__button__show">+ See all</span>
+        <span class="menu-info__button__hide">- Hide</span>
+      </span>
+                    </nav>
+                </div>
+
+
+                <div class="header__top__right">
+                    <a class="extend-logo" href="http://www.usc.edu/" target="_blank">
+                        <img src="./template_files/logo2.png" width="176" height="38" alt="Extend logo">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header__bottom">
+            <div class="header__bottom__inner container">
+                <div class="views-exposed-form bef-exposed-form header__search js-header__search"
+                     data-drupal-selector="views-exposed-form-acquia-search-page"
+                     id="block-exposedformacquia-searchpage-2">
+
+
+      <span class="header__search__btn">
+      <span class="icon-search"></span>
+      <span class="icon-cross"></span>
+    </span>
+                    <div class="search-box">
+                        <form action="https://www.marshall.usc.edu/search" method="get"
+                              id="views-exposed-form-acquia-search-page" accept-charset="UTF-8">
+                            <div class="js-form-item form-item js-form-type-textfield form-type-textfield form-item-search js-form-item-search">
+                                <label for="edit-search">Search</label>
+                                <input placeholder="Search..." data-drupal-selector="edit-search" type="text"
+                                       id="edit-search" name="search" value="" size="30" maxlength="128"
+                                       class="form-text">
+
+                            </div>
+                            <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper"
+                                 id="edit-actions"><input data-drupal-selector="edit-submit-acquia-search" type="submit"
+                                                          id="edit-submit-acquia-search" value="Search"
+                                                          class="button js-form-submit form-submit">
+                            </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation"
+                     class="header__main-menu">
+
+                    <h2 class="visually-hidden" id="block-mainnavigation-menu">Main navigation</h2>
+
+
+                    <ul class="main-menu js-expanded-menu">
+                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                            <div class="expanded-menu__menu-child" style="height: 0px;">
+                                <div class="expanded-menu__inner">
+                                    <div class="block-description">
+                                        <div class="block-description__content">
+                                            <h3 class="small-title">Programs</h3>
+                                            <div class="block-description__body">No matter your timetable or goals,
+                                                Marshall has a program that works for you.
+                                            </div>
+                                        </div>
+                                        <div class="block-description__links">
+                                            <a href="https://www.marshall.usc.edu/programs" class="btn btn--text">
+                                                Programs Overview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Undergraduate Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Undergraduate Programs</h3>
+                                                            <div class="block-description__body">Our undergraduate
+                                                                programs in business and accounting rank among the
+                                                                nation’s best.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/undergraduate-programs"
+                                                               class="btn btn--text">
+                                                                Undergraduate Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/undergraduate-programs/accounting"
+                                                               data-drupal-link-system-path="node/3866">Accounting</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/undergraduate-programs/business-administration"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3876">Business
+                                                                Administration</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/undergraduate-programs/world-bachelor-business"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3881">World Bachelor
+                                                                in Business</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/undergraduate-programs/undergraduate-admissions"
+                                                               data-drupal-link-system-path="node/276">Undergraduate
+                                                                Admissions</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">MBA Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">MBA Programs</h3>
+                                                            <div class="block-description__body">USC Marshall's
+                                                                top-ranked MBA programs attract students from across the
+                                                                globe for a hands-on graduate business education that
+                                                                translates to professional success.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs"
+                                                               class="btn btn--text">
+                                                                MBA Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/full-time-mba"
+                                                               data-drupal-link-system-path="node/4001">Full Time
+                                                                MBA</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/executive-mba-program"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/4011">Executive MBA
+                                                                Program</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/part-time-mba"
+                                                               data-drupal-link-system-path="node/4006">Part Time
+                                                                MBA</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/ibear-mba"
+                                                               data-drupal-link-system-path="node/11121">One-Year,
+                                                                Mid-Career IBEAR MBA</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/online-mba"
+                                                               data-drupal-link-system-path="node/4021">Online MBA</a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Specialized Masters Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Specialized Masters Programs</h3>
+                                                            <div class="block-description__body">Master your destiny at
+                                                                Marshall.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs"
+                                                               class="btn btn--text">
+                                                                Specialized Masters Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-business-analytics"
+                                                               data-drupal-link-system-path="node/3931">Master of
+                                                                Science in Business Analytics</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-entrepreneurship-and-innovation"
+                                                               data-drupal-link-system-path="node/4891">Master of
+                                                                Science in Entrepreneurship and Innovation</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-finance"
+                                                               data-drupal-link-system-path="node/3941">Master of
+                                                                Science in Finance</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-marketing"
+                                                               data-drupal-link-system-path="node/3951">Master of
+                                                                Science in Marketing</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-social-entrepreneurship"
+                                                               data-drupal-link-system-path="node/3966">Master of
+                                                                Science in Social Entrepreneurship</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-global-supply-chain-management"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3961">Master of
+                                                                Science in Global Supply Chain Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-management-library-and-information-science"
+                                                               data-drupal-link-system-path="node/3946">Master of
+                                                                Management in Library and Information Science</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-business-veterans"
+                                                               data-drupal-link-system-path="node/3971">Master of
+                                                                Business for Veterans</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-medical-management"
+                                                               data-drupal-link-system-path="node/3956">Master of
+                                                                Medical Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-management-studies"
+                                                               data-drupal-link-system-path="node/3976">Master of
+                                                                Management Studies</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/master-science-business-administration"
+                                                               data-drupal-link-system-path="node/3981">Master of
+                                                                Science in Business Administration</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/specialized-masters-programs/ms-program-learning-objectives"
+                                                               data-drupal-link-system-path="node/3986">MS Program
+                                                                Learning Objectives</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Graduate Accounting Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Graduate Accounting Programs</h3>
+                                                            <div class="block-description__body">Take your accounting
+                                                                career to the next level.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/graduate-accounting-programs"
+                                                               class="btn btn--text">
+                                                                Graduate Accounting Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/graduate-accounting-programs/master-accounting"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3911">Master of
+                                                                Accounting</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/graduate-accounting-programs/master-accounting-emphasis-data-and-analytics"
+                                                               data-drupal-link-system-path="node/50246">Master of
+                                                                Accounting with Emphasis in Data and Analytics</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/graduate-accounting-programs/jennifer-and-james-r-parks-master-business-taxation"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3916">Master of
+                                                                Business Taxation</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/graduate-accounting-programs/master-business-taxation-working-professionals"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3921">Master of
+                                                                Business Taxation for Working Professionals</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Online Degree Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Online Degree Programs</h3>
+                                                            <div class="block-description__body">Marshall offers a 24/7
+                                                                connection to your future.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/online-degree-programs"
+                                                               class="btn btn--text">
+                                                                Online Degree Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/mba-programs/online-mba"
+                                                               data-drupal-link-system-path="node/4021">Online MBA</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/online-degree-programs/master-business-taxation-working-professionals-online"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/12126">Master of
+                                                                Business Taxation for Working Professionals</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/online-degree-programs/master-science-global-supply-chain-management-online"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/12071">Master of
+                                                                Science of Global Supply Chain Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/online-degree-programs/master-management-library-and-information-science-online"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/12131">Master of
+                                                                Management in Library and Information Science</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="https://www.marshall.usc.edu/programs/phd-program" target="" rel=""
+                                               data-drupal-link-system-path="node/3991">PhD Program</a></li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Certificate Programs</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Certificate Programs</h3>
+                                                            <div class="block-description__body">Marshall brings you
+                                                                certified success.
+                                                            </div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs"
+                                                               class="btn btn--text">
+                                                                Certificate Programs Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-business-analytics"
+                                                               data-drupal-link-system-path="node/4691">Graduate
+                                                                Certificate in Business Analytics</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-business-fundamentals"
+                                                               data-drupal-link-system-path="node/4701">Graduate
+                                                                Certificate in Business Fundamentals</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-financial-analysis-and-valuation"
+                                                               data-drupal-link-system-path="node/4706">Graduate
+                                                                Certificate in Financial Analysis and Valuation</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-management-studies"
+                                                               data-drupal-link-system-path="node/4711">Graduate
+                                                                Certificate in Management Studies</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-marketing"
+                                                               data-drupal-link-system-path="node/4716">Graduate
+                                                                Certificate in Marketing</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-optimization-and-supply-chain-management"
+                                                               data-drupal-link-system-path="node/4721">Graduate
+                                                                Certificate in Optimization and Supply Chain
+                                                                Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-strategy-and-management-consulting"
+                                                               data-drupal-link-system-path="node/4726">Graduate
+                                                                Certificate in Strategy and Management Consulting</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-sustainability-and-business"
+                                                               data-drupal-link-system-path="node/4731">Graduate
+                                                                Certificate in Sustainability and Business</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/graduate-certificate-technology-commercialization"
+                                                               data-drupal-link-system-path="node/4736">Graduate
+                                                                Certificate in Technology Commercialization</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/programs/certificate-programs/food-industry-management-program"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/11176">Food Industry
+                                                                Management Program</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="https://www.marshall.usc.edu/programs/executive-education-programs"
+                                               target="" rel="" data-drupal-link-system-path="node/3886">Executive
+                                            Education Programs</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/programs/experiential-learning-center"
+                                               target="" rel="" data-drupal-link-system-path="node/3901">Experiential
+                                            Learning Center</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Departments</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                            <div class="expanded-menu__menu-child" style="height: 0px;">
+                                <div class="expanded-menu__inner">
+                                    <div class="block-description">
+                                        <div class="block-description__content">
+                                            <h3 class="small-title">Departments</h3>
+                                            <div class="block-description__body">At Marshall, we offer depth of
+                                                knowledge and breadth of expertise.
+                                            </div>
+                                        </div>
+                                        <div class="block-description__links">
+                                            <a href="https://www.marshall.usc.edu/departments" class="btn btn--text">
+                                                Departments Overview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li><a href="https://www.marshall.usc.edu/departments/business-communication"
+                                               target="" rel="" data-drupal-link-system-path="node/3826">Business
+                                            Communication</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/departments/data-sciences-and-operations"
+                                               target="" rel="" data-drupal-link-system-path="node/3831">Data Sciences
+                                                and Operations</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/departments/finance-and-business-economics"
+                                               target="" rel="" data-drupal-link-system-path="node/3841">Finance and
+                                                Business Economics</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/departments/leventhal-school-accounting"
+                                               target="" rel="" data-drupal-link-system-path="node/3846">Leventhal
+                                                School of Accounting</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/departments/management-and-organization"
+                                               target="" rel="" data-drupal-link-system-path="node/3851">Management and
+                                                Organization</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/departments/marketing" target=""
+                                               rel="" data-drupal-link-system-path="node/3856">Marketing</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/departments/lloyd-greif-center-entrepreneurial-studies"
+                                               target="" rel="" data-drupal-link-system-path="node/3836">Lloyd Greif
+                                                Center for Entrepreneurial Studies</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Faculty &amp; Research</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                            <div class="expanded-menu__menu-child" style="height: 0px;">
+                                <div class="expanded-menu__inner">
+                                    <div class="block-description">
+                                        <div class="block-description__content">
+                                            <h3 class="small-title">Faculty &amp; Research</h3>
+                                            <div class="block-description__body">USC Marshall faculty are award-winning
+                                                scholars who publish cutting-edge research.
+                                            </div>
+                                        </div>
+                                        <div class="block-description__links">
+                                            <a href="https://www.marshall.usc.edu/faculty-research"
+                                               class="btn btn--text">
+                                                Faculty &amp; Research Overview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/faculty-directory"
+                                               data-drupal-link-system-path="node/12271">Faculty Directory</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/faculty-resources"
+                                               target="" rel="" data-drupal-link-system-path="node/8876">Faculty
+                                            Resources</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/faculty-positions"
+                                               target="" rel="" data-drupal-link-system-path="node/8641">Faculty
+                                            Positions</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/recent-publications"
+                                               target="" rel="" data-drupal-link-system-path="node/4056">Recent
+                                            Publications</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/research-fair-videos"
+                                               target="" rel="" data-drupal-link-system-path="node/12276">Research Fair
+                                            Videos</a></li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Centers of Excellence</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Centers of Excellence</h3>
+                                                            <div class="block-description__body"></div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence"
+                                                               class="btn btn--text">
+                                                                Centers Overview
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/brittingham-social-enterprise-lab"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3776">Brittingham
+                                                                Social Enterprise Lab</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/center-effective-organizations"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3781">Center for
+                                                                Effective Organizations</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/global-branding-center"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3816">The Global
+                                                                Branding Center</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/center-global-innovation"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3786">Center for
+                                                                Global Innovation</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/center-global-supply-chain-management"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3791">Center for
+                                                                Global Supply Chain Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/center-investment-studies"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3796">Center for
+                                                                Investment Studies</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/institute-communication-technology-management"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3801">Institute for
+                                                                Communication Technology Management</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/neely-center-ethical-leadership-and-decision-making"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3811">Neely Center for
+                                                                Ethical Leadership and Decision Making</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/sports-business-institute"
+                                                               target="" rel=""
+                                                               data-drupal-link-system-path="node/3821">The Sports
+                                                                Business Institute</a></li>
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/centers-excellence/william-j-mcmorrow-global-real-estate-initiative"
+                                                               data-drupal-link-system-path="node/50801">The William J.
+                                                                McMorrow Global Real Estate Initiative</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="https://www.marshall.usc.edu/faculty-research/phd-students"
+                                               data-drupal-link-system-path="node/46436">Ph.D. Students</a></li>
+                                        <li>
+                                            <a href="https://www.marshall.usc.edu/faculty-research/institute-outlier-research-business"
+                                               target="" rel="" data-drupal-link-system-path="node/49136">Institute for
+                                                Outlier Research in Business</a></li>
+                                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">Labs and Institutes</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                                            <div class="expanded-menu__menu-child">
+                                                <div class="expanded-menu__inner">
+                                                    <span class="expanded-menu__back"></span>
+                                                    <div class="block-description">
+                                                        <div class="block-description__content">
+                                                            <h3 class="small-title">Labs and Institutes</h3>
+                                                            <div class="block-description__body"></div>
+                                                        </div>
+                                                        <div class="block-description__links">
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/labs-and-institutes"
+                                                               class="btn btn--text">
+                                                                Overall info
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="menu">
+                                                        <li>
+                                                            <a href="https://www.marshall.usc.edu/faculty-research/labs-and-institutes/usc-performance-science-institute"
+                                                               data-drupal-link-system-path="node/49161">The USC
+                                                                Performance Science Institute</a></li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                        <li class="expanded-menu">
+          <span class="expanded-menu__link">
+            <span class="no-link">News &amp; Events</span>
+            <span class="expanded-menu__button"></span>
+          </span>
+                            <div class="expanded-menu__menu-child" style="height: 0px;">
+                                <div class="expanded-menu__inner">
+                                    <div class="block-description">
+                                        <div class="block-description__content">
+                                            <h3 class="small-title">News &amp; Events</h3>
+                                            <div class="block-description__body">Across business disciplines, Marshall
+                                                makes the news.
+                                            </div>
+                                        </div>
+                                        <div class="block-description__links">
+                                            <a href="https://www.marshall.usc.edu/news-events" class="btn btn--text">
+                                                News &amp; Events Overview
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <ul class="menu">
+                                        <li><a href="https://www.marshall.usc.edu/news-events/usc-marshall-events"
+                                               target="" rel="" data-drupal-link-system-path="node/4051">Events at USC
+                                            Marshall</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/news-events/news-usc-marshall"
+                                               target="" rel="" data-drupal-link-system-path="node/4041">News at USC
+                                            Marshall</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/news-events/usc-marshall-blogs"
+                                               target="" rel="" data-drupal-link-system-path="node/4036">USC Marshall
+                                            Blogs</a></li>
+                                        <li><a href="https://www.marshall.usc.edu/news-events/podcasts" target="" rel=""
+                                               data-drupal-link-system-path="node/11126">Podcasts</a></li>
+                                        <li><a href="http://news.usc.edu/category/business/" target="_blank" rel="">Business
+                                            in the News at USC</a></li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </nav>
+                <nav role="navigation" aria-labelledby="block-secondnavigation-menu" id="block-secondnavigation"
+                     class="header__extend-menu">
+
+                    <h2 class="visually-hidden" id="block-secondnavigation-menu">Second navigation</h2>
+
+
+                    <ul class="extend-menu">
+                        <li>
+                            <a href="https://www.marshall.usc.edu/about" target="" rel=""
+                               data-drupal-link-system-path="node/46431">About</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/why-marshall" data-drupal-link-system-path="node/201">Why
+                                Marshall</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/departments/leventhal-school-accounting" target=""
+                               rel="" data-drupal-link-system-path="node/3846">USC Leventhal</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/usc-marshall-directory" target="" rel=""
+                               class="extend-menu__directory-icon"
+                               data-drupal-link-system-path="node/4046">Directory</a>
+                        </li>
+                    </ul>
+
+
+                </nav>
+                <nav role="navigation" aria-labelledby="block-topnavigation-mobile-menu" id="block-topnavigation-mobile"
+                     class="menu-info-mobile js-menu-info-mobile">
+
+                    <span id="block-topnavigation-mobile-menu" class="menu-info-mobile__btn">More:</span>
+
+
+                    <ul class="more-items">
+                        <li>
+                            <a href="https://www.marshall.usc.edu/admissions" target="" rel=""
+                               data-drupal-link-system-path="node/50576">Admissions</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/alumni-support"
+                               data-drupal-link-system-path="node/12321">Alumni &amp; Support</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/career-services"
+                               data-drupal-link-system-path="node/46796">Career Services</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/current-students" target="" rel=""
+                               data-drupal-link-system-path="node/181" class="is-active">Current Students</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/library" data-drupal-link-system-path="node/46476">Library</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/parents-families"
+                               data-drupal-link-system-path="node/196">Parents &amp; Families</a>
+                        </li>
+                        <li>
+                            <a href="https://www.marshall.usc.edu/programs" target="" rel=""
+                               data-drupal-link-system-path="node/81">Prospective Students</a>
+                        </li>
+                    </ul>
+
+
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+    <main id="main" class="main" role="main">
+        <section class="section">
+            <a id="main-content" tabindex="-1"></a>
+            <div>
+                <article role="article" about="/current-students">
+
+                    <div class="region__b--ii">
+
+                        <div class="field field--name-field-region-ii-b field--type-entity-reference-revisions field--label-hidden">
+                            <div class="block-hero  block-hero--has-image">
+                                <div class="block-hero__image">
+
+                                    <div><img src="./template_files/hero-current-students-section-page.jpg" width="1440"
+                                              height="400" alt="Thumbnail" typeof="foaf:Image">
+
+
+                                    </div>
+
+                                </div>
+                                <div class="container">
+                                    <div class="block-hero__content-wrap">
+                                        <div class="block-hero__content border-style">
+                                            <h1 class="block-hero__title">
+                                                <div>Business Administration Course Grid</div>
+                                            </h1>
+                                            <div class="block-hero__body">
+                                                <div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="region__c--ii">
+                        <div id="block-breadcrumbs">
+
+
+                            <div class="breadcrumbs container">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.marshall.usc.edu/">Home</a>
+                                    </li>
+                                    <li>
+                                        Current Students
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+                        <div id="block-usc-socialblock" class="block-social-share container">
+                            <div class="block-social-share__inner">
+
+                                <span class="label">Share this:</span>
+
+                                <div id="share-buttons-div" class="share-buttons-div share-buttons-div-visible">
+                                    <div class="addthis_toolbox addthis_default_style addthis_32x32_style"><a
+                                            class="addthis_button_facebook at300b" title="Facebook"
+                                            href="https://www.marshall.usc.edu/current-students#"><span
+                                            class="at-icon-wrapper"
+                                            style="background-color: rgb(59, 89, 152); line-height: 32px; height: 32px; width: 32px;"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                            aria-labelledby="at-svg-facebook-1" title="Facebook" alt="Facebook"
+                                            class="at-icon at-icon-facebook" style="width: 32px; height: 32px;"><title
+                                            id="at-svg-facebook-1">Facebook</title><g><path
+                                            d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z"
+                                            fill-rule="evenodd"></path></g></svg></span></a><a
+                                            class="addthis_button_twitter at300b" title="Twitter"
+                                            href="https://www.marshall.usc.edu/current-students#"><span
+                                            class="at-icon-wrapper"
+                                            style="background-color: rgb(29, 161, 242); line-height: 32px; height: 32px; width: 32px;"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                            aria-labelledby="at-svg-twitter-2" title="Twitter" alt="Twitter"
+                                            class="at-icon at-icon-twitter" style="width: 32px; height: 32px;"><title
+                                            id="at-svg-twitter-2">Twitter</title><g><path
+                                            d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336"
+                                            fill-rule="evenodd"></path></g></svg></span></a><a
+                                            class="addthis_button_email at300b" target="_blank" title="Email"
+                                            href="https://www.marshall.usc.edu/current-students#"><span
+                                            class="at-icon-wrapper"
+                                            style="background-color: rgb(132, 132, 132); line-height: 32px; height: 32px; width: 32px;"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                            aria-labelledby="at-svg-email-3" title="Email" alt="Email"
+                                            class="at-icon at-icon-email" style="width: 32px; height: 32px;"><title
+                                            id="at-svg-email-3">Email</title><g><g fill-rule="evenodd"></g><path
+                                            d="M27 22.757c0 1.24-.988 2.243-2.19 2.243H7.19C5.98 25 5 23.994 5 22.757V13.67c0-.556.39-.773.855-.496l8.78 5.238c.782.467 1.95.467 2.73 0l8.78-5.238c.472-.28.855-.063.855.495v9.087z"></path><path
+                                            d="M27 9.243C27 8.006 26.02 7 24.81 7H7.19C5.988 7 5 8.004 5 9.243v.465c0 .554.385 1.232.857 1.514l9.61 5.733c.267.16.8.16 1.067 0l9.61-5.733c.473-.283.856-.96.856-1.514v-.465z"></path></g></svg></span></a><a
+                                            class="addthis_button_compact at300m"
+                                            href="https://www.marshall.usc.edu/current-students#"><span
+                                            class="at-icon-wrapper"
+                                            style="background-color: rgb(255, 101, 80); line-height: 32px; height: 32px; width: 32px;"><svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 32 32" version="1.1" role="img"
+                                            aria-labelledby="at-svg-addthis-4" title="More"
+                                            alt="More" class="at-icon at-icon-addthis"
+                                            style="width: 32px; height: 32px;"><title
+                                            id="at-svg-addthis-4">Addthis</title><g><path
+                                            d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z"
+                                            fill-rule="evenodd"></path></g></svg></span></a>
+                                        <div class="atclear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="paragraph paragraph--type--cta-block paragraph--view-mode--default">
+                            <div class="cta-list">
+                                <div class="container">
+
+
+                                    <div ng-app="DEMO" class="ng-scope game-block">
+
+                                        <script src="js/pace.min.js"></script>
+                                        <link id="load_plugins_before"/>
+                                        <link rel="stylesheet" href="css/font-awesome.min.css">
+                                        <link rel="stylesheet"
+                                              href="css_custom/bootstrap.min.css">
+                                        <link rel="stylesheet" href="vendor/izitoast/dist/css/iziToast.css">
+                                        <link rel="icon" type="image/x-icon"
+                                              href="https://www.marshall.usc.edu/profiles/usc_marshall/usc_marshall.ico">
+                                        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800"
+                                              rel="stylesheet">
+                                        <link rel="stylesheet"
+                                              href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
+                                              media="print">
+                                        <link rel="stylesheet" href="css_custom/styles.css">
+                                        <style type="text/css">
+                                            [ng\:cloak],
+                                            [ng-cloak],
+                                            [data-ng-cloak],
+                                            [x-ng-cloak],
+                                            .ng-cloak,
+                                            .x-ng-cloak,
+                                            .ng-hide:not(.ng-hide-animate) {
+                                                display: none !important;
+                                            }
+                                        </style>
+                                        <div ng-controller="homeCtrl">
+                                            <!--================================================================ IntroPage ===================================================================-->
+                                            <div class="mid-part" id="introPage">
+                                                <div class="container">
+                                                    <div class="mid-description">
+                                                        <h2>Your Marshall, Your Way.</h2>
+                                                        <h4>Start personalizing your career preparation now</h4>
+                                                        <p>Welcome to USC Marshall’s interactive curriculum game! A
+                                                            major component of the undergraduate program at USC Marshall
+                                                            is the flexibility to take courses outside of business
+                                                            administration and accounting and complete a dual degree
+                                                            and/or minor program. For example, students graduate from
+                                                            USC Marshall with majors in business administration and/or
+                                                            accounting and minors in philosophy, cinematic arts, music
+                                                            industry, etc. </p>
+                                                        <p>Our interactive curriculum game is to be used for
+                                                            illustrative purposes only. The four-year plan that you will
+                                                            create will show you USC Marshall will maximize your time at
+                                                            USC, allowing you the flexibility to pursue an
+                                                            interdisciplinary path, while also maximizing Advance
+                                                            Placement (AP), International Baccalaureate(IB), and
+                                                            International A-Level exam credit (A-Level). </p>
+
+
+                                                        <button ng-click="gotoGame()" ng-mobile-click="gotoGame()"
+                                                                class="cmn-btn2 btn" id="letsplay">Let's Play
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--================================================================ Game Page =======================================================================-->
+                                            <div class="mid-part" id="gamePage">
+                                                <div class="container">
+                                                    <div class="main-wrapper">
+                                                        <div class="row">
+                                                            <div class="main-wrapper">
+                                                                <div class='col-md-8'>
+                                                                    <div class="game-zone-outer gamescroll">
+                                                                        <div class="game-zone" id="capture">
+                                                                            <table class="" width="100%">
+                                                                                <thead>
+                                                                                <tr>
+                                                                                    <th colspan='2'>Freshman</th>
+                                                                                    <th colspan='2'>Sophomore</th>
+                                                                                    <th colspan='2'>Junior</th>
+                                                                                    <th colspan='2'>Senior</th>
+                                                                                </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td>Fall</td>
+                                                                                    <td>Spring</td>
+                                                                                    <td>Fall</td>
+                                                                                    <td>Spring</td>
+                                                                                    <td>Fall</td>
+                                                                                    <td>Spring</td>
+                                                                                    <td>Fall</td>
+                                                                                    <td>Spring</td>
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <div class="blockdata" id="dataBlock">
+                                                                            </div>
+                                                                            <div class="bottom-table">
+                                                                                <table class="btm-table" width="100%">
+                                                                                    <thead>
+                                                                                    <tr>
+                                                                                        <th colspan='2'
+                                                                                            ng-repeat="item in summer">
+                                                                                            <!-- <div class="summerBlock"> -->
+                                                                                            <div class="grid smr"
+                                                                                                 ng-class='item.class'
+                                                                                                 data-drop="{{item.droppable}}"
+                                                                                                 data-drag="{{item.draggable}}"
+                                                                                                 data-jqyoui-options="{revert: 'invalid'}"
+                                                                                                 id='{{$index}}'
+                                                                                                 jqyoui-draggable="{index:$index, animate:true}"
+                                                                                                 jqyoui-droppable="{onDrop : 'sumrItemDrop($event, $index)',onOver: 'getSmrItem(item)', animate:true}">
+                                                                                                <h4 ng-if="item.heading"
+                                                                                                    style="color: grey;">
+                                                                                                    SUMMER</h4>
+                                                                                                <label ng-if="item.data.title"
+                                                                                                       class="title">{{item.data.title}}</label>
+                                                                                                <p ng-if="item.data.desc"
+                                                                                                   class="desc">
+                                                                                                    {{item.data.desc}}</p>
+                                                                                                <!-- <span ng-class="item.class=='box-bottom rmvBorder'? '':'points'">{{item.data.points}}</span> -->
+                                                                                                <span ng-if="item.class=='box-bottom rmvBorder'"
+                                                                                                      class="star"><img
+                                                                                                        src="images/star-icon.png"
+                                                                                                        height="20"
+                                                                                                        width="21"
+                                                                                                        alt=""></span>
+                                                                                            </div>
+                                                                                            <!-- </div> -->
+                                                                                        </th>
+                                                                                    </tr>
+                                                                                    </thead>
+                                                                                </table>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class='col-md-4 static'>
+                                                                    <div class="que-zone" id='que-block'>
+                                                                        <button type="button"
+                                                                                class="visible-xs visible-sm hidden-lg hidden-md que-btn que-btn2"
+                                                                                ng-click="toggleQuestion()">
+                                                                            <i class="fa fa-angle-right"
+                                                                               aria-hidden="true"
+                                                                               ng-show="queBlock"></i>
+                                                                            <i class="fa fa-angle-left ng-hide"
+                                                                               aria-hidden="true"
+                                                                               ng-show="!queBlock"></i>
+                                                                        </button>
+                                                                        <!-- <h3 style="font-weight: 600;color: #a32319;">{{currentQue.title}}</h3> -->
+                                                                        <h4 style="font-weight: bold;color: #a32319;font-size: 24px;">
+                                                                            {{currentQue.heading}}</h4>
+                                                                        <div class="scrollingContent">
+                                                                            <div class="contentQue">
+                                                                                <p ng-if="!currentQue.confirm && currentQue.title!='Q8' && currentQue.number!='1'">
+                                                                                    {{currentQue.que}}</p>
+                                                                                <p ng-if="currentQue.autoMove || currentQue.subcontent">
+                                                                                    {{currentQue.subcontent}}</p>
+                                                                                <p ng-if="currentQue.confirm || currentQue.title=='Q8' || currentQue.number=='1'"
+                                                                                   ng-bind-html="currentQue.que"></p>
+                                                                                <p ng-if="!currentQue.confirm && currentQue.content1 ">
+                                                                                    {{currentQue.content1}}</p>
+                                                                                <p ng-if="currentQue.confirm"
+                                                                                   ng-bind-html="currentQue.content1"></p>
+                                                                                <p ng-if="currentQue.confirm ">
+                                                                                    {{currentQue.content2}}</p>
+                                                                                <ul ng-if="currentQue.confirm">
+                                                                                    <li ng-repeat="item in questionData">
+                                                                                        {{item.data.title}}
+                                                                                        {{item.data.desc}}
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <!-- <hr> -->
+                                                                                <div class='option-container'>
+                                                                                    <ul ng-if="currentQue.type == 'radio' && !currentQue.showoptn && !currentQue.subTitle"
+                                                                                        id="styleScroll">
+                                                                                        <li ng-repeat=" item in currentQue.options"
+                                                                                            ng-click="slctOptn(item,'','radio')">
+                                                                                            <input type="radio"
+                                                                                                   id="radio{{$index}}"
+                                                                                                   name="option">
+                                                                                            <label class="labeloptn"
+                                                                                                   for="radio{{$index}}">{{item.optn}}</label>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <ul ng-if="currentQue.type == 'checkbox' && !currentQue.showoptn && !currentQue.subTitle"
+                                                                                        id="styleScroll">
+                                                                                        <li ng-repeat=" item in currentQue.options"
+                                                                                            ng-click="notCall!=1?slctOptn(item,'','chk'):''">
+                                                                                            <input type="checkbox"
+                                                                                                   id="chkqustn{{$index}}"
+                                                                                                   ng-click="slectchkbx(item,$event)"
+                                                                                                   name="option"
+                                                                                                   ng-model="item.selected">
+                                                                                            <label class="chklabel"
+                                                                                                   for="chkqustn{{$index}}">{{item.optn}}</label>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                    <ul ng-if="currentQue.subTitle"
+                                                                                        id="styleScroll">
+                                                                                        <li ng-repeat=" item in currentQue.options"
+                                                                                            id="nstdoptn{{$index}}"
+                                                                                            ng-init="outer=$index">
+                                                                                            <span style="font-weight: bold;">{{item.subTitle}}</span>
+                                                                                            <ul>
+                                                                                                <li ng-repeat="data in  item.options"
+                                                                                                    ng-click="slctOptn(data)">
+                                                                                                    <input type="checkbox"
+                                                                                                           name="mltioptn"
+                                                                                                           id="mltioption{{$index}}.[{{outer}}]"
+                                                                                                           ng-click="slectchkbx(data,$event)"
+                                                                                                           ng-model="data.selected">
+                                                                                                    <!-- <label ng-if="data.optn" class="chklabel" for="mltioption{{$index}}.[{{outer}}]" >{{data.optn.title}} at {{data.optn.desc}}</label> -->
+                                                                                                    <label ng-if="data.optn"
+                                                                                                           class="chklabel"
+                                                                                                           ng-class="!data.optn.onlink?'':'clickLink'"
+                                                                                                           for="mltioption{{$index}}.[{{outer}}]"
+                                                                                                           ng-click="redirectTo(data)">{{data.optn.title}}
+                                                                                                        at
+                                                                                                        {{data.optn.desc}}</label>
+                                                                                                </li>
+                                                                                            </ul>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                                <div ng-if="currentQue.showQueBlocks"
+                                                                                     class="que-block-container">
+                                                                                    <p> {{currentQue.headingText}}</p>
+                                                                                    <div ng-repeat=" item in currentQue.queData"
+                                                                                         class='box-contianer rightBox'
+                                                                                         ng-style="{'margin-left': item.stylecss.marginLeft}">
+                                                                                        <!-- ng-style="{top: item.stylecss.top,left: item.stylecss.left}" -->
+                                                                                        <div class="que box"
+                                                                                             id={{$index}}
+                                                                                             ng-class="item.class"
+                                                                                             data-drag="{{item.draggable}}"
+                                                                                             data-jqyoui-options="{revert: 'invalid'}"
+                                                                                             jqyoui-draggable="{onDrop : 'onItemDrop($event, $index,item)',animate:true,index:$index, onStart : 'onStart($event)', onDrag :'onDrag($event)'}">
+                                                                                            <label class="title">{{item.data.title}}</label>
+                                                                                            <p class="desc">
+                                                                                                {{item.data.desc}}</p>
+                                                                                            <span ng-if="item.class!='box-bottom rmvBorder'"
+                                                                                                  class="points">{{item.data.points}}</span>
+                                                                                            <span ng-if="item.class=='box-bottom rmvBorder'"
+                                                                                                  class="star"><img
+                                                                                                    src="images/star-icon.png"
+                                                                                                    height="20"
+                                                                                                    width="21"
+                                                                                                    alt=""></span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <p ng-if="currentQue.link">
+                                                                                    {{currentQue.link}}<a
+                                                                                        href="http://ahf.usc.edu/commencement-honors/renaissance/"
+                                                                                        class="resonacelink"
+                                                                                        target="_blank">Renaissance
+                                                                                    Scholar</a></p>
+                                                                                <p ng-if="currentQue.link1">
+                                                                                    {{currentQue.link1}}<a
+                                                                                        href="http://ahf.usc.edu/commencement-honors/global/"
+                                                                                        class="resonacelink"
+                                                                                        target="_blank">Global
+                                                                                    Scholar</a>
+                                                                                </p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <button type="button" class="btn cmn-btn"
+                                                                                ng-disabled="!isSelected"
+                                                                                ng-click='getNext()'>Next
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="lastStep" ng-show="lastStep">
+                                                                        <div class="right-content">
+                                                                            <h2>Congratulations! </h2>
+                                                                            <p>You have designed the following four-year
+                                                                                program:</p>
+                                                                            <p>
+                                                                                <span>BS in Business Administration</span>
+                                                                                with a focus in <span
+                                                                                    ng-bind-html="lastContent"></span><br>
+                                                                                <span
+                                                                                        ng-if="showmaster==1"
+                                                                                        ng-bind-html="lastContent1"></span>
+                                                                            </p>
+                                                                            <form name="finishForm" novalidate="">
+                                                                                <div class="form-group btm-input">
+                                                                                    <input type="text"
+                                                                                           class="form-control"
+                                                                                           id="name"
+                                                                                           ng-model="user.name" required
+                                                                                           placeholder="Enter Name">
+                                                                                </div>
+                                                                                <div class="form-group btm-input">
+                                                                                    <input type="email"
+                                                                                           class="form-control"
+                                                                                           id="email"
+                                                                                           ng-model="user.email"
+                                                                                           required
+                                                                                           placeholder="Enter Email Address">
+                                                                                </div>
+                                                                                <p id="emailHelp" class="btm-text">The
+                                                                                    above information is needed only to
+                                                                                    generate your sample resume.</p>
+                                                                                <button type="submit"
+                                                                                        class="cmn-btn red-btn"
+                                                                                        ng-disabled="finishForm.$invalid"
+                                                                                        ng-click="exportResume(user)"><i
+                                                                                        class="fa fa-file-o"
+                                                                                        aria-hidden="true"></i>export my
+                                                                                    resume
+                                                                                </button>
+                                                                                <button class="cmn-btn"
+                                                                                        ng-click="captureScrenshot()"><i
+                                                                                        class="fa fa-print"
+                                                                                        aria-hidden="true"></i>Print my
+                                                                                    curriculum
+                                                                                </button>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <a href="" class="help" data-toggle="modal"
+                                                       data-target="#help-popup"> HELP</a>
+                                                    <!-- /Partial View -->
+                                                    <div class="container-fluid">
+                                                        <div class="row">
+                                                            <div class="bottom">
+                                                                <div class="container">
+                                                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                                                        <div class="start-over">
+                                                                            <button href="javascript:window.location.reload(true)"
+                                                                                    ng-click="startOver()"
+                                                                                    ng-disabled="currentQue.number==1">
+                                                                                <span class="visible-xs visible-lg visible-md visible-sm"><i
+                                                                                        class="fa fa-refresh"
+                                                                                        aria-hidden="true"></i></span>
+                                                                                <a class="hidden-xs visible-lg visible-md visible-sm startover">Start
+                                                                                    Over</a>
+                                                                            </button>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-8 col-sm-8 col-xs-8">
+                                                                        <div class="units-outer">
+                                                                            <div class="total-units">
+                                                                                <h5>Total Units</h5>
+                                                                                <span>{{totalUnits}}
+                                            <div class="star-yellow"><!-- <img src="images/star-yellow.png" height="18" width="17" alt=""> -->
+                                            </div>
+                                        </span>
+                                                                            </div>
+                                                                            <div class="total-units elective">
+                                                                                <h5>Electives<br>Reserve</h5>
+                                                                                <span class="elective-bg">{{freeElectives}}</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                                                        <!-- <button type="button" class='btn btn-primary' ng-click='getNext()'>Next</button> -->
+                                                                        <div class="next pull-right">
+                                                                            <button type="button"
+                                                                                    class="hidden-xs visible-lg visible-md visible-sm"
+                                                                                    ng-disabled="!isSelected"
+                                                                                    ng-click='getNext()'>Next<i
+                                                                                    class="fa fa-arrow-right"
+                                                                                    aria-hidden="true"></i></button>
+                                                                            <a href="#" class="hidden-sm visible-xs"
+                                                                               ng-click='getNext()'>
+                                                                                <span><i class="fa fa-long-arrow-right"
+                                                                                         aria-hidden="true"></span></i>
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade bs-example-modal-sm" tabindex="-1" id="points-popup"
+                                                 role="dialog"
+                                                 aria-labelledby="mySmallModalLabel">
+                                                <div class="modal-dialog modal-sm" role="document">
+                                                    <div class="modal-content">
+                                                        <img src="images/points-icon.png" height="78"
+                                                             width="78" alt="">
+                                                        <p>You’ve saved 4 free elective credits in your bank for your
+                                                            minor(s)”</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade bs-example-modal-sm" tabindex="-1" id="chebox-popup"
+                                                 role="dialog"
+                                                 aria-labelledby="mySmallModalLabel">
+                                                <div class="modal-dialog modal-sm" role="document">
+                                                    <div class="modal-content"
+                                                         style="width: 236px;text-align: center;height: auto;">
+                                                        <div class="modal-body">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    style="font-size: 35px;">&times;
+                                                            </button>
+                                                            <h2 style="color: #b62600;">{{messagePop}}</h2>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade bs-example-modal-sm" tabindex="-1" id="help-popup"
+                                                 role="dialog" data-backdrop="static"
+                                                 data-keyboard="false" aria-labelledby="mySmallModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content" style="height: auto;">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                    ng-click="closepopUp()">&times;
+                                                            </button>
+                                                            <!-- <h4 class="modal-title">Modal Header</h4> -->
+                                                            <h2 class="modal-title"
+                                                                style="color: #991b1e;text-align: center;">How to
+                                                                play</h2>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <!-- <div class="container"> -->
+                                                            <div class="main-wrapper">
+                                                                <!-- <div class="container"> -->
+                                                                <div class="row">
+                                                                    <div class="main-wrapper howtoplay">
+                                                                        <p class="sample-text">Sample curriculum</p>
+                                                                        <div class="game-zone-outer">
+                                                                            <div class="gamebox">
+                                                                                <img src="images/sample-grid.jpg">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="discription">
+                                                                        <ul class="chart-detail">
+                                                                            <li><span><img
+                                                                                    src="images/required-icon.png"
+                                                                                    height="20" width="21"
+                                                                                    alt=""></span>Required courses,
+                                                                                fixed
+                                                                            </li>
+                                                                            <li><span><img
+                                                                                    src="images/unavailable-icon.png"
+                                                                                    height="20" width="21"
+                                                                                    alt=""></span>Unavailable
+                                                                            </li>
+                                                                        </ul>
+                                                                        <div class="bottom-notes">
+                                                                            <h3>Objective</h3>
+                                                                            <p>To build a four-year course map using
+                                                                                your free elective units and any
+                                                                                additional
+                                                                                free elective units you can earn with
+                                                                                AP, IB, and A-Level exam credit</p>
+                                                                            <h3>Grid Key</h3>
+                                                                            <p><i>*Note: Courses that are outlined
+                                                                                cannot be waived with AP, IB, or A-Level
+                                                                                exam
+                                                                                credit</i></p>
+                                                                            <ul>
+                                                                                <li>BUAD=USC Marshall business core
+                                                                                    course (you must complete these
+                                                                                    courses at
+                                                                                    USC)
+                                                                                </li>
+                                                                                <li>ECON=Required economics courses that
+                                                                                    must be completed at USC
+                                                                                </li>
+                                                                                <li>GE and Diversity=USC’s General
+                                                                                    Education courses, which give
+                                                                                    students a
+                                                                                    liberal arts core
+                                                                                </li>
+                                                                                <li>WRIT=USC’s writing requirements</li>
+                                                                                <li>Marshall Elective= a student’s focus
+                                                                                    in business
+                                                                                </li>
+                                                                                <li>Free Elective= ‘free’ courses that
+                                                                                    can be taken in any department at
+                                                                                    USC.
+                                                                                    You begin with 32 units.
+                                                                                </li>
+                                                                                <li>Minor= Minors offer you a way to
+                                                                                    explore a department,
+                                                                                    interdisciplinary
+                                                                                    theme, or topical area with less
+                                                                                    commitment of time than a major.
+                                                                                </li>
+                                                                            </ul>
+                                                                            <p>A minor can be completed in as few as 16
+                                                                                units, with most minors requiring about
+                                                                                20 to 24 units. Minors are optional. You
+                                                                                may complete multiple minors or none at
+                                                                                all.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- </div> -->
+                                                                </div>
+                                                            </div>
+                                                            <!-- </div> -->
+                                                        </div>
+                                                        <!-- </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal fade bs-example-modal-sm" tabindex="-1" id="resume-popup"
+                                                 role="dialog" data-backdrop="static" data-keyboard="false"
+                                                 aria-labelledby="mySmallModalLabel">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content" style="height: auto;">
+                                                        <div class="modal-header">
+                                                            <button type="button" class="close" data-dismiss="modal">
+                                                                &times;
+                                                            </button>
+                                                            <div class="resume-top">
+                                                                <a class="iconpdf" ng-click="downloadpdf()">
+                                                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="main-wrapper">
+                                                                <div class="resume-outer" id="resumeouter">
+                                                                    <div class="resume-top">
+                                                                    </div>
+                                                                    <div class="resume">
+                                                                        <div class="info">
+                                                                            <h2>{{username}}</h2>
+                                                                            <span class="email"><a
+                                                                                    href="#">{{emailId}}</a></span>
+                                                                        </div>
+                                                                        <div class="education">
+                                                                            <h3>EDUCATION</h3>
+                                                                            <h4>University of Southern California <br>
+                                                                                Marshall School of Business <span>May 2020</span>
+                                                                            </h4>
+                                                                            <p>{{masterIn}}</p>
+                                                                            <p>Bachelor of Science in Business
+                                                                                Administration, with a specialization in
+                                                                                {{ques1Selectn}}
+                                                                                <br> Minor in {{minor}}, Second minor
+                                                                                <br> Global Scholar
+                                                                                <br> Renaissance Scholar</p>
+                                                                            <h5 class="acadmic">ACADEMIC PROJECT</h5>
+                                                                            <h4>{{academinProject}}</h4>
+                                                                        </div>
+                                                                        <div class="education workExp">
+                                                                            <h3>WORK EXPERIENCES</h3>
+                                                                            <div class="intenship"
+                                                                                 ng-repeat="data in internship">
+                                                                                <h4>{{data.title}} at {{data.desc}}
+                                                                                    <span>Summer 2020</span></h4>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="education internationalExp">
+                                                                            <h3>INTERNATIONAL EXPERIENCES</h3>
+                                                                            <div class="intrnationl"
+                                                                                 ng-repeat="data in international">
+                                                                                <h4>
+                                                                                    {{data.title}}<span>Summer 2018</span>
+                                                                                </h4>
+                                                                                <p>{{data.desc}}</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="education">
+                                                                            <h3>LEADERSHIP INVOLVEMENTS</h3>
+                                                                            <h4>{{ques1Selectn}} Society</h4>
+                                                                            <h4>Applied Statistic Club</h4>
+                                                                            <h4>Marshall Business Student
+                                                                                Government</h4>
+                                                                        </div>
+                                                                        <div class="resume-bottom">
+                                                                            <p>Sample resume is created by </p>
+                                                                            <img src="images/logo2.png"
+                                                                                 height="31" width="138" alt="">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="canvasGrid">
+                                                <h2 style="text-align: center;padding: 20px 0px;font-weight: bold;color: grey;">
+                                                    Business Administration Course Grid</h2>
+                                                <div id="canDoIt"></div>
+                                            </div>
+                                            <script src="vendor/jquery/dist/jquery.js"></script>
+                                            <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+                                            <script src="vendor/angular/angular.min.js"></script>
+                                            <script src="vendor/angular-animate/angular-animate.min.js"></script>
+                                            <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+                                            <script src="js/jquery.ui.touch-punch.js"></script>
+                                            <script src="vendor/angular-dragdrop/src/angular-dragdrop.min.js"></script>
+                                            <script src="js/angular-sanitize.js"></script>
+                                            <script src="vendor/slideout-1.0.1/dist/slideout.min.js"></script>
+                                            <script src="vendor/html2canvas/dist/html2canvas.min.js"></script>
+                                            <script src="vendor/jspdf/dist/jspdf.min.js"></script>
+                                            <script src="https://goldfirestudios.com/proj/howlerjs/howler.min.js?v=1.1.28"></script>
+                                            <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+                                            <script src="js/defaultServices.js"></script>
+                                            <script src="question.js"></script>
+                                            <script src="js/messages.js"></script>
+                                            <script src="app.js"></script>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="region__d--ii">
+
+                            <div class="field field--name-field-region-ii-d field--type-entity-reference-revisions field--label-hidden">
+                                <div>
+                                    <div class="paragraph paragraph--type--text-content text-content list-style container paragraph--view-mode--default">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                </article>
+
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="block-contact">
+                <div class="block-contact__left">
+                    <div>
+                        <div id="block-contact-site">
+
+
+                            <div><h3 class="small-title">USC Marshall School of Business:</h3>
+
+                                <div class="block-contact__body">
+                                    <p>3670 Trousdale Pkwy,<br>
+                                        Los Angeles, CA 90089,<br>
+                                        United States<br><a href="https://goo.gl/maps/UBFfoUyPWzq"
+                                                            target="_blank">Map</a></p>
+                                </div>
+
+                                <ul class="block-contact__phones">
+                                    <!--	<li><a class="icon-phone" href="tel:213-740-8674">213-740-8674</a></li> -->
+                                    <!--	<li><a class="icon-fax" href="tel:213-740-8675">213-740-8675</a></li> --></ul>
+                                <div class="block-contact__links"><a class="btn btn--text "
+                                                                     href="https://www.marshall.usc.edu/usc-marshall-directory">Full
+                                    Directory</a></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="block-contact__right">
+                    <div>
+                        <nav role="navigation" aria-labelledby="block-footernavigation-menu"
+                             id="block-footernavigation">
+
+                            <h2 class="visually-hidden" id="block-footernavigation-menu">Footer navigation</h2>
+
+
+                            <ul class="block-contact__list">
+                                <li>
+                                    <a href="https://www.marshall.usc.edu/about" target="" rel=""
+                                       data-drupal-link-system-path="node/46431">About</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.marshall.usc.edu/alumni/usc-marshall-alumni-association"
+                                       target="" rel="">Alumni Association</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.marshall.usc.edu/journalists" target="" rel=""
+                                       data-drupal-link-system-path="node/46416">For Journalists</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.marshall.usc.edu/news-events" target="" rel=""
+                                       data-drupal-link-system-path="node/216">Marshall in the News</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.marshall.usc.edu/alumni/support-usc-marshall" target="" rel="">Support
+                                        Marshall</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.usc.edu/" target="_blank" rel="">USC</a>
+                                </li>
+                            </ul>
+
+
+                        </nav>
+                        <div id="block-visitusonsocialmedia" class="social-list-wrap">
+
+                            <span class="label">Visit Us On Social Media</span>
+
+
+                            <div class="field field--name-field-paragraph-ref field--type-entity-reference-revisions field--label-hidden">
+                                <div class="paragraph paragraph--type--social-media-links paragraph--view-mode--default">
+
+                                    <ul class="block-social">
+                                        <li>
+                                            <a href="http://twitter.com/uscmarshall" class="icon-twitter"
+                                               target="_blank">Twitter Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://www.facebook.com/uscmarshall" class="icon-facebook"
+                                               target="_blank">Facebook Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.linkedin.com/edu/school?id=17972&amp;trk=tyah&amp;trkInfo=tarId%3A1404924261796%2Ctas%3Ausc%20marshall%2Cidx%3A2-1-4"
+                                               class="icon-linkedin" target="_blank">LinkedIn Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.instagram.com/uscmarshall" class="icon-instagram"
+                                               target="_blank">Instagram Profile</a>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray">
+            <div class="container">
+                <div class="block-copyright">
+                    <a class="block-copyright__logo" href="https://www.marshall.usc.edu/">
+                        <img src="./template_files/logo-footer.svg" width="309" height="73" alt="footer logo">
+                    </a>
+
+                    <div class="block-copyright__content">
+                        <p>University of Southern California Marshall School of Business | Copyright 2001 - 2018</p>
+                    </div>
+
+                    <div class="block-copyright__link">
+                        <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
+
+                            <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+
+
+                            <ul>
+                                <li>
+                                    <a href="http://policies.usc.edu/p2admOpBus/privacy_personal_information.html"
+                                       target="_blank">Privacy Policy</a>
+                                </li>
+                            </ul>
+
+
+                        </nav>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{
+    "path": {
+        "baseUrl": "\/",
+        "scriptPath": null,
+        "pathPrefix": "",
+        "currentPath": "node\/181",
+        "currentPathIsAdmin": false,
+        "isFront": false,
+        "currentLanguage": "en"
+    },
+    "pluralDelimiter": "\u0003",
+    "ajaxPageState": {
+        "libraries": "asset_injector\/css\/directory_icon_override,asset_injector\/css\/header_tweaks_info_for_links_,asset_injector\/css\/main_navigation_menu_f,asset_injector\/css\/overwritting_strong_and_em_tags,asset_injector\/css\/sidebar_cta_tabs,better_exposed_filters\/general,core\/html5shiv,google_analytics\/google_analytics,system\/base,usc_base\/global-js,usc_base\/global-styling,usc_general\/usc_general.override,usc_metatag\/usc.addthis",
+        "theme": "usc_base",
+        "theme_token": null
+    },
+    "ajaxTrustedUrl": {
+        "\/search": true
+    },
+    "google_analytics": {
+        "trackOutbound": true,
+        "trackMailto": true,
+        "trackDownload": true,
+        "trackDownloadExtensions": "7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"
+    },
+    "usc_metatag": {
+        "pubid": "ra-57d6bfa86a131421"
+    },
+    "user": {
+        "uid": 0,
+        "permissionsHash": "e52e5b18da764007d3c95be627bd789dcca9542a2375a3ce85a3ca090c5ed6ac"
+    }
+}</script>
+<script src="./template_files/js_BKcMdIbOMdbTdLn9dkUq3KCJfIKKo2SvKoQ1AnB8D-g.js"></script>
+
+<!--[if lte IE 9]>
+<script src="/sites/default/files/js/js_VhqXmo4azheUjYC30rijnR_Dddo0WjWkF27k5gTL8S4.js"></script>
+<![endif]-->
+<script src="./template_files/js_PIdVpWZKXapMDlu7fCNTfThVwrBiATI4RZr83_UrFCI.js"></script>
+
+<script type="text/javascript">window.NREUM || (NREUM = {});
+NREUM.info = {
+    "beacon": "bam.nr-data.net",
+    "licenseKey": "cf096c9a4e",
+    "applicationID": "70700242",
+    "transactionName": "MlBXNUoDV0ADARIIWwsadAJMC1ZdTRIHBlE6VlQCUAc=",
+    "queueTime": 0,
+    "applicationTime": 52,
+    "atts": "HhdUQwIZRE4=",
+    "errorBeacon": "bam.nr-data.net",
+    "agent": ""
+}</script>
+
+<div id="_atssh"
+     style="visibility: hidden; height: 1px; width: 1px; position: absolute; top: -9999px; z-index: 100000;">
+    <iframe id="_atssh621" title="AddThis utility frame" src="./template_files/sh.d663e43787b663d5491cf753.html"
+            style="height: 1px; width: 1px; position: absolute; top: 0px; z-index: 100000; border: 0px; left: 0px;"></iframe>
+</div>
+<style id="service-icons-0"></style>
+</body>
+</html>

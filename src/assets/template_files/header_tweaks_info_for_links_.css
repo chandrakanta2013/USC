@@ -1,0 +1,15 @@
+#block-topnavigation-menu.menu-info__label {
+    display: none;
+}
+.menu-info > ul li:nth-child(4), .menu-info__list li:nth-child(4) {
+    clear: none;
+}
+.menu-info > ul li:nth-child(5), .menu-info__list li:nth-child(5) {
+    clear: both;
+}
+.menu-info > ul li:nth-child(1), .menu-info > ul li:nth-child(2), .menu-info > ul li:nth-child(3), .menu-info > ul li:nth-child(4), .menu-info__list li:nth-child(1), .menu-info__list li:nth-child(2), .menu-info__list li:nth-child(3) .menu-info__list li:nth-child(4) {
+    max-width: inherit;
+    padding-right: 1.625rem;
+    -webkit-transition: inherit
+    transition: inherit;
+}

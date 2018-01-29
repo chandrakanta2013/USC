@@ -1,4 +1,0 @@
-# USC Marshal
-
-Grid Project
-
