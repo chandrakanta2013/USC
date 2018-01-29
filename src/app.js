@@ -24,27 +24,44 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     $('#gamePage').hide();
     console.log("hello page");
 
+
+    $scope.openPopup = function(){
+        $('#help-popup').modal('show');
+        $('body .modal-backdrop').addClass('popup-backdrop  popup-backdrop-in popup-backdrop-fade');
+        $('body.modal-open').addClass('bodyOverflow');
+        $('body.modal-open .modal').addClass('overflowpopup');
+
+    }
     $scope.gotoGame = function () {
 
         console.log("called")
         $('#gamePage').show();
         $('#introPage').hide();
         $('#help-popup').modal('show');
+        $('body .modal-backdrop').addClass('popup-backdrop  popup-backdrop-in popup-backdrop-fade');
+        $('body.modal-open').addClass('bodyOverflow');
+        $('body.modal-open .modal').addClass('overflowpopup');
         if ($(window).width() < 768) {
-            $('.banner').css('display', 'none');
-            $('.banner-part').css('display', 'none');
-            $('footer').css('display', 'none');
+            $('.region__b--ii').css('display', 'none');
+            $('#block-breadcrumbs').css('display', 'none');
+            $('#block-usc-socialblock').css('display', 'none');
+            $('.footer').css('display', 'none');
+            $('.help').css('display','none')
+            $('.cta-list').css('padding-top', '5px')
         }
     }
     if (localStorage.getItem('startover')) {
         $('#gamePage').show();
         $('#introPage').hide();
         $('#help-popup').modal('show');
-
+        $('body .modal-backdrop').addClass('popup-backdrop  popup-backdrop-in popup-backdrop-fade');
+        $('body.modal-open').addClass('bodyOverflow');
+        $('body.modal-open .modal').addClass('overflowpopup');
         if ($(window).width() < 768) {
-            $('.banner').css('display', 'none');
-            $('.banner-part').css('display', 'none');
-            $('footer').css('display', 'none');
+            $('.region__b--ii').css('display', 'none');
+            $('#block-breadcrumbs').css('display', 'none');
+            $('#block-social-share').css('display', 'none');
+            $('.footer').css('display', 'none');
         }
         localStorage.removeItem('startover');
     }
@@ -68,13 +85,13 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
     console.log(path, "url")
     $scope.queBlock = false;
     var sound = new Howl({
-        urls: ['audio/elective.mp3']
+        urls: ['assets/audio/elective.mp3']
     })
     var sound = new Howl({
-        urls: ['audio/final.mp3']
+        urls: ['assets/audio/final.mp3']
     })
     var sound = new Howl({
-        urls: ['audio/totalunit.mp3']
+        urls: ['assets/audio/totalunit.mp3']
     })
     //===============Functions for question side bar in Responsive==============//
     // angular.element('#que-block').addClass('right-menu');
@@ -112,7 +129,11 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         $('.box-contianer').find('.red').addClass('defaultselect')
         $('.box-contianer').find('.pink').addClass('defaultselect')
         $('.box-contianer').find('.orange').addClass('defaultselect')
-
+        $('body.modal-open').removeClass('bodyOverflow');
+    }
+    $scope.closeModal = function() {
+        $('#resume-popup').modal('hide');
+        $('body.modal-open').removeClass('bodyOverflow');
     }
     //==========================================================================//
 
@@ -271,7 +292,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             $scope.summer[dstIndex] = temp;
         }
         var sound = new Howl({
-            urls: ['audio/totalunit.mp3']
+            urls: ['assets/audio/totalunit.mp3']
         }).play();
     }
 
@@ -341,7 +362,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             // ============= custom binding HTML add Drag contents =============
         }
         var sound = new Howl({
-            urls: ['audio/totalunit.mp3']
+            urls: ['assets/audio/totalunit.mp3']
         }).play();
     }
     //=======================================================================//
@@ -409,7 +430,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $scope.selectedOption.points = $scope.freeElectives;
                 $scope.freeElectives = 0;
                 $scope.color = 'sky-blue rmvBorder';
-                if (i == 0 || i == 4 || i == 9 || i == 14) {
+                if (i == 0 || i == 8 || i == 16) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -424,7 +445,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 console.log("in 4")
                 $scope.color = 'purple rmvBorder';
                 $scope.blckPoints = '4';
-                if (i == 0 || i == 4 || i == 9 || i == 14) {
+                if (i == 0 || i == 8 || i == 16) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -439,7 +460,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                     $scope.selectedOption.name = $scope.summmerchkboxArry[i].optn.title;
                     $scope.selectedOption.desc = $scope.summmerchkboxArry[i].optn.desc;
                 }
-                if (i == 0 || i == 4 || i == 9 || i == 14) {
+                if (i == 0 ||  i == 8 || i == 16) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '0px'
@@ -450,7 +471,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
             } else if ($scope.currentQue.nextBlock != 'afterQ5' && $scope.currentQue.nextBlock != 'afterQ4') { //condition for QUESTN 5
                 $scope.color = 'green rmvBorder';
                 $scope.blckPoints = '4';
-                if (i == 0 || i == 4 || i == 9 || i == 14) {
+                if (i == 0 || i == 8 || i == 16) {
                     $scope.margin = '0px'
                 } else {
                     $scope.margin = '-60px'
@@ -531,7 +552,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                         $scope.isSelected = 1;
                     }
                     var sound = new Howl({
-                        urls: ['audio/elective.mp3']
+                        urls: ['assets/audio/elective.mp3']
                     }).play();
                     $scope.freeElectives = $scope.freeElectives - parseInt(itmObj.points);
                     return false;
@@ -553,7 +574,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                             if (ele.points != '0') {
                                 ele.selected = false;
                                 var sound = new Howl({
-                                    urls: ['audio/elective.mp3']
+                                    urls: ['assets/audio/elective.mp3']
                                 }).play();
                                 $scope.freeElectives = $scope.freeElectives + parseInt(ele.points);
                             }
@@ -575,7 +596,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 var indx = $scope.chkboxArry.indexOf(itmObj)
                 $scope.chkboxArry.splice(indx, 1);
                 var sound = new Howl({
-                    urls: ['audio/elective.mp3']
+                    urls: ['assets/audio/elective.mp3']
                 }).play();
                 // add points back to freeelectives tally
                 $scope.freeElectives = $scope.freeElectives + parseInt(itmObj.points);
@@ -679,7 +700,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         $scope.selectedArray.push($scope.selectedOption);
         if ($scope.currentQue.lastStep) {
             var sound = new Howl({
-                urls: ['audio/final.mp3']
+                urls: ['assets/audio/final.mp3']
             }).play();
             $scope.lastStep = true;
             // $scope.currentQue = [];
@@ -717,7 +738,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 console.log("select none")
             } else {
                 var sound = new Howl({
-                    urls: ['audio/elective.mp3']
+                    urls: ['assets/audio/elective.mp3']
                 }).play();
                 $scope.freeElectives = $scope.freeElectives + 4
                 $('#points-popup').modal('show');
@@ -746,7 +767,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                 $scope.freeElectives = $scope.freeElectives + $scope.selectedOption.points;
                 $scope.currentQue = $scope.queJson[queCounter];
                 var sound = new Howl({
-                    urls: ['audio/elective.mp3']
+                    urls: ['assets/audio/elective.mp3']
                 }).play();
                 $('#points-popup').modal('show');
                 $timeout(function () {
@@ -791,7 +812,7 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
                     if ($scope.currentQue.autoMove) {
                         // play sound any time board autoMoves tiles
                         var sound = new Howl({
-                            urls: ['audio/final.mp3']
+                            urls: ['assets/audio/final.mp3']
                         }).play();
                         $scope.gridData = $scope.gridData.map(function (obj, val) {
                             if (obj.year == "senior") {
@@ -973,6 +994,9 @@ App.controller('homeCtrl', ['$timeout', '$scope', '$sce', '$rootScope', '$http',
         $scope.username = data.name;
         $scope.emailId = data.email;
         $('#resume-popup').modal('show');
+        $('body .modal-backdrop').addClass('popup-backdrop  popup-backdrop-in popup-backdrop-fade');
+        $('body.modal-open').addClass('bodyOverflow');
+        $('body.modal-open .modal').addClass('overflowpopup');
         $scope.ques1Selectn = $scope.selectedArray[1].optn;
         $scope.academinProject = $scope.selectedArray[1].content;
         $scope.selectedArray.filter(function (obj) {

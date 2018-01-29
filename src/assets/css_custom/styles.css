@@ -51,7 +51,7 @@
     border: none;
     padding: 12px;
     width: 100%;
-    margin-top: 14px; }
+    margin-top: 10px; }
   .game-block button.cmn-btn:hover {
     background-color: #000;
     color: #fff; }
@@ -136,15 +136,15 @@
   .game-block .que-zone {
     text-align: left;
     font-size: 16px;
-    line-height: 23px; }
+    line-height: 23px;     padding-left: 17px;}
   .game-block table.btm-table th {
-    border-radius: 10px;
+    border-radius: 18px;
     /*padding: 10px 10px;*/ }
   .game-block .box {
     border-radius: 10px;
     padding: 0 8px;
-    width: 98px;
-    height: 98px;
+    width: 93px;
+    height: 93px;
     color: #fff;
     border: 2px solid #000;
     text-align: left;
@@ -330,8 +330,8 @@
   .game-block .cross {
     display: block;
     margin: auto;
-    width: 98px;
-    height: 98px;
+    width: 93px;
+    height: 93px;
     position: relative;
     border: solid 1px #c8c6c4;
     background: #e3e2df;
@@ -343,7 +343,7 @@
     position: absolute;
     top: 50%;
     left: -16px;
-    width: 130px;
+    width: 122px;
     height: 1px;
     background: #c8c6c4;
     -webkit-transform: rotate(45deg);
@@ -354,7 +354,7 @@
     position: absolute;
     top: 50%;
     left: -16px;
-    width: 130px;
+    width: 122px;
     height: 1px;
     background: #c8c6c4;
     -webkit-transform: rotate(-45deg);
@@ -399,10 +399,11 @@
     padding: 8px 0;
     position: relative; }
   .game-block .right-content button i.fa {
-    position: absolute;
+    /*position: absolute;
     left: 14px;
     top: 16px;
-    font-size: 18px; }
+    font-size: 18px;*/     margin: 0px 10px; }
+    .lastStep{ padding-left: 20px }
   .game-block .right-content button.red-btn {
     background: #a31919; }
   .game-block #points-popup .modal-content {
@@ -421,7 +422,7 @@
     padding: 5px 0;
     display: inline-block;
     width: 100%;
-    margin-bottom: 61px; }
+    margin-bottom: 61px;margin-bottom: 27px }
   .game-block .bottom .start-over {
     padding-top: 15px;
     display: block; }
@@ -512,7 +513,7 @@
     height: auto; }
   .game-block .option-container input[type=radio] {
     float: left;
-    margin: 8px 0px 0px; }
+    margin: 3px 0px 0px; }
   .game-block .chklabel {
     width: 91%;
     font-weight: 400;
@@ -586,7 +587,8 @@
   .game-block p.sample-text {
     color: #000;
     font-weight: bold;
-    text-align: center; }
+    text-align: center; margin: 0 0 6px!important;}
+    .game-block p{ margin: 0 0 7px!important; }
   .game-block .howtoplay .game-zone {
     float: none;
     display: inline-block; }
@@ -762,7 +764,7 @@
   .game-block .help:focus {
     outline: none; }
   .game-block .modal-header .close {
-    font-size: 37px; }
+    font-size: 37px;display: block;width: auto }
   .game-block .blue .points {
     display: none; }
   .game-block .box.rmvBorder {
@@ -937,15 +939,18 @@
     outline: none; }
   .game-block #gamePage {
     display: none; }
+  .game-block #gamePage .container{ margin: 0px; padding: 0px; width: 1200px}
+  .game-block #gamePage .container .col-md-8{ padding: 0px; }
   .game-block #introPage {
     display: block; }
+    .game-block #introPage .container{ padding: 0px; margin:0px; }
   .game-block .btm-table .gridbox {
     margin-top: 0px;
     margin-left: 0px; }
   .game-block .summerBlock {
     padding: 10px; }
   .game-block .smr {
-    padding: 10px 9px; }
+    padding: 10px 0px; width:194px; height: 57px; padding-left: 5px}
   .game-block .clickLink {
     color: #970000;
     text-decoration: underline;
@@ -975,14 +980,31 @@
     font-size: 24px;
     color: brown; }
   .game-block .box-bottom {
-    width: 204px;
-    height: 60px; }
+    width: 194px;
+    height: 57px; }
   .game-block button:disabled,
   .game-block button[disabled] {
     /*border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;*/
     cursor: not-allowed; }
+  .popup-backdrop{ 
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+    background-color: #000; }
+    .popup-backdrop-in{ opacity: .5!important; }
+    .popup-backdrop-fade{ opacity: 0; }
+    .overflowpopup{ overflow-x: hidden!important;
+    overflow-y: auto!important; }
+  .bodyOverflow{ overflow: hidden!important; }
+  .game-zone th{ border: none; }
+  .extraLink{ margin-top: -13px!important; }
+
+
   @media only screen and (max-width: 1200px) {
     .game-block .game-zone-outer {
       overflow-x: auto; }
@@ -1068,7 +1090,8 @@
         padding: 2px 20px 2px 50px;
         box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
         z-index: 999;
-        padding-bottom: 38px; }
+        padding-bottom: 38px; 
+        padding-left: 17px}
       .game-block .que-btn {
         float: right;
         margin: 6px 20px 0 10px;
@@ -1213,7 +1236,7 @@
                 transform: scale(1); }
       .game-block .box label.title {
         font-size: 11px;
-        line-height: 16px; }
+        line-height: 7px; }
       .game-block .box p.desc {
         font-size: 9px;
         line-height: 10px; }
@@ -1250,7 +1273,10 @@
         float: none; }
       .game-block .units-outer .total-units.elective h5 {
         width: auto !important;
-        padding: 0 2px; } }
+        padding: 0 2px; } 
+        .game-block .que-zone{ padding-top: 43px; }
+        .toglequestn{ width: 25px!important; }
+      }
   @media only screen and (min-width: 320px) and (max-width: 380px) {
     .game-block .bottom .start-over span {
       margin: 0 0 0 -15px; }

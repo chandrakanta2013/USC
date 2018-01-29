@@ -470,11 +470,11 @@ var questionJson = [{
         type: 'checkbox',
         options: [
             { optn: 'Philosophy (20 units of free electives needed)*', name: 'Philosophy', points: '20', ques: 'minor' },
-            { optn: 'Real Estate Development (24 units of free electives needed)', name: 'Real Estate Development Minor', points: '24', ques: 'minor' },
-            { optn: 'Cinematic Arts (24 units of free electives needed)*', name: 'Cinematic Arts Minor', points: '24', ques: 'minor' },
-            { optn: 'Music Industry (20 units of free electives needed)', name: 'Music Industry Minor', points: '20', ques: 'minor' },
-            { optn: 'Political Science (20 units of free electives needed)', name: 'Political Science Minor', points: '20', ques: 'minor' },
-            { optn: 'Sports Media Studies ( 24 units of free electives needed)*', name: 'Sports Media Studies Minor', points: '24', ques: 'minor' },
+            { optn: 'Real Estate Development (24 units of free electives needed)', name: 'Real Estate Development', points: '24', ques: 'minor' },
+            { optn: 'Cinematic Arts (24 units of free electives needed)*', name: 'Cinematic Arts', points: '24', ques: 'minor' },
+            { optn: 'Music Industry (20 units of free electives needed)', name: 'Music Industry', points: '20', ques: 'minor' },
+            { optn: 'Political Science (20 units of free electives needed)', name: 'Political Science', points: '20', ques: 'minor' },
+            { optn: 'Sports Media Studies ( 24 units of free electives needed)*', name: 'Sports Media Studies', points: '24', ques: 'minor' },
             { optn: 'None', points: '0', ques: 'minor' }
         ],
         successMsg: 'You’ve saved 4 free elective credits in your bank for your minor(s)',
